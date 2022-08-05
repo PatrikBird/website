@@ -5,12 +5,12 @@
         <div
           v-for="post in posts"
           :key="post.title"
-          class="flex flex-col rounded-lg shadow-lg overflow-hidden dark:bg-primary-700"
+          class="flex flex-col rounded-lg shadow-lg overflow-hidden dark:bg-primary-900"
         >
           <div class="flex-shrink-0">
             <img class="h-48 w-full object-cover" :src="post.imageUrl" alt="">
           </div>
-          <div class="flex-1 p-6 flex flex-col justify-between dark:bg-primary-700">
+          <div class="flex-1 p-6 flex flex-col justify-between dark:bg-primary-900">
             <div class="flex-1">
               <!-- <p class="text-sm font-medium text-indigo-600">
                 <a :href="post.category.href" class="hover:underline">
