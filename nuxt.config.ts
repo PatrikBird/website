@@ -21,6 +21,9 @@ export default defineNuxtConfig({
       theme: 'dracula'
     }
   },
+  build: {
+    transpile: ['@headlessui/vue', 'tailwindcss/typography']
+  },
   // Coming soon in RC7
   experimental: {
     viteNode: true
