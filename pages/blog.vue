@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
+  <NuxtLayout>
     <h2 class="text-3xl tracking-tight font-extrabold sm:text-4xl">
       From the blog
     </h2>
@@ -38,5 +38,5 @@ definePageMeta({
         </ContentList>
       </div>
     </div>
-  </div>
+  </NuxtLayout>
 </template>
