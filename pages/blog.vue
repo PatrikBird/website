@@ -16,10 +16,11 @@ definePageMeta({
     <div class="max-w-7xl mx-auto">
       <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
         <ContentList v-slot="{ list }" path="/blog" :query="{ sort: { date: -1 } }">
-          <div
+          <NuxtLink
             v-for="article in list"
             :key="article._path"
-            class="flex flex-col rounded-lg shadow-lg overflow-hidden dark:bg-primary-900"
+            :to="article._path"
+            class="flex flex-col rounded-lg shadow-lg overflow-hidden dark:bg-primary-900 duration-100 ease-in-out transform hover:scale-105"
           >
             <div class="flex-shrink-0">
               <img class="h-48 w-full object-cover" :src="article.imageUrl" alt="">
@@ -34,7 +35,7 @@ definePageMeta({
                 </p>
               </div>
             </div>
-          </div>
+          </NuxtLink>
         </ContentList>
       </div>
     </div>
