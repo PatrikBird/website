@@ -1,5 +1,5 @@
 <template>
-  <div class="py-3 m-auto sm:shadow dark:bg-primary-800 sm:rounded">
+  <div class="py-2 m-auto sm:shadow dark:bg-primary-800 sm:rounded">
     <main class="px-2 mx-auto prose prose-gray text-center text-primary dark:text-primary-100 max-w-none dark:prose-invert">
       <slot>
         <!-- <h1 class="text-2xl">
