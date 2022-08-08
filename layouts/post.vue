@@ -1,10 +1,10 @@
 <template>
-  <div class="py-10 m-auto sm:px-8 sm:shadow dark:bg-primary-800 sm:rounded">
-    <main class="px-4 mx-auto sm:px-8 sm:pt-14 prose prose-gray text-center text-primary dark:text-primary-100 max-w-none dark:prose-invert">
+  <div class="py-3 m-auto sm:shadow dark:bg-primary-800 sm:rounded">
+    <main class="px-2 mx-auto prose prose-gray text-center text-primary dark:text-primary-100 max-w-none dark:prose-invert">
       <slot>
-        <h1 class="text-2xl">
+        <!-- <h1 class="text-2xl">
           Blog post not found
-        </h1>
+        </h1> -->
       </slot>
     </main>
   </div>
