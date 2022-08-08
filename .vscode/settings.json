@@ -7,5 +7,6 @@
   },
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "emmet.excludeLanguages": []
 }

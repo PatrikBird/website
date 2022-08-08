@@ -10,9 +10,15 @@
         <div class="w-full border-t border-gray-300" />
       </div>
     </div>
-    <slot>
-      <p>no value here</p>
-    </slot>
+    <div class="pb-16 px-4 sm:pt-6 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto">
+      <div class="lg:pl-8">
+        <div class="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto">
+          <slot name="content">
+            <p>no content provided</p>
+          </slot>
+        </div>
+      </div>
+    </div>
   </article>
 </template>
 

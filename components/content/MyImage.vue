@@ -9,6 +9,6 @@ const props = defineProps<{pic: string, widepic: string, alt: string}>()
       :srcset="widepic"
       media="(min-width: 640px)"
     >
-    <img :src="pic" :alt="alt" style="margin: 0">
+    <img :src="pic" :alt="alt" class="m-auto">
   </picture>
 </template>
