@@ -7,7 +7,7 @@ const props = defineProps<{pic: string, widepic: string, alt: string}>()
   <div>
     <picture>
       <source
-        srcset="/blog/first/test-resized-wide.webp 1500w"
+        :srcset="widepic"
         sizes="(min-width: 1300px) 80vw"
         media="(min-width: 640px)"
         :alt="alt"
