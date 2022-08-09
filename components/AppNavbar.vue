@@ -7,10 +7,6 @@ const { navigation } = useContent()
 const theme = useTheme()
 
 const mobileIsOpen = ref(false)
-const route = useRoute()
-watch(route, () => {
-  mobileIsOpen.value = false
-})
 </script>
 
 <template>
@@ -89,6 +85,7 @@ watch(route, () => {
             :to="link._path"
             active-class="active-navbar-link-mobile"
             class="border-transparent text-primary hover:text-primary-700 hover:border-gray-300 dark:text-primary-100 dark:hover:text-primary-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+            @click="mobileIsOpen = false"
           >
             {{ link.title }}
           </NuxtLink>
