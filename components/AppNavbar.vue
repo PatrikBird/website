@@ -1,6 +1,5 @@
 <!-- eslint-disable no-console -->
 <script setup>
-import { Disclosure, DisclosureButton } from '@headlessui/vue'
 import { OnClickOutside } from '@vueuse/components'
 
 const { navigation } = useContent()
@@ -12,7 +11,7 @@ const mobileIsOpen = ref(false)
 <template>
   <div class="top-0 sticky">
     <OnClickOutside @trigger="mobileIsOpen = false">
-      <Disclosure as="nav" class="shadow bg-primary-50 dark:bg-primary-800">
+      <nav class="shadow bg-primary-50 dark:bg-primary-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex">
@@ -72,7 +71,7 @@ const mobileIsOpen = ref(false)
               <ColorModeSwitch
                 class="inline-flex items-center justify-center text-primary hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
               />
-              <DisclosureButton
+              <button
                 class="inline-flex items-center justify-center text-primary hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 @click="mobileIsOpen = !mobileIsOpen"
               >
@@ -83,7 +82,7 @@ const mobileIsOpen = ref(false)
                   aria-hidden="true"
                 />
                 <Icon v-else name="clarity:times-line" aria-hidden="true" />
-              </DisclosureButton>
+              </button>
             </div>
           </div>
         </div>
@@ -102,7 +101,7 @@ const mobileIsOpen = ref(false)
             </NuxtLink>
           </div>
         </div>
-      </Disclosure>
+      </nav>
     </OnClickOutside>
   </div>
 </template>
