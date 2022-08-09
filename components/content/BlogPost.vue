@@ -12,10 +12,17 @@
         <div class="w-full border-t border-gray-300" />
       </div>
     </div>
-    <!-- Content -->
+    <!-- BlogPost -->
     <div class="pb-16 px-4 sm:pt-6 sm:px-6">
-      <div class="lg:pl-8">
-        <div class="text-base max-w-prose mx-auto">
+      <div class="max-w-prose mx-auto lg:pl-8">
+        <!-- Intro -->
+        <div class="text-lg">
+          <slot name="intro">
+            <p>no intro content provided</p>
+          </slot>
+        </div>
+        <!-- Content -->
+        <div class="text-base">
           <slot name="content">
             <p>no content provided</p>
           </slot>
