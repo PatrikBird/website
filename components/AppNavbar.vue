@@ -1,4 +1,3 @@
-<!-- eslint-disable no-console -->
 <script setup>
 import { OnClickOutside } from '@vueuse/components'
 
