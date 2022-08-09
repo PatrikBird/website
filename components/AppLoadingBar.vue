@@ -12,7 +12,7 @@ const props = defineProps({
   },
   height: {
     type: Number,
-    default: 3
+    default: 2
   }
 })
 
