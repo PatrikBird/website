@@ -8,7 +8,7 @@ const mobileIsOpen = ref(false)
 </script>
 
 <template>
-  <div class="top-0 sticky">
+  <div class="top-0 sticky z-40">
     <OnClickOutside @trigger="mobileIsOpen = false">
       <nav class="shadow bg-primary-50 dark:bg-primary-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
