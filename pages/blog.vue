@@ -40,5 +40,6 @@ definePageMeta({
         </ContentList>
       </div>
     </div>
+    <LightBox />
   </NuxtLayout>
 </template>
