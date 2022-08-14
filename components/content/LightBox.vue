@@ -15,7 +15,7 @@ const thumbs = ref(null)
   <div>
     <div class="grid">
       <div v-for="n in 20" :key="n" class="gridItem" @click="lightbox = true; slide = Number(n) - 1">
-        <img :data-src="'https://picsum.photos/id/'+n+'/640/480'" class="lazyload">
+        <img :data-src="'https://picsum.photos/id/'+n+'/640/480'">
       </div>
     </div>
     <teleport to="body">
@@ -46,7 +46,7 @@ const thumbs = ref(null)
               <Carousel :current-slide="slide" :thumbs="thumbs" />
             </div>
             <div class="lightBoxFooter">
-              <Thumbnail v-model:current-slide="slide" @thumbs="thumbs" />
+              <Thumbnail v-model="slide" @thumbs="thumbs" />
             </div>
           </div>
         </div>
