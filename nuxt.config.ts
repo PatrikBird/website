@@ -25,15 +25,11 @@ export default defineNuxtConfig({
   build: {
     transpile: ['tailwindcss/typography']
   },
-  // Coming soon in RC7
-  experimental: {
-    viteNode: true
-  },
   app: {
     // theme: {
     //   meta: {
-    //     name: 'Content Wind',
-    //     author: 'Sebastien Chopin (@Atinux)',
+    //     name: 'Test Name',
+    //     author: 'Patrik Bird (@Atinux)',
     //     description: 'A lightweight Nuxt theme to build a Markdown driven website, based on Nuxt Content, TailwindCSS and Iconify ✨'
     //   }
     // }
