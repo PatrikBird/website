@@ -5,7 +5,7 @@ const props = defineProps<{pic: string, widepic: string, alt: string}>()
 
 <template>
   <div>
-    <nuxt-picture>
+    <picture>
       <source
         :srcset="widepic"
         sizes="(min-width: 1300px) 80vw"
@@ -13,6 +13,6 @@ const props = defineProps<{pic: string, widepic: string, alt: string}>()
         :alt="alt"
       >
       <img :src="pic" :alt="alt" class="m-auto">
-    </nuxt-picture>
+    </picture>
   </div>
 </template>
