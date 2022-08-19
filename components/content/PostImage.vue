@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps<{ pic: string; alt: string }>()
 </script>
 
