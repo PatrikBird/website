@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxtjs/design-tokens/module',
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxt/image-edge'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {

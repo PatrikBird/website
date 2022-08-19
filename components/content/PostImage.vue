@@ -4,11 +4,12 @@ const props = defineProps<{ pic: string; alt: string }>()
 
 <template>
   <figure>
-    <img :src="pic" :alt="alt" width="600" height="400">
-    <figcaption>
-      <slot>
-        <p>no caption provided</p>
-      </slot>
-    </figcaption>
+    <nuxt-img :src="pic" :alt="alt">
+      <figcaption>
+        <slot>
+          <p>no caption provided</p>
+        </slot>
+      </figcaption>
+    </nuxt-img>
   </figure>
 </template>
