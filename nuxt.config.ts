@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     }
   },
   build: {
-    transpile: ['@headlessui/vue', 'tailwindcss/typography']
+    transpile: ['tailwindcss/typography']
   },
   // Coming soon in RC7
   experimental: {
