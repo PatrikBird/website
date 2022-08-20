@@ -1,16 +1,16 @@
 <script setup>
-import { OnClickOutside } from '@vueuse/components'
+// import { OnClickOutside } from '@vueuse/components'
 
 const { navigation } = useContent()
 const theme = useTheme()
 
-const mobileIsOpen = ref(false)
+// const mobileIsOpen = ref(false)
 </script>
 
 <template>
-  <div class="top-0 sticky z-40">
-    <OnClickOutside @trigger="mobileIsOpen = false">
-      <nav class="shadow bg-primary-50 dark:bg-primary-800">
+  <div class="top-0 z-40 text-primary-800">
+    <!-- <OnClickOutside @trigger="mobileIsOpen = false"> -->
+      <nav class="dark:bg-primary-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex">
@@ -27,7 +27,7 @@ const mobileIsOpen = ref(false)
                 >
               </div>
               <div
-                class="hidden sm:ml-6 sm:flex sm:space-x-8 text-primary-700 dark:text-primary-200"
+                class="ml-6 flex space-x-8 dark:text-primary-200"
               >
                 <!-- Navigation -->
                 <NuxtLink
@@ -35,20 +35,20 @@ const mobileIsOpen = ref(false)
                   :key="link._path"
                   :to="link._path"
                   active-class="active-navbar-link"
-                  class="border-transparent text-primary hover:border-gray-300 hover:text-gray-700 dark:text-primary-100 dark:hover:text-primary-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  class="border-transparent hover:border-gray-300 hover:text-gray-700 dark:text-primary-100 dark:hover:text-primary-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                 >
                   {{ link.title }}
                 </NuxtLink>
               </div>
             </div>
             <div
-              class="hidden sm:ml-6 sm:flex sm:items-center space-x-3 transition text-primary-500"
+              class="ml-6 flex items-center space-x-4 transition"
             >
               <a
                 v-if="theme.socials?.twitter"
                 :href="`https://twitter.com/${theme.socials?.twitter}`"
                 title="Twitter"
-                class="dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300"
+                class="hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
               >
                 <Icon name="line-md:twitter" />
               </a>
@@ -56,22 +56,22 @@ const mobileIsOpen = ref(false)
                 v-if="theme.socials?.github"
                 :href="`https://github.com/${theme.socials?.github}`"
                 title="GitHub"
-                class="dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300"
+                class="hover:text-primary-700 dark:text-primary-100  dark:hover:text-primary-300"
               >
                 <Icon name="line-md:github-loop" />
               </a>
               <ColorModeSwitch
-                class="dark:text-primary-100 hover:text-primary-700 dark:hover:text-primary-300"
+                class="hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
               />
             </div>
 
             <!-- Mobile menu -->
-            <div class="-mr-2 flex items-center sm:hidden gap-4">
+            <!-- <div class="-mr-2 flex items-center sm:hidden gap-4">
               <ColorModeSwitch
-                class="inline-flex items-center justify-center text-primary hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
+                class="inline-flex items-center justify-center hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
               />
               <button
-                class="inline-flex items-center justify-center text-primary hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="inline-flex items-center justify-center hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 @click="mobileIsOpen = !mobileIsOpen"
               >
                 <span class="sr-only">Open main menu</span>
@@ -82,25 +82,25 @@ const mobileIsOpen = ref(false)
                 />
                 <Icon v-else name="clarity:times-line" aria-hidden="true" />
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
 
-        <div v-show="mobileIsOpen" class="sm:hidden">
-          <div class="pt-2 pb-3 space-y-1">
+        <!-- <div v-show="mobileIsOpen" class="sm:hidden">
+          <div class="pt-2 pb-3 space-y-1 text-primary-800">
             <NuxtLink
               v-for="link of navigation"
               :key="link._path"
               :to="link._path"
               active-class="active-navbar-link-mobile"
-              class="border-transparent text-primary hover:text-primary-700 hover:border-gray-300 dark:text-primary-100 dark:hover:text-primary-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              class="border-transparent hover:text-primary-700 hover:border-gray-300 dark:text-primary-100 dark:hover:text-primary-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               @click="mobileIsOpen = false"
             >
               {{ link.title }}
             </NuxtLink>
           </div>
-        </div>
+        </div> -->
       </nav>
-    </OnClickOutside>
+    <!-- </OnClickOutside> -->
   </div>
 </template>
