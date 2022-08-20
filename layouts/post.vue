@@ -1,11 +1,9 @@
 <template>
-  <div class="py-2 m-auto sm:shadow dark:bg-primary-800 sm:rounded">
-    <main class="px-2 mx-auto prose prose-gray text-left text-primary dark:text-primary-100 max-w-7xl dark:prose-invert">
-      <slot>
-        <h1 class="text-2xl">
-          Blog post not found
-        </h1>
-      </slot>
+  <div class="px-6 pb-16 pt-10 sm:px-6 mx-auto py-2 m-auto mx-auto lg:pl-8 dark:bg-primary-800 sm:rounded">
+    <main class="text-base max-w-prose prose prose-gray text-left max-w-7xl dark:prose-invert">
+      <article>
+        <slot />
+      </article>
     </main>
   </div>
 </template>
