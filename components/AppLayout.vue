@@ -11,6 +11,6 @@
 
 <style lang="postcss">
 body {
-  @apply bg-primary-50 dark:bg-primary-800;
+  @apply bg-white dark:bg-primary-800;
 }
 </style>
