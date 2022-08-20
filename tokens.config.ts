@@ -18,8 +18,12 @@ export default defineTokens({
       500: { value: '#78716c' },
       600: { value: '#57534e' },
       700: { value: '#44403c' },
-      800: { value: '#292524' },
+      800: { value: '#242529' },
       900: { value: '#1c1917' }
+    },
+    accent: {
+      DEFAULT: {value: '#4bc4a0'},
+      50: { value: '#ff0000' },
     }
   }
 })

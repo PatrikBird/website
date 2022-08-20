@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: $dt('colors.primary')
+        primary: $dt('colors.primary'),
+        accent: $dt('colors.accent')
       }
     }
   }
