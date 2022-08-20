@@ -4,7 +4,7 @@
 
 @layer components {
   .active-navbar-link {
-    @apply border-indigo-500 border-b-2 !important;
+    @apply border-accent border-b-2 !important;
   }
   .active-navbar-link-mobile {
     @apply border-indigo-500 !important;

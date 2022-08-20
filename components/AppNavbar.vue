@@ -35,20 +35,20 @@ const theme = useTheme()
                   :key="link._path"
                   :to="link._path"
                   active-class="active-navbar-link"
-                  class="border-transparent hover:border-gray-300 hover:text-gray-700 dark:text-primary-100 dark:hover:text-primary-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  class="border-transparent hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                 >
                   {{ link.title }}
                 </NuxtLink>
               </div>
             </div>
             <div
-              class="ml-6 flex items-center space-x-4 transition"
+              class="flex items-center space-x-4"
             >
               <a
                 v-if="theme.socials?.twitter"
                 :href="`https://twitter.com/${theme.socials?.twitter}`"
                 title="Twitter"
-                class="hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
+                class="dark:text-primary-100"
               >
                 <Icon name="line-md:twitter" />
               </a>
@@ -56,12 +56,12 @@ const theme = useTheme()
                 v-if="theme.socials?.github"
                 :href="`https://github.com/${theme.socials?.github}`"
                 title="GitHub"
-                class="hover:text-primary-700 dark:text-primary-100  dark:hover:text-primary-300"
+                class="dark:text-primary-100"
               >
                 <Icon name="line-md:github-loop" />
               </a>
               <ColorModeSwitch
-                class="hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
+                class="dark:text-primary-100"
               />
             </div>
 
