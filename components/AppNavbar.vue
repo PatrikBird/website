@@ -11,7 +11,7 @@ const theme = useTheme()
   <div class="top-0 z-40 text-primary-800">
     <!-- <OnClickOutside @trigger="mobileIsOpen = false"> -->
       <nav class="dark:bg-primary-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-none mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex">
               <div class="flex-shrink-0 flex items-center">
@@ -30,10 +30,10 @@ const theme = useTheme()
                   alt="Workflow"
                 > -->
               </div>
-              <div
+              <!-- <div
                 class="ml-6 flex space-x-8 dark:text-primary-200"
               >
-                <!-- Navigation -->
+                Navigation
                 <NuxtLink
                   v-for="link of navigation"
                   :key="link._path"
@@ -43,11 +43,20 @@ const theme = useTheme()
                 >
                   {{ link.title }}
                 </NuxtLink>
-              </div>
+              </div> -->
             </div>
             <div
-              class="flex items-center space-x-4"
+              class="flex items-center space-x-8"
             >
+            <NuxtLink
+                  v-for="link of navigation"
+                  :key="link._path"
+                  :to="link._path"
+                  active-class="active-navbar-link"
+                  class="border-transparent hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                >
+                  {{ link.title }}
+                </NuxtLink>
               <a
                 v-if="theme.socials?.twitter"
                 :href="`https://twitter.com/${theme.socials?.twitter}`"
