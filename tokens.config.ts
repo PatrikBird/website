@@ -17,7 +17,7 @@ export default defineTokens({
       400: { value: '#a8a29e' },
       500: { value: '#78716c' },
       600: { value: '#57534e' },
-      700: { value: '#44403c' },
+      700: { value: '#2D2E33' },
       800: { value: '#242529' },
       900: { value: '#1c1917' }
     },

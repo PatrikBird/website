@@ -30,7 +30,7 @@ definePageMeta({
             v-for="article in list"
             :key="article._path"
             :to="article._path"
-            class="flex flex-col no-underline rounded-lg shadow-lg overflow-hidden dark:bg-primary-900 duration-100 ease-in-out transform hover:scale-105"
+            class="flex flex-col no-underline rounded-lg shadow-lg overflow-hidden dark:bg-primary-700"
           >
             <div class="flex-shrink-0">
               <img
@@ -40,7 +40,7 @@ definePageMeta({
               />
             </div>
             <div
-              class="flex-1 p-6 flex flex-col justify-between dark:bg-primary-900"
+              class="flex-1 px-6 pb-6 flex flex-col justify-between dark:bg-primary-700"
             >
               <div class="flex-1">
                 <p class="text-xl font-semibold">
