@@ -19,6 +19,8 @@ const theme = useTheme()
                   <img
                     class="h-8 w-auto"
                     src="/logo.webp"
+                    width="48"
+                    height="48"
                     alt="logo"
                   >
                 </NuxtLink>
