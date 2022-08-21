@@ -15,16 +15,18 @@ const theme = useTheme()
           <div class="flex justify-between h-16">
             <div class="flex">
               <div class="flex-shrink-0 flex items-center">
-                <img
-                  class="block lg:hidden h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt="Workflow"
-                >
-                <img
-                  class="hidden lg:block h-8 w-auto"
+                <NuxtLink to="/">
+                  <img
+                    class="h-8 w-auto"
+                    src="/logo.webp"
+                    alt="logo"
+                  >
+                </NuxtLink>
+                <!-- <img
+                  class="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                   alt="Workflow"
-                >
+                > -->
               </div>
               <div
                 class="ml-6 flex space-x-8 dark:text-primary-200"
