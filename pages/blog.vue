@@ -36,6 +36,8 @@ definePageMeta({
               <img
                 class="h-48 w-full object-cover"
                 :src="article.imageUrl"
+                width="630"
+                height="290"
                 alt=""
               />
             </div>
