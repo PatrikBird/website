@@ -10,27 +10,21 @@ const theme = useTheme()
 <template>
   <div class="top-0 z-40 text-primary-800">
     <!-- <OnClickOutside @trigger="mobileIsOpen = false"> -->
-      <nav class="dark:bg-primary-800">
-        <div class="max-w-none mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between h-16">
-            <div class="flex">
-              <div class="flex-shrink-0 flex items-center">
-                <NuxtLink to="/">
-                  <img
-                    class="h-8 w-auto"
-                    src="/logo.webp"
-                    width="48"
-                    height="48"
-                    alt="logo"
-                  >
-                </NuxtLink>
-                <!-- <img
+    <nav class="dark:bg-primary-800">
+      <div class="max-w-none mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <div class="flex-shrink-0 flex items-center">
+              <NuxtLink to="/">
+                <img class="h-8 w-auto" src="/logo.webp" width="48" height="48" alt="logo">
+              </NuxtLink>
+              <!-- <img
                   class="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                   alt="Workflow"
                 > -->
-              </div>
-              <!-- <div
+            </div>
+            <!-- <div
                 class="ml-6 flex space-x-8 dark:text-primary-200"
               >
                 Navigation
@@ -44,42 +38,25 @@ const theme = useTheme()
                   {{ link.title }}
                 </NuxtLink>
               </div> -->
-            </div>
-            <div
-              class="flex items-center space-x-8"
-            >
-            <NuxtLink
-                  v-for="link of navigation"
-                  :key="link._path"
-                  :to="link._path"
-                  active-class="active-navbar-link"
-                  class="border-transparent hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                >
-                  {{ link.title }}
-                </NuxtLink>
-              <a
-                v-if="theme.socials?.twitter"
-                :href="`https://twitter.com/${theme.socials?.twitter}`"
-                title="Twitter"
-                class="dark:text-primary-100"
-              >
-                <Icon name="line-md:twitter" />
-              </a>
-              <a
-                v-if="theme.socials?.github"
-                :href="`https://github.com/${theme.socials?.github}`"
-                title="GitHub"
-                class="dark:text-primary-100"
-              >
-                <Icon name="line-md:github-loop" />
-              </a>
-              <ColorModeSwitch
-                class="dark:text-primary-100"
-              />
-            </div>
+          </div>
+          <div class="flex items-center space-x-8">
+            <NuxtLink v-for="link of navigation" :key="link._path" :to="link._path" active-class="active-navbar-link"
+              class="border-transparent hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+              {{ link.title }}
+            </NuxtLink>
+            <a v-if="theme.socials?.twitter" :href="`https://twitter.com/${theme.socials?.twitter}`" title="Twitter"
+              class="dark:text-primary-100">
+              <Icon name="line-md:twitter" />
+            </a>
+            <a v-if="theme.socials?.github" :href="`https://github.com/${theme.socials?.github}`" title="GitHub"
+              class="dark:text-primary-100">
+              <Icon name="line-md:github-loop" />
+            </a>
+            <ColorModeSwitch class="dark:text-primary-100" />
+          </div>
 
-            <!-- Mobile menu -->
-            <!-- <div class="-mr-2 flex items-center sm:hidden gap-4">
+          <!-- Mobile menu -->
+          <!-- <div class="-mr-2 flex items-center sm:hidden gap-4">
               <ColorModeSwitch
                 class="inline-flex items-center justify-center hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
               />
@@ -96,10 +73,10 @@ const theme = useTheme()
                 <Icon v-else name="clarity:times-line" aria-hidden="true" />
               </button>
             </div> -->
-          </div>
         </div>
+      </div>
 
-        <!-- <div v-show="mobileIsOpen" class="sm:hidden">
+      <!-- <div v-show="mobileIsOpen" class="sm:hidden">
           <div class="pt-2 pb-3 space-y-1 text-primary-800">
             <NuxtLink
               v-for="link of navigation"
@@ -113,7 +90,7 @@ const theme = useTheme()
             </NuxtLink>
           </div>
         </div> -->
-      </nav>
+    </nav>
     <!-- </OnClickOutside> -->
   </div>
 </template>
