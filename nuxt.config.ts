@@ -23,7 +23,12 @@ export default defineNuxtConfig({
     }
   },
   build: {
-    transpile: ['tailwindcss/typography']
+    transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps']
+  },
+  runtimeConfig: {
+    public: {
+      googleMapsApiKey: '',
+    }
   },
   app: {
     // theme: {
