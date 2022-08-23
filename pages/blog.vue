@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import GoogleMaps from '~~/components/GoogleMaps.vue';
 definePageMeta({
   layout: "fullwidth",
   documentDriven: {
@@ -19,7 +18,6 @@ definePageMeta({
       atque, ducimus sed.
     </p>
     <div class="max-w-7xl mx-auto">
-      <GoogleMaps></GoogleMaps>
       <div class="mt-12 max-w-lg mx-auto grid gap-4 lg:grid-cols-3 lg:max-w-none">
         <ContentList v-slot="{ list }" path="/blog/" :query="{ sort: { date: -1 } }">
           <NuxtLink v-for="article in list" :key="article._path" :to="article._path"

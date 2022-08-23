@@ -1,10 +1,12 @@
 <script setup lang='ts'>
-// const openedMarkerID = ref(null);
-const center = ref({ lat: 49.45421, lng: 11.07752 });
+
+const props = defineProps<{ lat: number, lng: number }>()
+
+const center = ref({ lat: props.lat, lng: props.lng });
 const marker = {
   id: 'nbg',
   position: {
-    lat: 49.45421, lng: 11.07752
+    lat: props.lat, lng: props.lng
   },
 }
 // const markers = ref({
