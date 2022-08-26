@@ -1,7 +1,7 @@
 <template>
   <div class="sm:pb-10">
     <Html lang="en" />
-    <Meta property="og:image" content="/cover.jpg" />
+    <Meta property="og:image" content="/test.jpg" />
     <Meta name="twitter:card" content="summary_large_image" />
     <AppLoadingBar />
     <AppNavbar />
