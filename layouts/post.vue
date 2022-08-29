@@ -1,9 +1,9 @@
 <template>
-  <div class="px-6 pb-16 pt-10 sm:px-6 mx-auto py-2 m-auto mx-auto lg:pl-8 dark:bg-primary-800 sm:rounded">
-    <main class="text-base max-w-prose prose prose-gray text-left max-w-7xl dark:prose-invert">
-      <article>
-        <slot />
-      </article>
+  <ReadProgressBar />
+  <div class="max-w-3xl px-4 py-10 m-auto sm:px-8 sm:pt-14 dark:bg-primary-800 sm:rounded">
+    <main class="prose prose-gray dark:prose-invert max-w-none">
+      <slot />
+      <BlogPostFooter />    
     </main>
   </div>
 </template>
