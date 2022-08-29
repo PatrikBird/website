@@ -1,11 +1,12 @@
 <template>
   <div>
     <ReadProgressBar />
+    <ScrollToTop />
     <div class="max-w-3xl px-4 py-10 m-auto sm:px-8 sm:pt-14 dark:bg-primary-800 sm:rounded">
-      <main class="prose prose-gray dark:prose-invert max-w-none">
+      <article class="prose prose-gray dark:prose-invert max-w-none">
         <slot />
         <BlogPostFooter />
-      </main>
+      </article>
     </div>
   </div>
 </template>
