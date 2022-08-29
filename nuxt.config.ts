@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    '@nuxt/image-edge'
+    '@nuxt/image-edge',
+    '@nuxtjs/critters',
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
@@ -27,7 +28,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      googleMapsApiKey: '',
+      googleMapsApiKey: '',  // will be injected in vueGoogleMaps plugin
     }
   },
   app: {
