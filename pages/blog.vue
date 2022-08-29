@@ -1,5 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
+  title: 'Blog',
   layout: "fullwidth",
   documentDriven: {
     page: false,
