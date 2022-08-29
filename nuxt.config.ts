@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxt/image-edge',
-    '@nuxtjs/critters',
+    '@nuxtjs/critters'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     documentDriven: true,
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-      theme: 'vitesse-dark',
+      theme: 'vitesse-dark'
     }
   },
   build: {
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      googleMapsApiKey: '',  // will be injected in vueGoogleMaps plugin
+      googleMapsApiKey: '' // will be injected in vueGoogleMaps plugin
     }
   },
   app: {

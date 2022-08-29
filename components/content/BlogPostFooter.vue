@@ -7,14 +7,20 @@ function scrollToTop() {
 </script>
 
 <template>
-<div class="flex justify-between">
-  <NuxtLink
-  :to="route.path.split('/').slice(0, -1).join('/') || '/'"
-  title="Zurück zum Blog"
-  class="font-mono no-underline opacity-75 hover:opacity-100">Zum Blog</NuxtLink>
-  <NuxtLink
-  class="font-mono no-underline opacity-75 hover:opacity-100 hover:cursor-pointer"
-  title="Scroll to top"
-  @click="scrollToTop"><Icon name="mdi-light:arrow-up-circle" /></NuxtLink>
-</div>
+  <div class="flex justify-between">
+    <NuxtLink
+      :to="route.path.split('/').slice(0, -1).join('/') || '/'"
+      title="Zurück zum Blog"
+      class="font-mono no-underline opacity-75 hover:opacity-100"
+    >
+      Zum Blog
+    </NuxtLink>
+    <NuxtLink
+      class="font-mono no-underline opacity-75 hover:opacity-100 hover:cursor-pointer"
+      title="Scroll to top"
+      @click="scrollToTop"
+    >
+      <Icon name="mdi-light:arrow-up-circle" />
+    </NuxtLink>
+  </div>
 </template>

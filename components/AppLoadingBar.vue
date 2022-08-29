@@ -30,12 +30,12 @@ let _throttle = null
 let _cut
 
 // Functions
-function clear () {
+function clear() {
   _timer && clearInterval(_timer)
   _throttle && clearTimeout(_throttle)
   _timer = null
 }
-function start () {
+function start() {
   if (data.show) { return }
   clear()
   data.percent = 0
@@ -47,14 +47,14 @@ function start () {
     startTimer()
   }
 }
-function increase (num) {
+function increase(num) {
   data.percent = Math.min(100, Math.floor(data.percent + num))
 }
-function finish () {
+function finish() {
   data.percent = 100
   hide()
 }
-function hide () {
+function hide() {
   clear()
   setTimeout(() => {
     data.show = false
@@ -63,7 +63,7 @@ function hide () {
     }, 400)
   }, 500)
 }
-function startTimer () {
+function startTimer() {
   data.show = true
   _cut = 10000 / Math.floor(props.duration)
   _timer = setInterval(() => {

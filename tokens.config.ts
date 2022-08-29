@@ -22,8 +22,8 @@ export default defineTokens({
       900: { value: '#1c1917' }
     },
     accent: {
-      DEFAULT: {value: '#4bc4a0'},
-      50: { value: '#ff0000' },
+      DEFAULT: { value: '#4bc4a0' },
+      50: { value: '#ff0000' }
     }
   }
 })

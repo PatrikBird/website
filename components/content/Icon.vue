@@ -15,7 +15,7 @@ const isFetching = ref(false)
 const icon = computed<IconifyIcon | null>(() => state.value?.[props.name])
 const component = computed(() => nuxtApp.vueApp.component(props.name))
 
-async function loadIconComponent () {
+async function loadIconComponent() {
   if (component.value) {
     return
   }

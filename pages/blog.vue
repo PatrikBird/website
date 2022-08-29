@@ -1,11 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Blog',
-  layout: "fullwidth",
+  layout: 'fullwidth',
   documentDriven: {
-    page: false,
-  },
-});
+    page: false
+  }
+})
 </script>
 
 <template>
@@ -21,10 +21,14 @@ definePageMeta({
     <div class="max-w-7xl mx-auto">
       <div class="mt-12 max-w-lg mx-auto grid gap-4 lg:grid-cols-3 lg:max-w-none">
         <ContentList v-slot="{ list }" path="/blog/" :query="{ sort: { date: -1 } }">
-          <NuxtLink v-for="article in list" :key="article._path" :to="article._path"
-            class="flex flex-col no-underline rounded-lg shadow-lg hover:shadow-xl border dark:border-primary-700 overflow-hidden dark:bg-primary-700 transition-all duration-200 ease-in-out">
+          <NuxtLink
+            v-for="article in list"
+            :key="article._path"
+            :to="article._path"
+            class="flex flex-col no-underline rounded-lg shadow-lg hover:shadow-xl border dark:border-primary-700 overflow-hidden dark:bg-primary-700 transition-all duration-200 ease-in-out"
+          >
             <div class="flex-shrink-0">
-              <img class="h-48 w-full object-cover" :src="article.imageUrl" width="630" height="290" alt="" />
+              <img class="h-48 w-full object-cover" :src="article.imageUrl" width="630" height="290" alt="">
             </div>
             <div class="flex-1 px-6 pb-6 flex flex-col justify-between dark:bg-primary-700">
               <div class="flex-1">

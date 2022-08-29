@@ -40,16 +40,29 @@ const theme = useTheme()
               </div> -->
           </div>
           <div class="flex items-center space-x-8">
-            <NuxtLink v-for="link of navigation" :key="link._path" :to="link._path" active-class="active-navbar-link"
-              class="border-transparent opacity-75 hover:opacity-100 hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+            <NuxtLink
+              v-for="link of navigation"
+              :key="link._path"
+              :to="link._path"
+              active-class="active-navbar-link"
+              class="border-transparent opacity-75 hover:opacity-100 hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+            >
               {{ link.title }}
             </NuxtLink>
-            <a v-if="theme.socials?.twitter" :href="`https://twitter.com/${theme.socials?.twitter}`" title="Twitter"
-              class="opacity-75 hover:opacity-100 dark:text-primary-100">
+            <a
+              v-if="theme.socials?.twitter"
+              :href="`https://twitter.com/${theme.socials?.twitter}`"
+              title="Twitter"
+              class="opacity-75 hover:opacity-100 dark:text-primary-100"
+            >
               <Icon name="line-md:twitter" />
             </a>
-            <a v-if="theme.socials?.github" :href="`https://github.com/${theme.socials?.github}`" title="GitHub"
-              class="opacity-75 hover:opacity-100 dark:text-primary-100">
+            <a
+              v-if="theme.socials?.github"
+              :href="`https://github.com/${theme.socials?.github}`"
+              title="GitHub"
+              class="opacity-75 hover:opacity-100 dark:text-primary-100"
+            >
               <Icon name="line-md:github-loop" />
             </a>
             <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-primary-100" />
