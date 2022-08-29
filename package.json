@@ -16,6 +16,7 @@
     "@nuxt-themes/config": "npm:@nuxt-themes/config-edge@latest",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxtjs/color-mode": "^3.1.4",
+    "@nuxtjs/critters": "^0.3.1",
     "@nuxtjs/design-tokens": "npm:@nuxtjs/design-tokens-edge@latest",
     "@nuxtjs/tailwindcss": "^5.3.1",
     "@tailwindcss/typography": "^0.5.4",
