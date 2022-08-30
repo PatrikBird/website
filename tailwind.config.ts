@@ -10,7 +10,9 @@ export default {
     extend: {
       colors: {
         primary: $dt('colors.primary'),
-        accent: $dt('colors.accent')
+        secondary: $dt('colors.secondary'),
+        accent: $dt('colors.accent'),
+        info: $dt('colors.info')
       }
     }
   }
