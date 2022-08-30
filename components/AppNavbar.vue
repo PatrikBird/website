@@ -39,7 +39,7 @@ const theme = useTheme()
                 </NuxtLink>
               </div> -->
           </div>
-          <div class="flex items-center space-x-8">
+          <div class="flex items-center space-x-6">
             <NuxtLink
               v-for="link of navigation"
               :key="link._path"
@@ -52,6 +52,7 @@ const theme = useTheme()
             <a
               v-if="theme.socials?.twitter"
               :href="`https://twitter.com/${theme.socials?.twitter}`"
+              target="_blank"
               title="Twitter"
               class="opacity-75 hover:opacity-100 dark:text-primary-100"
             >
@@ -60,6 +61,7 @@ const theme = useTheme()
             <a
               v-if="theme.socials?.github"
               :href="`https://github.com/${theme.socials?.github}`"
+              target="_blank"
               title="GitHub"
               class="opacity-75 hover:opacity-100 dark:text-primary-100"
             >
