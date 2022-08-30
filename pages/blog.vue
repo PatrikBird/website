@@ -11,12 +11,10 @@ definePageMeta({
 <template>
   <NuxtLayout>
     <h2 class="text-3xl tracking-tight font-extrabold sm:text-4xl">
-      From the blog
+      Blog
     </h2>
     <p class="mt-3 max-w-2xl mx-auto text-xl sm:mt-4">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
-      labore natus <a href="http://google.de">Google.de</a>
-      atque, ducimus sed.
+      For now, the blog will be exclusively about my upcoming trip to inform friends and family and is therefore written in German.
     </p>
     <div class="max-w-7xl mx-auto">
       <div class="mt-12 max-w-lg mx-auto grid gap-4 lg:grid-cols-3 lg:max-w-none">
