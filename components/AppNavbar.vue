@@ -2,7 +2,7 @@
 // import { OnClickOutside } from '@vueuse/components'
 
 const { navigation } = useContent()
-const theme = useTheme()
+const appConfig = useAppConfig()
 
 // const mobileIsOpen = ref(false)
 </script>
@@ -50,8 +50,8 @@ const theme = useTheme()
               {{ link.title }}
             </NuxtLink>
             <a
-              v-if="theme.socials?.twitter"
-              :href="`https://twitter.com/${theme.socials?.twitter}`"
+              v-if="appConfig.socials?.twitter"
+              :href="`https://twitter.com/${appConfig.socials?.twitter}`"
               target="_blank"
               title="Twitter"
               class="opacity-75 hover:opacity-100 dark:text-primary-100"
@@ -59,8 +59,8 @@ const theme = useTheme()
               <Icon name="line-md:twitter" />
             </a>
             <a
-              v-if="theme.socials?.github"
-              :href="`https://github.com/${theme.socials?.github}`"
+              v-if="appConfig.socials?.github"
+              :href="`https://github.com/${appConfig.socials?.github}`"
               target="_blank"
               title="GitHub"
               class="opacity-75 hover:opacity-100 dark:text-primary-100"

@@ -3,12 +3,11 @@ import { defineNuxtConfig } from 'nuxt'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   modules: [
-    '@nuxt-themes/config/module',
     '@nuxtjs/design-tokens/module',
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    '@nuxt/image-edge',
+    'nuxt-icon',
     '@nuxtjs/critters'
   ],
   // https://color-mode.nuxtjs.org
@@ -30,15 +29,6 @@ export default defineNuxtConfig({
     public: {
       googleMapsApiKey: '' // will be injected in vueGoogleMaps plugin
     }
-  },
-  app: {
-    // theme: {
-    //   meta: {
-    //     name: 'Test Name',
-    //     author: 'Patrik Bird (@Atinux)',
-    //     description: 'A lightweight Nuxt theme to build a Markdown driven website, based on Nuxt Content, TailwindCSS and Iconify ✨'
-    //   }
-    // }
   },
   css: ['@/assets/css/main.css']
 })
