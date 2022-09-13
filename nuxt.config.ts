@@ -17,6 +17,12 @@ export default defineNuxtConfig({
   // https://content.nuxtjs.org
   content: {
     documentDriven: true,
+    markdown: {
+      toc: {
+        depth: 3,
+        searchDepth: 3
+      }
+    },
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
       theme: 'vitesse-dark'
