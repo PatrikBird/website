@@ -8,8 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    '@nuxtjs/critters',
-    '@nuxt/image-edge'
+    '@nuxtjs/critters'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {

@@ -24,7 +24,6 @@
     "nuxt-icon": "^0.1.4"
   },
   "devDependencies": {
-    "@nuxt/image-edge": "^1.0.0-27707824.1028381",
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "eslint": "^8.23.0",
     "nuxt": "^3.0.0-rc.9",
