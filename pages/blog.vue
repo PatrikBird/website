@@ -29,9 +29,12 @@ definePageMeta({
             <div class="flex-shrink-0">
               <img class="h-48 w-full object-cover" :src="article.imageUrl" width="630" height="290" alt="">
             </div>
-            <time class="text-xs italic">
-              {{ article.date }}
-            </time>
+            <span class="text-xs italic">
+              <time>
+                {{ article.date }}
+              </time>
+              / Dauer: {{ article.readingTime }}
+            </span>
             <div class="flex-1 px-6 pb-6 flex flex-col justify-between dark:bg-primary-700">
               <div class="flex-1">
                 <p class="text-xl mt-0">
