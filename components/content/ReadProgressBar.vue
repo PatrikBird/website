@@ -39,7 +39,7 @@ onUnmounted(() => {
   z-index: 50;
   top: 0;
   left: 0;
-  height: 4px;
+  height: 3px;
 }
 .read-progress-container .read-progress-bar {
   display: block;
