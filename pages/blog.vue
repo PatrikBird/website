@@ -24,7 +24,7 @@ definePageMeta({
             v-for="article in list"
             :key="article._path"
             :to="article._path"
-            class="flex flex-col no-underline rounded-lg shadow hover:shadow-xl bg-zinc-50 dark:bg-zinc-800/50 overflow-hidden hover:-translate-y-1 dark:bg-primary-700 transition-transform transition-shadow duration-200 ease-in-out"
+            class="flex flex-col no-underline rounded-lg shadow hover:shadow-xl bg-zinc-50 dark:bg-zinc-800/50 overflow-hidden hover:-translate-y-1 dark:bg-primary-700 transition-transform duration-200 ease-in-out"
           >
             <div class="flex-shrink-0">
               <img class="h-48 w-full object-cover" :src="article.imageUrl" width="630" height="290" alt="">
