@@ -1,10 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Blog',
   layout: 'fullwidth',
   documentDriven: {
     page: false
   }
+})
+useHead({
+  title: 'Blog - Patrik Bird'
 })
 </script>
 
@@ -31,7 +33,7 @@ definePageMeta({
                 <time>
                   {{ article.date }}
                 </time>
-                / Dauer: {{ article.readingTime }}
+                · Dauer: {{ article.readingTime }}
               </span>
               <img class="h-48 w-full object-cover mt-1" :src="article.imageUrl" width="630" height="290" alt="">
             </div>
