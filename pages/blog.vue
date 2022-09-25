@@ -27,20 +27,20 @@ definePageMeta({
             class="flex flex-col no-underline rounded-lg shadow hover:shadow-xl bg-zinc-50 dark:bg-zinc-800/50 overflow-hidden hover:-translate-y-1 dark:bg-primary-700 transition-transform duration-200 ease-in-out"
           >
             <div class="flex-shrink-0">
-              <img class="h-48 w-full object-cover" :src="article.imageUrl" width="630" height="290" alt="">
+              <span class="text-xs italic">
+                <time>
+                  {{ article.date }}
+                </time>
+                / Dauer: {{ article.readingTime }}
+              </span>
+              <img class="h-48 w-full object-cover mt-1" :src="article.imageUrl" width="630" height="290" alt="">
             </div>
-            <span class="text-xs italic">
-              <time>
-                {{ article.date }}
-              </time>
-              / Dauer: {{ article.readingTime }}
-            </span>
-            <div class="flex-1 px-6 pb-6 flex flex-col justify-between dark:bg-primary-700">
+            <div class="text-left flex-1 px-6 pb-6 flex flex-col justify-between dark:bg-primary-700">
               <div class="flex-1">
                 <p class="text-xl mt-0">
                   {{ article.title }}
                 </p>
-                <p class="mt-3 text-base">
+                <p class="mt-3 mb-2 text-sm">
                   {{ article.description }}
                 </p>
               </div>
