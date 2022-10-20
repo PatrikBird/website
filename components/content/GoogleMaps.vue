@@ -1,18 +1,26 @@
 <script setup lang='ts'>
-const props = defineProps<{ centerLat: number, centerLng: number, markersPos: [number, number] }>()
 
-const center = ref({ lat: props.centerLat, lng: props.centerLng })
-const markers = ref([
-  {
-    description: 'whatever',
-    id: '1',
-    position: {
-      lat: 13.7563,
-      lng: 100.5018
-    }
+const props = defineProps<{ lat: number, lng: number }>()
+
+const center = ref({ lat: props.lat, lng: props.lng })
+const marker = {
+  id: 'nbg',
+  position: {
+    lat: props.lat, lng: props.lng
   }
-]
-)
+}
+// const markers = ref({
+//   markers: [
+//     {
+//       description: "Google France",
+//       id: "1",
+//       position: {
+//         lat: 48.8773406,
+//         lng: 2.327774,
+//       },
+//     },
+//   ]
+// });
 </script>
 
 <template>
@@ -34,11 +42,13 @@ const markers = ref([
       }"
       style="width: 100%; height: 600px; margin: auto"
     >
-      <GMapMarker
-        v-for="marker in markers"
-        :key="marker.id"
-        :position="marker.position"
-      />
+      <GMapMarker :key="marker.id" :position="marker.position" />
+      <!-- <GMapMarker :key="index" v-for="(marker, index) in markers" :position="marker.position" :clickable="true"
+        :draggable="true" @click="openMarker(marker.id)">
+        <GMapInfoWindow :closeclick="true" @closeclick="openMarker(null)" :opened="openedMarkerID === marker.id">
+          <div>{{ marker.description }}</div>
+        </GMapInfoWindow>
+      </GMapMarker> -->
     </GMapMap>
   </div>
 </template>
