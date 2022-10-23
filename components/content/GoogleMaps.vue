@@ -10,7 +10,7 @@ function openMarker(id) {
 
 const markers = ref([
   {
-    description: 'Bangkok, Thailand',
+    description: 'Bangkok - 3 Nächte waren hier natürlich zu wenig, wir werden wohl zurück kommen.',
     id: '1',
     position: {
       lat: 13.76,
@@ -18,7 +18,7 @@ const markers = ref([
     }
   },
   {
-    description: 'Ayutthaya - the Ancient Capital of Thailand, and is one of the most visited historical sites in the country.',
+    description: 'Ayutthaya war leider überflutet als wir dort waren, wir konnten dennoch die meisten Tempelruinen besuchen. Nur einen Katzensprung von Bangkok entfernt!',
     id: '2',
     position: {
       lat: 14.37,
@@ -26,7 +26,7 @@ const markers = ref([
     }
   },
   {
-    description: 'Phitsanulok',
+    description: 'Die Stadt Phitsanulok ist eigentlich nichts besonderes und wird oft nur als Zwischenstopp genutzt. Wir hatten dennoch eine schöne Zeit dort.',
     id: '3',
     position: {
       lat: 16.82,
@@ -34,7 +34,7 @@ const markers = ref([
     }
   },
   {
-    description: 'Sukhothai new and old city (Historical Park) and Ramkhamhaeng National Park',
+    description: 'Sukhothai beheimatet wohl die schönsten Tempelruinen in ganz Thailand. Der Ramkhamhaeng National Park ist ebenfalls hier. Die Wanderung hatte es in sich!',
     id: '4',
     position: {
       lat: 17,
@@ -42,7 +42,7 @@ const markers = ref([
     }
   },
   {
-    description: 'Lampang',
+    description: 'Lampang - eine ruhige Stadt mit sehr wenig Touristen im Norden Thailands. Wir haben uns hier sehr viel ausgeruht.',
     id: '5',
     position: {
       lat: 18.29,
