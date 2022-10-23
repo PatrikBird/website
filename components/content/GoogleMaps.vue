@@ -10,7 +10,7 @@ function openMarker(id) {
 
 const markers = ref([
   {
-    description: 'Bangkok - 3 Nächte waren hier natürlich zu wenig, wir werden wohl zurück kommen.',
+    description: 'Bangkok - 3 Nächte waren hier natürlich zu wenig, wir werden wohl zurück kommen. Wir sind dann weiter mit dem Zug nach Ayutthaya.',
     id: '1',
     position: {
       lat: 13.76,
@@ -18,7 +18,7 @@ const markers = ref([
     }
   },
   {
-    description: 'Ayutthaya war leider überflutet als wir dort waren, wir konnten dennoch die meisten Tempelruinen besuchen. Nur einen Katzensprung von Bangkok entfernt!',
+    description: 'Ayutthaya war leider überflutet als wir dort waren, wir konnten dennoch die meisten Tempelruinen besuchen. Nur einen Katzensprung von Bangkok entfernt! Wir haben wieder den Zug genommen... diesmal nach Phitsanulok.',
     id: '2',
     position: {
       lat: 14.37,
@@ -26,7 +26,7 @@ const markers = ref([
     }
   },
   {
-    description: 'Die Stadt Phitsanulok ist eigentlich nichts besonderes und wird oft nur als Zwischenstopp genutzt. Wir hatten dennoch eine schöne Zeit dort.',
+    description: 'Die Stadt Phitsanulok ist eigentlich nichts besonderes und wird oft nur als Zwischenstopp genutzt. Wir hatten dennoch eine schöne Zeit dort. Anschließend mit dem Bus nach Sukhothai.',
     id: '3',
     position: {
       lat: 16.82,
@@ -34,7 +34,7 @@ const markers = ref([
     }
   },
   {
-    description: 'Sukhothai beheimatet wohl die schönsten Tempelruinen in ganz Thailand. Der Ramkhamhaeng National Park ist ebenfalls hier. Die Wanderung hatte es in sich!',
+    description: 'Sukhothai beheimatet wohl die schönsten Tempelruinen in ganz Thailand. Der Ramkhamhaeng National Park ist ebenfalls hier. Die Wanderung hatte es in sich! Weiter mit dem Bus nach Lampang.',
     id: '4',
     position: {
       lat: 17,
