@@ -1,56 +1,24 @@
 <script setup lang='ts'>
-
-const props = defineProps<{ lat: number, lng: number }>()
+const props = defineProps<{ lat: number, lng: number, pins: number[][] }>()
 const center = ref({ lat: props.lat, lng: props.lng })
+
+const markers = computed(() => {
+  return props.pins.map((pin, index) => {
+    return {
+      id: index,
+      description: pin[2],
+      position: {
+        lat: pin[0],
+        lng: pin[1]
+      }
+    }
+  })
+})
 
 const openedMarkerID = ref(null)
 function openMarker(id) {
   openedMarkerID.value = id
 }
-
-const markers = ref([
-  {
-    description: 'Bangkok - 3 Nächte waren hier natürlich zu wenig, wir werden wohl zurück kommen. Wir sind dann weiter mit dem Zug nach Ayutthaya.',
-    id: '1',
-    position: {
-      lat: 13.76,
-      lng: 100.5
-    }
-  },
-  {
-    description: 'Ayutthaya war leider überflutet als wir dort waren, wir konnten dennoch die meisten Tempelruinen besuchen. Nur einen Katzensprung von Bangkok entfernt! Wir haben wieder den Zug genommen... diesmal nach Phitsanulok.',
-    id: '2',
-    position: {
-      lat: 14.37,
-      lng: 100.59
-    }
-  },
-  {
-    description: 'Die Stadt Phitsanulok ist eigentlich nichts besonderes und wird oft nur als Zwischenstopp genutzt. Wir hatten dennoch eine schöne Zeit dort. Anschließend mit dem Bus nach Sukhothai.',
-    id: '3',
-    position: {
-      lat: 16.82,
-      lng: 100.26
-    }
-  },
-  {
-    description: 'Sukhothai beheimatet wohl die schönsten Tempelruinen in ganz Thailand. Der Ramkhamhaeng National Park ist ebenfalls hier. Die Wanderung hatte es in sich! Weiter mit dem Bus nach Lampang.',
-    id: '4',
-    position: {
-      lat: 17,
-      lng: 99.83
-    }
-  },
-  {
-    description: 'Lampang - eine ruhige Stadt mit sehr wenig Touristen im Norden Thailands. Wir haben uns hier sehr viel ausgeruht.',
-    id: '5',
-    position: {
-      lat: 18.29,
-      lng: 99.49
-    }
-  }
-]
-)
 </script>
 
 <template>
