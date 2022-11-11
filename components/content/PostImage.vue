@@ -5,7 +5,7 @@ const props = defineProps<{ pic: string; alt: string }>()
 
 <template>
   <figure>
-    <img :src="pic" :alt="alt" width="800" height="400">
+    <img :src="pic" loading="lazy" :alt="alt" width="800" height="400">
     <figcaption>
       <slot>
         <p>no caption provided</p>
