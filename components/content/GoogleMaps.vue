@@ -49,7 +49,9 @@ function openMarker(id) {
         @click="openMarker(marker.id)"
       >
         <GMapInfoWindow :closeclick="true" :opened="openedMarkerID === marker.id" @closeclick="openMarker(null)">
-          <div>{{ marker.description }}</div>
+          <div class="text-black">
+            {{ marker.description }}
+          </div>
         </GMapInfoWindow>
       </GMapMarker>
     </GMapMap>
