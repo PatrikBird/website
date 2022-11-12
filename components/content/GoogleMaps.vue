@@ -28,13 +28,17 @@ const openedMarkerID = ref(null)
 function openMarker(id) {
   openedMarkerID.value = id
 }
+
+const colorMode = useColorMode()
+const backgroundColor = computed(() => {
+  return colorMode.value === 'dark' ? '#525151' : '#f1f1f1'
+})
 </script>
 
 <template>
   <div>
     <GMapMap
       :center="center"
-      :zoom="15"
       :options="{
         zoomControl: false,
         mapTypeControl: false,
@@ -42,7 +46,7 @@ function openMarker(id) {
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: false,
-        backgroundColor: '#f1f1f1',
+        backgroundColor: backgroundColor,
         zoom: zoom,
         minZoom: 4,
         mapTypeId: 'terrain',
