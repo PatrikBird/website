@@ -1,5 +1,15 @@
 <script setup lang='ts'>
-const props = defineProps<{ lat: number, lng: number, pins: number[][] }>()
+// const props = defineProps<{ lat: number, lng: number, pins: number[][] }>()
+interface Props {
+  lat: number,
+  lng: number,
+  pins: number[][],
+  zoom: number,
+}
+const props = withDefaults(defineProps<Props>(), {
+  zoom: 6
+})
+
 const center = ref({ lat: props.lat, lng: props.lng })
 
 const markers = computed(() => {
@@ -34,7 +44,7 @@ function openMarker(id) {
         rotateControl: false,
         fullscreenControl: false,
         backgroundColor: '#f1f1f1',
-        zoom: 6,
+        zoom: zoom,
         minZoom: 4,
         mapTypeId: 'terrain',
       }"
