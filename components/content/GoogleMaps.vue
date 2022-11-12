@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-// const props = defineProps<{ lat: number, lng: number, pins: number[][] }>()
 interface Props {
   lat: number,
   lng: number,
