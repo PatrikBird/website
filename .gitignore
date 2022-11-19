@@ -10,3 +10,10 @@ dist
 .vscode/settings.json
 .DS_Store
 .vercel
+
+# Yarn
+.yarn/cache
+.yarn/*state*
+
+# Local History
+.history
