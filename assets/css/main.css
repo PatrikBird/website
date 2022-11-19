@@ -9,4 +9,8 @@
   .active-navbar-link-mobile {
     @apply border-indigo-500 !important;
   }
+
+  .read-progress-container .read-progress-bar {
+    @apply bg-secondary-500
+  }
 }

@@ -46,7 +46,6 @@ onUnmounted(() => {
   width: 0%;
   height: inherit;
   /* background: repeating-linear-gradient(to right, #00dc82 0%, #34cdfe 50%, #0047e1 100%); */
-  background: #58CDAF;
 }
 /* .read-progress-container .read-progress-bar.with-shadow {
   box-shadow: 0 0 4px 0 rgba(0, 255, 102, 1);

@@ -1,4 +1,4 @@
-import { $dt } from '@nuxtjs/design-tokens'
+import colors from 'tailwindcss/colors'
 
 export default {
   darkMode: 'class',
@@ -9,10 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: $dt('colors.primary'),
-        secondary: $dt('colors.secondary'),
-        accent: $dt('colors.accent'),
-        info: $dt('colors.info')
+        primary: colors.gray,
+        secondary: colors.teal,
+        accent: colors.green,
+        info: colors.yellow
       }
     }
   }

@@ -14,7 +14,7 @@ function scrollToTop() {
     <button
       type="button"
       :class="{ hidden: isHidden }"
-      class="fixed right-4 sm:right-12 bottom-4 sm:bottom-12 p-1 rounded-full shadow-sm text-white bg-accent hover:bg-accent-800"
+      class="fixed right-4 sm:right-12 bottom-4 sm:bottom-12 p-1 rounded-full shadow-sm text-white bg-secondary-500 hover:bg-secondary-700"
       @click="scrollToTop"
     >
       <Icon name="material-symbols:arrow-circle-up-outline-rounded" class="h-7 w-7" aria-hidden="true" />
