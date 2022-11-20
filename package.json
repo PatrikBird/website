@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "generate": "nuxi generate",
+    "generate": "node --version && nuxi generate",
     "preview": "nuxi preview",
     "lint": "eslint ."
   },
