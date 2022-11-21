@@ -21,7 +21,8 @@
     "@tailwindcss/typography": "0.5.8",
     "@vueuse/components": "9.5.0",
     "@vueuse/core": "9.5.0",
-    "nuxt-icon": "0.1.7"
+    "nuxt-icon": "0.1.7",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "10.0.0",
