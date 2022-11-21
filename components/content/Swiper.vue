@@ -12,28 +12,28 @@ const onSlideChange = () => {
 
 <template>
   <swiper
-    :slides-per-view="3"
-    :space-between="50"
+    :slides-per-view="1 "
+    :space-between="10"
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
     <swiper-slide>
-      <img src="https://picsum.photos/200/300" alt="random">
+      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
     </swiper-slide>
     <swiper-slide>
-      <img src="https://picsum.photos/200/300" alt="random">
+      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
     </swiper-slide>
     <swiper-slide>
-      <img src="https://picsum.photos/200/300" alt="random">
+      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
     </swiper-slide>
     <swiper-slide>
-      <img src="https://picsum.photos/200/300" alt="random">
+      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
     </swiper-slide>
     <swiper-slide>
-      <img src="https://picsum.photos/200/300" alt="random">
+      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
     </swiper-slide>
     <swiper-slide>
-      <img src="https://picsum.photos/200/300" alt="random">
+      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
     </swiper-slide>
   </swiper>
 </template>
