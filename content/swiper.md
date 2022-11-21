@@ -1,5 +1,5 @@
 ---
-navigation.title: ""
+navigation: false
 ---
 
 ::Swiper
