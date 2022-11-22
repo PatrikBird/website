@@ -1,3 +1,3 @@
-# My personal website in progress
+# My website and blog
 
-based on [Nuxt Content](https://content.nuxtjs.org), [TailwindCSS](https://tailwindcss.com) and [Iconify](https://iconify.design).
+made with [Nuxt 3](https://nuxt.com/)
