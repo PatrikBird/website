@@ -1,9 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'fullwidth',
-  documentDriven: {
-    page: false
-  }
+  layout: 'fullwidth'
 })
 useHead({
   title: 'Blog - Patrik Bird'
