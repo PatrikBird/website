@@ -67,7 +67,7 @@ const appConfig = useAppConfig()
             >
               <Icon name="line-md:github-loop" />
             </a>
-            <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-primary-100" />
+            <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-primary-100" title="Toggle color mode" />
           </div>
 
           <!-- Mobile menu -->

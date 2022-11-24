@@ -11,6 +11,7 @@ const route = useRoute()
         <NuxtLink
           class="group mb-8 flex h-10 w-10 lg:absolute lg:top-15 lg:-left-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20"
           :to="route.path.split('/').slice(0, -1).join('/') || '/'"
+          title="Back to blog"
         >
           <Icon name="line-md:arrow-small-left" class="opacity-75 group-hover:opacity-100 text-secondary-800 dark:text-primary-100" aria-hidden="true" />
         </NuxtLink>
