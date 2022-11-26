@@ -9,7 +9,10 @@ const { prev, next } = useContent()
         <div class="w-full border-t border-gray-300" />
       </div>
     </div>
-    <div class="flex flex-col justify-center pt-5 sm:flex-row sm:justify-between gap-3">
+    <h4 class="text-center pt-5">
+      Weitere Beiträge
+    </h4>
+    <div class="flex flex-col justify-center sm:flex-row sm:justify-between gap-3">
       <NuxtLink
         v-if="prev && prev._path.includes('blog')"
         :to="prev._path"
