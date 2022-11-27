@@ -2,38 +2,19 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 
-const onSwiper = (swiper) => {
-  console.log(swiper)
-}
-const onSlideChange = () => {
-  console.log('slide change')
-}
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const props = defineProps<{
+  picUrls: string[]
+}>()
 </script>
 
 <template>
   <swiper
-    :slides-per-view="1 "
+    :slides-per-view="1"
     :space-between="10"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
   >
-    <swiper-slide>
-      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
-    </swiper-slide>
-    <swiper-slide>
-      <img src="https://www.patbird.me/blog/first/temple_ruins.webp" alt="random">
+    <swiper-slide v-for="pic in picUrls" :key="pic">
+      <img :src="pic" alt="random">
     </swiper-slide>
   </swiper>
 </template>
