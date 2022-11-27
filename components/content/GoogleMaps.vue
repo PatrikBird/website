@@ -25,7 +25,7 @@ const markers = computed(() => {
 })
 
 const openedMarkerID = ref(null)
-function openMarker(id) {
+function openMarker(id: any) {
   openedMarkerID.value = id
 }
 
