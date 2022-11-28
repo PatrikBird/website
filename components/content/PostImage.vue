@@ -8,7 +8,7 @@ const props = defineProps<{ pic: string; alt: string }>()
     <img :src="pic" loading="lazy" :alt="alt" width="800" height="400">
     <figcaption>
       <slot>
-        <p>no caption provided</p>
+        <p>{{ alt }}</p>
       </slot>
     </figcaption>
   </figure>
