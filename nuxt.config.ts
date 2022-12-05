@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    '@nuxtjs/critters'
+    '@nuxtjs/critters',
+    '@nuxtjs/plausible'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
