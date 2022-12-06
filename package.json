@@ -15,21 +15,21 @@
     "@fawmi/vue-google-maps": "0.9.72",
     "@iconify/vue": "4.0.1",
     "@nuxt/content": "2.2.2",
-    "@nuxtjs/color-mode": "3.1.8",
-    "@nuxtjs/critters": "0.3.3",
+    "@nuxtjs/color-mode": "3.2.0",
+    "@nuxtjs/critters": "0.4.0",
     "@nuxtjs/tailwindcss": "6.1.3",
     "@tailwindcss/typography": "0.5.8",
-    "@vueuse/components": "9.5.0",
-    "@vueuse/core": "9.5.0",
-    "nuxt-icon": "0.1.7",
-    "swiper": "^8.4.5"
+    "@vueuse/components": "9.6.0",
+    "@vueuse/core": "9.6.0",
+    "nuxt-icon": "0.1.8",
+    "swiper": "8.4.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "12.0.0",
-    "@nuxtjs/plausible": "^0.2.0",
-    "eslint": "8.26.0",
+    "@nuxtjs/plausible": "0.2.0",
+    "eslint": "8.29.0",
     "nuxt": "3.0.0",
-    "typescript": "4.8.2"
+    "typescript": "4.9.3"
   },
   "packageManager": "pnpm@7.16.1"
 }
