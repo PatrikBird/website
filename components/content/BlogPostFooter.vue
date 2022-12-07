@@ -1,33 +1,51 @@
 <script setup lang='ts'>
 const { prev, next } = useContent()
+
+const hasTwoAdjacentBlogPosts = computed(() => {
+  return prev.value && prev.value._path.includes('blog') && next.value && next.value._path.includes('blog')
+})
 </script>
 
 <template>
-  <footer v-if="prev && prev._path.includes('blog') || next && next._path.includes('blog')">
-    <div class="relative mb-8">
-      <div class="absolute inset-0 flex items-center" aria-hidden="true">
-        <div class="w-full border-t border-gray-300" />
-      </div>
-    </div>
-    <h4 class="text-center pt-5">
+  <footer class="py-12">
+    <p class="text-center text-2xl">
       Weitere Beiträge
-    </h4>
-    <div class="flex flex-col justify-center sm:flex-row sm:justify-between gap-3">
+    </p>
+    <div
+      class="rounded-lg shadow-lg sm:grid"
+      :class="{'sm:grid-cols-2': hasTwoAdjacentBlogPosts}"
+    >
       <NuxtLink
         v-if="prev && prev._path.includes('blog')"
         :to="prev._path"
-        class="m-auto sm:m-0 truncate no-underline opacity-75 hover:opacity-100"
+        class="no-underline flex flex-col border-b border-primary-500 py-6 text-center sm:border-0 opacity-75 hover:opacity-100"
+        :class="{'sm:border-r': hasTwoAdjacentBlogPosts}"
       >
-        <Icon name="line-md:arrow-small-left" class="opacity-75 hover:opacity-100" />
-        {{ prev.title }}
+        <dd class="order-0 leading-6 text-sm">
+          {{ prev.date }}
+        </dd>
+        <dd class="order-1 text-3xl font-bold tracking-tight text-secondary-600">
+          {{ prev.title }}
+        </dd>
+        <dd class="order-2 mt-2 font-medium leading-6">
+          {{ prev.description }}
+        </dd>
       </NuxtLink>
-      <div v-else />
-
-      <NuxtLink v-if="next" :to="next._path" class="m-auto sm:m-0 truncate no-underline opacity-75 hover:opacity-100">
-        {{ next.title }}
-        <Icon name="line-md:arrow-small-left" class="rotate-180 opacity-75 hover:opacity-100" />
+      <NuxtLink
+        v-if="next && next._path.includes('blog')"
+        :to="next._path"
+        class="no-underline flex flex-col py-6 text-center opacity-75 hover:opacity-100"
+      >
+        <dd class="order-0 leading-6 text-sm">
+          {{ next.date }}
+        </dd>
+        <dd class="order-1 text-3xl font-bold tracking-tight text-secondary-600">
+          {{ next.title }}
+        </dd>
+        <dd class="order-2 mt-2 font-medium leading-6">
+          {{ next.description }}
+        </dd>
       </NuxtLink>
-      <div v-else />
     </div>
   </footer>
 </template>
