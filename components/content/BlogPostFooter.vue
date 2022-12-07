@@ -18,7 +18,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
       <NuxtLink
         v-if="prev && prev._path.includes('blog')"
         :to="prev._path"
-        class="no-underline flex flex-col border-primary-500 py-6 text-center sm:border-0 opacity-75 hover:opacity-100"
+        class="no-underline flex flex-col border-primary-500 p-6 text-center sm:border-0 opacity-75 hover:opacity-100"
         :class="{'sm:border-r': hasTwoAdjacentBlogPosts, 'border-b': hasTwoAdjacentBlogPosts}"
       >
         <dd class="order-0 leading-6 text-sm">
