@@ -7,7 +7,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
 </script>
 
 <template>
-  <footer class="py-12">
+  <footer class="py-10">
     <p class="text-center text-2xl">
       Weitere Beiträge
     </p>
@@ -24,10 +24,10 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         <dd class="order-0 leading-6 text-sm">
           {{ prev.date }}
         </dd>
-        <dd class="order-1 text-3xl font-bold tracking-tight text-secondary-600">
+        <dd class="order-1 text-xl font-bold tracking-tight text-secondary-600">
           {{ prev.title }}
         </dd>
-        <dd class="order-2 mt-2 font-medium leading-6">
+        <dd class="order-2 mt-2 leading-6">
           {{ prev.description }}
         </dd>
       </NuxtLink>
@@ -39,10 +39,10 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         <dd class="order-0 leading-6 text-sm">
           {{ next.date }}
         </dd>
-        <dd class="order-1 text-3xl font-bold tracking-tight text-secondary-600">
+        <dd class="order-1 text-xl font-bold tracking-tight text-secondary-600">
           {{ next.title }}
         </dd>
-        <dd class="order-2 mt-2 font-medium leading-6">
+        <dd class="order-2 mt-2 leading-6">
           {{ next.description }}
         </dd>
       </NuxtLink>
