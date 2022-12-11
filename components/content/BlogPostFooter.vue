@@ -12,14 +12,13 @@ const hasTwoAdjacentBlogPosts = computed(() => {
       Weitere Beiträge
     </p>
     <div
-      class="rounded-lg shadow-lg sm:grid"
+      class="rounded-lg sm:grid gap-1"
       :class="{'sm:grid-cols-2': hasTwoAdjacentBlogPosts}"
     >
       <NuxtLink
         v-if="prev && prev._path.includes('blog')"
         :to="prev._path"
-        class="no-underline flex flex-col border-primary-500 p-6 text-center sm:border-0 opacity-75 hover:opacity-100"
-        :class="{'sm:border-r': hasTwoAdjacentBlogPosts, 'border-b': hasTwoAdjacentBlogPosts}"
+        class="no-underline shadow hover:shadow-lg flex flex-col border-primary-500 p-6 text-center sm:border-0 opacity-75 hover:opacity-100"
       >
         <dd class="order-0 leading-6 text-sm">
           {{ prev.date }}
@@ -34,7 +33,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
       <NuxtLink
         v-if="next && next._path.includes('blog')"
         :to="next._path"
-        class="no-underline flex flex-col py-6 text-center opacity-75 hover:opacity-100"
+        class="no-underline shadow hover:shadow-lg flex flex-col py-6 text-center opacity-75 hover:opacity-100"
       >
         <dd class="order-0 leading-6 text-sm">
           {{ next.date }}
