@@ -9,8 +9,10 @@
   .active-navbar-link-mobile {
     @apply border-indigo-500 !important;
   }
-
   .read-progress-container .read-progress-bar {
-    @apply bg-secondary-500
+    @apply bg-secondary-500;
+  }
+  .action-btn {
+    @apply inline-block rounded-full items-center justify-center bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20;
   }
 }
