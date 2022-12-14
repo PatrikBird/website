@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import { useTimeAgo } from '@vueuse/core'
+
 definePageMeta({
   layout: 'fullwidth'
 })
 useHead({
   title: 'Blog - Patrik Bird'
 })
+
+const { data } = await useFetch('/api/pageview')
+const time = useTimeAgo(computed(() => data.value!.startAt))
 </script>
 
 <template>
@@ -50,5 +55,10 @@ useHead({
         </div>
       </div>
     </NuxtLayout>
+    <div class="text-center opacity-10">
+      <span>{{ data!.pageview }}</span>
+      page views since
+      <span>{{ time }}</span>
+    </div>
   </div>
 </template>
