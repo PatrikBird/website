@@ -12,8 +12,8 @@ const hasTwoAdjacentBlogPosts = computed(() => {
       Weitere Beiträge
     </p>
     <div
-      class="rounded-lg sm:grid gap-1"
-      :class="{'sm:grid-cols-2': hasTwoAdjacentBlogPosts}"
+      class="rounded-lg sm:grid gap-1 mx-auto"
+      :class="{'sm:grid-cols-2': hasTwoAdjacentBlogPosts, 'max-w-lg': !hasTwoAdjacentBlogPosts}"
     >
       <NuxtLink
         v-if="prev && prev._path.includes('blog')"
