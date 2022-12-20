@@ -9,5 +9,6 @@
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnPaste": true,
   "emmet.excludeLanguages": [],
-  "eslint.format.enable": true
+  "eslint.format.enable": true,
+  "editor.rulers": [80,120]
 }
