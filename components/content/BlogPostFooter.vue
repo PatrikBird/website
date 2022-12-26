@@ -26,7 +26,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         <dd class="order-1 text-xl font-bold tracking-tight text-secondary-600">
           {{ prev.title }}
         </dd>
-        <dd class="order-2 mt-2 leading-6">
+        <dd class="order-2 mt-2 leading-6 px-4">
           {{ prev.description }}
         </dd>
       </NuxtLink>
@@ -41,7 +41,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         <dd class="order-1 text-xl font-bold tracking-tight text-secondary-600">
           {{ next.title }}
         </dd>
-        <dd class="order-2 mt-2 leading-6">
+        <dd class="order-2 mt-2 leading-6 px-4">
           {{ next.description }}
         </dd>
       </NuxtLink>
