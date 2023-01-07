@@ -7,6 +7,9 @@ export default {
   ],
   content: ['content/**/*.{md,yml,json,json5,csv}'],
   theme: {
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif']
+    },
     extend: {
       colors: {
         primary: colors.gray,
