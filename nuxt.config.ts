@@ -40,6 +40,7 @@ export default defineNuxtConfig({
       }
     }
   },
+  fontMetrics: { fonts: ['Poppins'] },
   build: {
     transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps']
   },
