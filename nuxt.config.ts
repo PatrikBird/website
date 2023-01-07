@@ -27,20 +27,15 @@ export default defineNuxtConfig({
       theme: 'vitesse-dark'
     }
   },
+  fontMetrics: {
+    fonts: ['Poppins', { family: 'Poppins', src: '/assets/fonts/Poppins-400.woff2' }]
+  },
   googleFonts: {
     download: true,
     families: {
-      Poppins: true,
-      Roboto: true,
-      'Josefin+Sans': true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [100, 400],
-        ital: [100]
-      }
+      Poppins: true
     }
   },
-  fontMetrics: { fonts: ['Poppins'] },
   build: {
     transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps']
   },
