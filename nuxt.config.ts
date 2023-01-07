@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/critters',
     '@nuxtjs/plausible',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/fontaine'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
