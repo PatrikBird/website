@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: Poppins, Roboto, system-ui, sans-serif;
+  }
+}
+
 @layer components {
   .active-navbar-link {
     @apply border-black dark:border-white border-b-2 !important;
