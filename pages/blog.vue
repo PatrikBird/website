@@ -14,7 +14,7 @@ useHead({
         Blog
       </h2>
       <p class="mt-3 max-w-2xl mx-auto text-xl sm:mt-4">
-        For now, the blog will be exclusively about my upcoming trip to inform friends and family and is therefore written
+        For now, the blog will be exclusively about my upcoming trip to update friends and family and is therefore written
         in German.
       </p>
       <div class="max-w-7xl mx-auto">
