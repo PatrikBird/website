@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-icon',
     '@nuxtjs/critters',
-    '@nuxtjs/plausible'
+    '@nuxtjs/plausible',
+    '@nuxtjs/web-vitals'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
