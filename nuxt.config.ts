@@ -5,9 +5,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-icon',
     '@nuxtjs/critters',
-    '@nuxtjs/plausible',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/fontaine'
+    '@nuxtjs/plausible'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
@@ -25,15 +23,6 @@ export default defineNuxtConfig({
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
       theme: 'vitesse-dark'
-    }
-  },
-  fontMetrics: {
-    fonts: ['Poppins', { family: 'Poppins', src: '/assets/fonts/Poppins-400.woff2' }]
-  },
-  googleFonts: {
-    download: true,
-    families: {
-      Poppins: true
     }
   },
   build: {
