@@ -1,6 +1,8 @@
-import colors from 'tailwindcss/colors'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const colors = require('tailwindcss/colors')
 
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: 'class',
   plugins: [
     require('@tailwindcss/typography')

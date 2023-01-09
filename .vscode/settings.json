@@ -11,5 +11,5 @@
   "emmet.excludeLanguages": [],
   "eslint.format.enable": true,
   "editor.rulers": [80,120],
-  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs"
+  "tailwindCSS.experimental.configFile": "tailwind.config.js"
 }
