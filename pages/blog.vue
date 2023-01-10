@@ -10,7 +10,7 @@ useHead({
 <template>
   <div>
     <NuxtLayout>
-      <h2 class="text-3xl tracking-tight font-extrabold sm:text-4xl">
+      <h2 class="text-3xl tracking-tight font-mont font-extrabold sm:text-4xl">
         Blog
       </h2>
       <p class="mt-3 max-w-2xl mx-auto text-xl sm:mt-4">
