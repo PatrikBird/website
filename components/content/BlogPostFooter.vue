@@ -8,7 +8,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
 
 <template>
   <footer class="py-10">
-    <p class="text-center text-2xl">
+    <p class="text-center text-2xl font-mont font-bold">
       Weitere Beiträge
     </p>
     <div
