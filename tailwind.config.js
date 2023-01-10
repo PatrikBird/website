@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans]
+        mont: ['Montserrat', ...defaultTheme.fontFamily.sans]
       },
       colors: {
         primary: colors.gray,
