@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-// import Swiper core and required modules
-import { Pagination, Lazy } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination } from 'swiper'
+import { Swiper as SwiperContainer, SwiperSlide } from 'swiper/vue'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps<{
   pics: string[][] // [src, alt]
 }>()
@@ -20,11 +18,11 @@ const images = computed(() => {
   })
 })
 
-const modules = [Pagination, Lazy]
+const modules = [Pagination]
 </script>
 
 <template>
-  <swiper
+  <swiper-container
     :modules="modules"
     :slides-per-view="1"
     :space-between="10"
@@ -36,5 +34,5 @@ const modules = [Pagination, Lazy]
         {{ image.alt }}
       </post-image>
     </swiper-slide>
-  </swiper>
+  </swiper-container>
 </template>
