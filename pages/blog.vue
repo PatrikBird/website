@@ -7,7 +7,7 @@ definePageMeta({
 useHead({
   title: 'Blog - Patrik Bird'
 })
-const query: QueryBuilderParams = { path: '/posts', sort: { _file: -1 } }
+const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
 </script>
 
 <template>
