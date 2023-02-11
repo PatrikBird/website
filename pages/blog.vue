@@ -24,7 +24,7 @@ useHead({
               v-for="article in list"
               :key="article._path"
               :to="article._path"
-              class="flex flex-col no-underline rounded-lg shadow hover:shadow-lg bg-zinc-50 dark:bg-zinc-800/50 overflow-hidden opacity-90 hover:opacity-100 dark:bg-primary-700 transition-opacity transition-shadow duration-100 ease-in-out"
+              class="flex flex-col no-underline rounded-lg shadow hover:shadow-lg bg-zinc-50 overflow-hidden opacity-90 hover:opacity-100 dark:bg-primary-700 transition-opacity duration-100 ease-in-out"
             >
               <div class="flex-shrink-0">
                 <span class="text-xs italic">
