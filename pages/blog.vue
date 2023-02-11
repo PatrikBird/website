@@ -1,10 +1,13 @@
 <script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+
 definePageMeta({
   layout: 'fullwidth'
 })
 useHead({
   title: 'Blog - Patrik Bird'
 })
+const query: QueryBuilderParams = { path: '/posts', sort: { _file: -1 } }
 </script>
 
 <template>
@@ -19,7 +22,7 @@ useHead({
       </p>
       <div class="max-w-7xl mx-auto">
         <div class="mt-12 max-w-lg mx-auto grid gap-4 lg:grid-cols-3 lg:max-w-none">
-          <ContentList v-slot="{ list }" path="/blog/" :query="{where: { draft: { $ne:true } }, sort: { _file: -1 } }">
+          <ContentList v-slot="{ list }" :query="query" path="/blog">
             <NuxtLink
               v-for="article in list"
               :key="article._path"
