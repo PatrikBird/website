@@ -4,7 +4,7 @@
     "files": ["*.vue", "*.ts"],
     "rules": {
       "space-before-function-paren": ["error", "never"],
-      "vue/multi-word-component-names": 0    
+      "vue/multi-word-component-names": 0
     }
   }
   ]
