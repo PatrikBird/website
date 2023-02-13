@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/web-vitals',
     '@nuxt/devtools',
+    '@nuxtjs/robots',
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
