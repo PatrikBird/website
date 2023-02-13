@@ -24,7 +24,7 @@ onUnmounted(() => {
 <template>
   <div class="read-progress-container">
     <span
-      class="read-progress-bar with-shadow"
+      class="read-progress-bar"
       :style="{ width: `${readProgress}%` }"
     />
   </div>

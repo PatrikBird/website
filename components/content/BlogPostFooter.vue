@@ -20,13 +20,13 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         :to="prev._path"
         class="flex flex-col border-primary-500 p-6 text-center no-underline opacity-75 shadow hover:opacity-100 hover:shadow-lg sm:border-0"
       >
-        <dd class="order-0 text-sm leading-6">
+        <dd class="text-sm leading-6">
           {{ prev.date }}
         </dd>
-        <dd class="order-1 text-xl font-bold tracking-tight text-secondary-600">
+        <dd class="text-xl font-bold tracking-tight text-teal-600">
           {{ prev.title }}
         </dd>
-        <dd class="order-2 mt-2 px-4 leading-6">
+        <dd class="mt-2 px-4 leading-6">
           {{ prev.description }}
         </dd>
       </NuxtLink>
@@ -35,13 +35,13 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         :to="next._path"
         class="flex flex-col py-6 text-center no-underline opacity-75 shadow hover:opacity-100 hover:shadow-lg"
       >
-        <dd class="order-0 text-sm leading-6">
+        <dd class="text-sm leading-6">
           {{ next.date }}
         </dd>
-        <dd class="order-1 text-xl font-bold tracking-tight text-secondary-600">
+        <dd class="text-xl font-bold tracking-tight text-teal-600">
           {{ next.title }}
         </dd>
-        <dd class="order-2 mt-2 px-4 leading-6">
+        <dd class="mt-2 px-4 leading-6">
           {{ next.description }}
         </dd>
       </NuxtLink>

@@ -8,7 +8,7 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-  <div class="top-0 z-40 text-primary-800">
+  <div class="top-0 z-40 text-gray-800">
     <!-- <OnClickOutside @trigger="mobileIsOpen = false"> -->
     <nav class="dark:bg-primary-800">
       <div class="mx-auto max-w-none px-4 sm:px-6 lg:px-8">
@@ -25,7 +25,7 @@ const appConfig = useAppConfig()
                 > -->
             </div>
             <!-- <div
-                class="ml-6 flex space-x-8 dark:text-primary-200"
+                class="ml-6 flex space-x-8 dark:text-gray-200"
               >
                 Navigation
                 <NuxtLink
@@ -33,7 +33,7 @@ const appConfig = useAppConfig()
                   :key="link._path"
                   :to="link._path"
                   active-class="active-navbar-link"
-                  class="border-transparent hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  class="border-transparent hover:border-gray-300 dark:text-gray-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                 >
                   {{ link.title }}
                 </NuxtLink>
@@ -45,7 +45,7 @@ const appConfig = useAppConfig()
               :key="link._path"
               :to="link._path"
               active-class="active-navbar-link"
-              class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium opacity-75 hover:border-gray-300 hover:opacity-100 dark:text-primary-100"
+              class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium opacity-75 hover:border-gray-300 hover:opacity-100 dark:text-gray-100"
             >
               {{ link.title }}
             </NuxtLink>
@@ -54,7 +54,7 @@ const appConfig = useAppConfig()
               :href="`https://twitter.com/${appConfig.socials?.twitter}`"
               target="_blank"
               title="Twitter"
-              class="opacity-75 hover:opacity-100 dark:text-primary-100"
+              class="opacity-75 hover:opacity-100 dark:text-gray-100"
             >
               <Icon name="line-md:twitter" />
             </a>
@@ -63,20 +63,20 @@ const appConfig = useAppConfig()
               :href="`https://github.com/${appConfig.socials?.github}`"
               target="_blank"
               title="GitHub"
-              class="opacity-75 hover:opacity-100 dark:text-primary-100"
+              class="opacity-75 hover:opacity-100 dark:text-gray-100"
             >
               <Icon name="line-md:github-loop" />
             </a>
-            <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-primary-100" title="Toggle color mode" />
+            <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-gray-100" title="Toggle color mode" />
           </div>
 
           <!-- Mobile menu -->
           <!-- <div class="-mr-2 flex items-center sm:hidden gap-4">
               <ColorModeSwitch
-                class="inline-flex items-center justify-center hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300"
+                class="inline-flex items-center justify-center hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-300"
               />
               <button
-                class="inline-flex items-center justify-center hover:text-primary-700 dark:text-primary-100 dark:hover:text-primary-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="inline-flex items-center justify-center hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 @click="mobileIsOpen = !mobileIsOpen"
               >
                 <span class="sr-only">Open main menu</span>
@@ -92,13 +92,13 @@ const appConfig = useAppConfig()
       </div>
 
       <!-- <div v-show="mobileIsOpen" class="sm:hidden">
-          <div class="pt-2 pb-3 space-y-1 text-primary-800">
+          <div class="pt-2 pb-3 space-y-1 text-gray-800">
             <NuxtLink
               v-for="link of navigation"
               :key="link._path"
               :to="link._path"
               active-class="active-navbar-link-mobile"
-              class="border-transparent hover:text-primary-700 hover:border-gray-300 dark:text-primary-100 dark:hover:text-primary-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              class="border-transparent hover:text-gray-700 hover:border-gray-300 dark:text-gray-100 dark:hover:text-gray-300 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               @click="mobileIsOpen = false"
             >
               {{ link.title }}

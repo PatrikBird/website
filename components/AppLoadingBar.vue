@@ -81,7 +81,7 @@ onBeforeUnmount(() => clear)
 
 <template>
   <div
-    class="nuxt-progress"
+    class="fixed inset-x-0 top-0 z-50 w-0 bg-teal-400 opacity-100"
     :class="{
       'nuxt-progress-failed': !data.canSucceed,
     }"
@@ -94,18 +94,3 @@ onBeforeUnmount(() => clear)
     }"
   />
 </template>
-
-<style>
-.nuxt-progress {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  width: 0%;
-  opacity: 1;
-  transition: width 0.1s, height 0.4s, opacity 0.4s;
-  /* background: repeating-linear-gradient(to right, #00dc82 0%, #34cdfe 50%, #0047e1 100%); */
-  background: #58CDAF;
-  z-index: 50;
-}
-</style>
