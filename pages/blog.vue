@@ -32,7 +32,7 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
               <div class="shrink-0">
                 <span class="text-xs italic">
                   <time>
-                    {{ article.date }}
+                    {{ formatDate(article.date) }}
                   </time>
                   · Dauer: {{ article.readingTime }}
                 </span>
