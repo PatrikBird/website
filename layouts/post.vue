@@ -1,5 +1,10 @@
 <script setup lang='ts'>
 const route = useRoute()
+definePageMeta({
+  htmlAttrs: {
+    lang: 'de',
+  },
+})
 </script>
 
 <template>

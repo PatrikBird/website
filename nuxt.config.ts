@@ -10,6 +10,17 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxtjs/robots',
   ],
+  app: {
+    head: {
+      title: 'Patrik Bird',
+      meta: [
+        { name: 'description', content: 'Personal website' },
+      ],
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
+  },
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: '',
