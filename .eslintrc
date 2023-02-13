@@ -1,11 +1,9 @@
 {
-  "extends": ["@nuxtjs/eslint-config-typescript"],
-  "overrides": [{
-    "files": ["*.vue", "*.ts"],
-    "rules": {
-      "space-before-function-paren": ["error", "never"],
-      "vue/multi-word-component-names": 0
-    }
+  "extends": [
+    "@antfu", 
+    "plugin:tailwindcss/recommended"
+  ],
+  "rules": {
+    "no-console": "off"
   }
-  ]
 }

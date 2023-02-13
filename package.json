@@ -9,7 +9,7 @@
     "build": "nuxi build",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
-    "lint": "eslint .",
+    "lint": "eslint \"**/*.{ts,js,vue,json}\"",
     "types": "vue-tsc --noEmit"
   },
   "dependencies": {
@@ -27,10 +27,11 @@
     "swiper": "9.0.4"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "12.0.0",
+    "@antfu/eslint-config": "^0.35.2",
     "@nuxtjs/plausible": "0.2.0",
     "@types/node": "^18.13.0",
     "eslint": "8.34.0",
+    "eslint-plugin-tailwindcss": "^3.8.3",
     "nuxt": "3.2.0",
     "typescript": "4.9.5",
     "vue-tsc": "1.0.24"
