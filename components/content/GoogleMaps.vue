@@ -1,12 +1,12 @@
 <script setup lang='ts'>
 interface Props {
-  lat: number,
-  lng: number,
-  pins: number[][],
-  zoom: number,
+  lat: number
+  lng: number
+  pins: number[][]
+  zoom: number
 }
 const props = withDefaults(defineProps<Props>(), {
-  zoom: 6
+  zoom: 6,
 })
 
 const center = ref({ lat: props.lat, lng: props.lng })
@@ -18,8 +18,8 @@ const markers = computed(() => {
       description: pin[2],
       position: {
         lat: pin[0],
-        lng: pin[1]
-      }
+        lng: pin[1],
+      },
     }
   })
 })
@@ -46,8 +46,8 @@ const backgroundColor = computed(() => {
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: false,
-        backgroundColor: backgroundColor,
-        zoom: zoom,
+        backgroundColor,
+        zoom,
         minZoom: 4,
         mapTypeId: 'terrain',
       }"

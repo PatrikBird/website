@@ -10,6 +10,6 @@
   "editor.formatOnPaste": true,
   "emmet.excludeLanguages": [],
   "eslint.format.enable": true,
-  "editor.rulers": [80,120],
+  "editor.rulers": [80, 120],
   "tailwindCSS.experimental.configFile": "tailwind.config.js"
 }

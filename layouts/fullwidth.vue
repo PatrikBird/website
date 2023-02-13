@@ -1,6 +1,6 @@
 <template>
-  <div class="py-10 m-auto sm:px-8 dark:bg-primary-800 sm:rounded">
-    <main class="px-4 mx-auto sm:px-8 sm:pt-14 prose prose-gray text-center text-primary dark:text-primary-100 max-w-none dark:prose-invert">
+  <div class="m-auto py-10 dark:bg-primary-800 sm:rounded sm:px-8">
+    <main class="text-primary prose prose-gray mx-auto max-w-none px-4 text-center dark:prose-invert dark:text-primary-100 sm:px-8 sm:pt-14">
       <slot>
         <h1 class="text-2xl">
           Page not found

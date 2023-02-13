@@ -6,14 +6,14 @@ const route = useRoute()
   <div>
     <ReadProgressBar />
     <ScrollToTop />
-    <div class="max-w-3xl px-4 py-10 m-auto sm:px-8 sm:pt-14 dark:bg-primary-800 sm:rounded lg:relative">
-      <div class="prose prose-gray dark:prose-invert max-w-none">
+    <div class="m-auto max-w-3xl px-4 py-10 dark:bg-primary-800 sm:rounded sm:px-8 sm:pt-14 lg:relative">
+      <div class="prose prose-gray max-w-none dark:prose-invert">
         <NuxtLink
-          class="action-btn mb-8 w-10 h-10 flex group lg:absolute lg:top-15 lg:-left-10"
+          class="action-btn lg:top-15 group mb-8 flex h-10 w-10 lg:absolute lg:-left-10"
           :to="route.path.split('/').slice(0, -1).join('/') || '/'"
           title="Back to blog"
         >
-          <Icon name="line-md:arrow-small-left" class="opacity-75 group-hover:opacity-100 text-secondary-800 dark:text-primary-100" aria-hidden="true" />
+          <Icon name="line-md:arrow-small-left" class="text-secondary-800 opacity-75 group-hover:opacity-100 dark:text-primary-100" aria-hidden="true" />
         </NuxtLink>
         <article>
           <slot />

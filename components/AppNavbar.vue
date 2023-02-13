@@ -11,10 +11,10 @@ const appConfig = useAppConfig()
   <div class="top-0 z-40 text-primary-800">
     <!-- <OnClickOutside @trigger="mobileIsOpen = false"> -->
     <nav class="dark:bg-primary-800">
-      <div class="max-w-none mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+      <div class="mx-auto max-w-none px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 justify-between">
           <div class="flex">
-            <div class="flex-shrink-0 flex items-center">
+            <div class="flex shrink-0 items-center">
               <NuxtLink to="/">
                 <img class="h-8 w-auto" src="/logo.webp" width="48" height="48" alt="logo">
               </NuxtLink>
@@ -45,7 +45,7 @@ const appConfig = useAppConfig()
               :key="link._path"
               :to="link._path"
               active-class="active-navbar-link"
-              class="border-transparent opacity-75 hover:opacity-100 hover:border-gray-300 dark:text-primary-100 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium opacity-75 hover:border-gray-300 hover:opacity-100 dark:text-primary-100"
             >
               {{ link.title }}
             </NuxtLink>

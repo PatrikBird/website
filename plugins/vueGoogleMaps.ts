@@ -4,7 +4,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const apiKey = useRuntimeConfig().public.googleMapsApiKey
   nuxtApp.vueApp.use(VueGoogleMaps, {
     load: {
-      key: apiKey
-    }
+      key: apiKey,
+    },
   })
 })

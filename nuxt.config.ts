@@ -6,11 +6,11 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/critters',
     '@nuxtjs/plausible',
-    '@nuxtjs/web-vitals'
+    '@nuxtjs/web-vitals',
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
   },
   // https://content.nuxtjs.org
   content: {
@@ -18,21 +18,21 @@ export default defineNuxtConfig({
     markdown: {
       toc: {
         depth: 3,
-        searchDepth: 3
-      }
+        searchDepth: 3,
+      },
     },
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
-      theme: 'vitesse-dark'
-    }
+      theme: 'vitesse-dark',
+    },
   },
   build: {
-    transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps']
+    transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps'],
   },
   runtimeConfig: {
     public: {
-      googleMapsApiKey: '' // will be injected in vueGoogleMaps plugin
-    }
+      googleMapsApiKey: '', // will be injected in vueGoogleMaps plugin
+    },
   },
-  css: ['@/assets/css/main.css', '@/assets/fonts/montserrat/stylesheet.css']
+  css: ['@/assets/css/main.css', '@/assets/fonts/montserrat/stylesheet.css'],
 })

@@ -1,19 +1,19 @@
 <script setup>
-import { useNuxtApp, onBeforeUnmount, reactive } from '#imports'
+import { onBeforeUnmount, reactive, useNuxtApp } from '#imports'
 
 const props = defineProps({
   throttle: {
     type: Number,
-    default: 200
+    default: 200,
   },
   duration: {
     type: Number,
-    default: 2000
+    default: 2000,
   },
   height: {
     type: Number,
-    default: 2
-  }
+    default: 2,
+  },
 })
 
 const nuxtApp = useNuxtApp()
@@ -22,7 +22,7 @@ const nuxtApp = useNuxtApp()
 const data = reactive({
   percent: 0,
   show: false,
-  canSucceed: true
+  canSucceed: true,
 })
 // Local variables
 let _timer = null
@@ -36,16 +36,16 @@ function clear() {
   _timer = null
 }
 function start() {
-  if (data.show) { return }
+  if (data.show)
+    return
   clear()
   data.percent = 0
   data.canSucceed = true
 
-  if (props.throttle) {
+  if (props.throttle)
     _throttle = setTimeout(startTimer, props.throttle)
-  } else {
+  else
     startTimer()
-  }
 }
 function increase(num) {
   data.percent = Math.min(100, Math.floor(data.percent + num))

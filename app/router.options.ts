@@ -21,7 +21,7 @@ export default <RouterConfig>{
 
         return window.scrollTo({
           top: heading.offsetTop,
-          behavior: 'smooth'
+          behavior: 'smooth',
         })
       })
       return
@@ -29,5 +29,5 @@ export default <RouterConfig>{
 
     // Scroll to top of window
     return { top: 0 }
-  }
+  },
 }

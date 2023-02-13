@@ -3,8 +3,8 @@ const readProgress = ref(0)
 
 function currentScrollPosition(position: number) {
   return (
-    (position / (document.body.clientHeight - document.documentElement.clientHeight)) *
-    100
+    (position / (document.body.clientHeight - document.documentElement.clientHeight))
+    * 100
   )
 }
 
@@ -25,7 +25,7 @@ onUnmounted(() => {
   <div class="read-progress-container">
     <span
       class="read-progress-bar with-shadow"
-      :style="{ width: readProgress + '%' }"
+      :style="{ width: `${readProgress}%` }"
     />
   </div>
 </template>
