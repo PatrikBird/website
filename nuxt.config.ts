@@ -16,9 +16,6 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Personal website' },
       ],
-      htmlAttrs: {
-        lang: 'en',
-      },
     },
   },
   // https://color-mode.nuxtjs.org

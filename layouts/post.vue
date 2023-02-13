@@ -1,14 +1,10 @@
 <script setup lang='ts'>
 const route = useRoute()
-definePageMeta({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
 </script>
 
 <template>
   <div>
+    <Html lang="de" />
     <ReadProgressBar />
     <ScrollToTop />
     <div class="m-auto max-w-3xl px-4 py-10 dark:bg-primary-800 sm:rounded sm:px-8 sm:pt-14 lg:relative">
