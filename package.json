@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.2",
+    "@nuxt/devtools": "^0.1.2",
     "@nuxtjs/plausible": "0.2.0",
     "@types/node": "^18.13.0",
     "eslint": "8.34.0",

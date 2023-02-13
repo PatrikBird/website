@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/critters',
     '@nuxtjs/plausible',
     '@nuxtjs/web-vitals',
+    '@nuxt/devtools',
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
