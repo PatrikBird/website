@@ -39,7 +39,7 @@ const appConfig = useAppConfig()
                 </NuxtLink>
               </div> -->
           </div>
-          <!-- <div class="flex items-center space-x-6">
+          <div class="flex items-center space-x-6">
             <NuxtLink
               v-for="link of navigation"
               :key="link._path"
@@ -68,7 +68,7 @@ const appConfig = useAppConfig()
               <Icon name="iconoir:github" class="h-5 w-5" />
             </a>
             <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-gray-100" title="Toggle color mode" />
-          </div> -->
+          </div>
 
           <!-- Mobile menu -->
           <!-- <div class="-mr-2 flex items-center sm:hidden gap-4">
