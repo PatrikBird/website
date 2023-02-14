@@ -14,7 +14,7 @@ module.exports = {
         mont: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: colors.gray,
+        primary: colors.zinc,
         secondary: colors.teal,
         accent: colors.green,
         info: colors.yellow,

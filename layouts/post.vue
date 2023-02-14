@@ -7,7 +7,7 @@ const route = useRoute()
     <Html lang="de" />
     <ReadProgressBar />
     <ScrollToTop />
-    <div class="m-auto max-w-3xl px-4 py-10 dark:bg-primary-800 sm:rounded sm:px-8 sm:pt-14 lg:relative">
+    <div class="m-auto max-w-3xl px-4 py-10 sm:rounded sm:px-8 sm:pt-14 lg:relative">
       <div class="prose prose-gray max-w-none dark:prose-invert">
         <NuxtLink
           class="action-btn group mb-8 flex h-10 w-10 lg:absolute  lg:-left-10"
@@ -25,7 +25,7 @@ const route = useRoute()
   </div>
 </template>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 /* Customize headers to remove default underline */
 .prose h2 a,
 .prose h3 a {
@@ -35,4 +35,4 @@ const route = useRoute()
     @apply border-b border-neutral-600 dark:border-neutral-300;
   }
 }
-</style>
+</style> -->

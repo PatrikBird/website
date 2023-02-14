@@ -8,9 +8,9 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-  <div class="top-0 z-40 text-gray-800">
+  <div class="top-0 z-40">
     <!-- <OnClickOutside @trigger="mobileIsOpen = false"> -->
-    <nav class="dark:bg-primary-800">
+    <nav>
       <div class="mx-auto max-w-none px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 justify-between">
           <div class="flex">

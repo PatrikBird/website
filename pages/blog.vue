@@ -27,7 +27,7 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
               v-for="article in list"
               :key="article._path"
               :to="article._path"
-              class="flex flex-col overflow-hidden rounded-lg bg-zinc-50 no-underline opacity-90 shadow transition-opacity duration-100 ease-in-out hover:opacity-100 hover:shadow-lg dark:bg-primary-700"
+              class="flex flex-col overflow-hidden rounded-lg bg-white no-underline opacity-90 shadow transition-opacity duration-100 ease-in-out hover:opacity-100 hover:shadow-lg dark:bg-zinc-800"
             >
               <div class="shrink-0">
                 <span class="text-xs italic">
@@ -38,9 +38,9 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
                 </span>
                 <img class="mt-1 h-48 w-full object-cover" :src="article.imageUrl" width="630" height="290" alt="">
               </div>
-              <div class="flex flex-1 flex-col justify-between px-6 pb-6 text-left dark:bg-primary-700">
+              <div class="flex flex-1 flex-col justify-between px-6 pb-6 text-left dark:bg-zinc-800">
                 <div class="flex-1">
-                  <p class="mt-0 text-xl">
+                  <p class="mt-0 font-mont text-xl font-semibold">
                     {{ article.title }}
                   </p>
                   <p class="mt-3 mb-2 text-sm">
