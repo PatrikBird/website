@@ -3,7 +3,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div>
+  <main>
     <Html lang="de" />
     <ReadProgressBar />
     <ScrollToTop />
@@ -14,7 +14,11 @@ const route = useRoute()
           :to="route.path.split('/').slice(0, -1).join('/') || '/'"
           title="Back to blog"
         >
-          <Icon name="line-md:arrow-small-left" class="text-teal-800 opacity-75 group-hover:opacity-100 dark:text-gray-100" aria-hidden="true" />
+          <Icon
+            name="line-md:arrow-small-left"
+            class="text-teal-800 opacity-75 group-hover:opacity-100 dark:text-gray-100"
+            aria-hidden="true"
+          />
         </NuxtLink>
         <article>
           <slot />
@@ -22,5 +26,5 @@ const route = useRoute()
         <BlogPostFooter />
       </div>
     </div>
-  </div>
+  </main>
 </template>

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-zinc-50 dark:bg-zinc-900;
+  }
+}
 @layer components {
   .active-navbar-link {
     @apply border-black dark:border-white border-b-2 !important;
