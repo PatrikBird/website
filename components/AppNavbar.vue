@@ -56,7 +56,7 @@ const appConfig = useAppConfig()
               title="Twitter"
               class="opacity-75 hover:opacity-100 dark:text-gray-100"
             >
-              <Icon name="line-md:twitter" />
+              <Icon name="iconoir:twitter" class="h-5 w-5" />
             </a>
             <a
               v-if="appConfig.socials?.github"
@@ -65,7 +65,7 @@ const appConfig = useAppConfig()
               title="GitHub"
               class="opacity-75 hover:opacity-100 dark:text-gray-100"
             >
-              <Icon name="line-md:github-loop" />
+              <Icon name="iconoir:github" class="h-5 w-5" />
             </a>
             <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-gray-100" title="Toggle color mode" />
           </div>
