@@ -28,3 +28,15 @@ const route = useRoute()
     </div>
   </main>
 </template>
+
+<style lang="postcss">
+/* Customize headers to remove default underline */
+.prose h2 a,
+.prose h3 a {
+  @apply no-underline;
+
+  &:hover {
+    @apply border-b border-zinc-600 dark:border-zinc-300;
+  }
+}
+</style>
