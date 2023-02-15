@@ -23,10 +23,10 @@ const route = useRoute()
         <article>
           <slot />
         </article>
-        <BlogPostFooter />
       </div>
     </div>
   </main>
+  <BlogPostFooter class="mx-auto max-w-2xl lg:max-w-6xl" />
 </template>
 
 <style lang="postcss">
