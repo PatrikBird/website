@@ -26,7 +26,7 @@ const route = useRoute()
       </div>
     </div>
   </main>
-  <BlogPostFooter class="mx-auto max-w-2xl lg:max-w-6xl" />
+  <BlogPostFooter class="mx-auto max-w-2xl lg:max-w-4xl" />
 </template>
 
 <style lang="postcss">

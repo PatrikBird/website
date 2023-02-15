@@ -7,60 +7,67 @@ const hasTwoAdjacentBlogPosts = computed(() => {
 </script>
 
 <template>
+  <!-- TODO: refactor this mess -->
   <footer class="py-10">
-    <p class="text-center font-mont text-2xl font-bold">
+    <p class="pb-4 text-center font-mont text-2xl font-bold">
       Weitere Beiträge
     </p>
     <div
       class="mx-auto gap-1 rounded-lg sm:grid"
       :class="{ 'lg:grid-cols-2': hasTwoAdjacentBlogPosts, 'max-w-2xl': !hasTwoAdjacentBlogPosts }"
     >
-      <NuxtLink
+      <div
         v-if="prev && prev._path.includes('blog')"
-        :to="prev._path"
-        class="flex flex-row gap-2 border-zinc-500 p-6 text-center no-underline opacity-75 shadow hover:opacity-100 hover:shadow-lg sm:border-0"
+        class="flex flex-row gap-2 p-1 text-center"
       >
-        <div>
+        <NuxtLink :to="prev._path">
           <img
             class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
             :src="prev.imageUrl" alt=""
           >
-        </div>
+        </NuxtLink>
         <div class="self-center text-start">
           <dd class="text-xs">
             Vorheriger Beitrag
           </dd>
           <dd class="text-xl font-bold tracking-tight text-teal-600">
-            {{ prev.title }}
+            <NuxtLink
+              :to="prev._path"
+            >
+              {{ prev.title }}
+            </NuxtLink>
           </dd>
           <dd class="text-xs">
             {{ prev.description }}
           </dd>
         </div>
-      </NuxtLink>
-      <NuxtLink
+      </div>
+      <div
         v-if="next && next._path.includes('blog')"
-        :to="next._path"
-        class="flex flex-row justify-end gap-2 p-6 text-center no-underline opacity-75 shadow hover:opacity-100 hover:shadow-lg"
+        class="flex flex-row justify-end gap-2 p-1 text-center"
       >
         <div class="self-center text-end">
           <dd class="text-xs">
             Nächster Beitrag
           </dd>
           <dd class="text-xl font-bold tracking-tight text-teal-600">
-            {{ next.title }}
+            <NuxtLink
+              :to="next._path"
+            >
+              {{ next.title }}
+            </NuxtLink>
           </dd>
           <dd class="text-xs">
             {{ next.description }}
           </dd>
         </div>
-        <div>
+        <NuxtLink :to="next._path">
           <img
             class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
             :src="next.imageUrl" alt=""
           >
-        </div>
-      </NuxtLink>
+        </NuxtLink>
+      </div>
     </div>
   </footer>
 </template>
