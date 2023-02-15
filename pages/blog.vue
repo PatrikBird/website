@@ -21,34 +21,42 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
         in German.
       </p>
       <div class="mx-auto max-w-7xl">
-        <div class="mx-auto mt-12 grid max-w-lg gap-4 lg:max-w-none lg:grid-cols-3">
+        <div
+          class="mx-auto mt-12 grid max-w-lg gap-4 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3"
+        >
           <ContentList v-slot="{ list }" :query="query" path="/blog">
-            <NuxtLink
+            <article
               v-for="article in list"
               :key="article._path"
-              :to="article._path"
-              class="flex flex-col overflow-hidden rounded-lg bg-white no-underline opacity-90 shadow transition-opacity duration-100 ease-in-out hover:opacity-100 hover:shadow-lg dark:bg-zinc-800"
+              class="flex flex-col gap-3 overflow-hidden rounded-lg"
             >
-              <div class="shrink-0">
+              <NuxtLink
+                :to="article._path"
+              >
+                <img
+                  class="my-0 h-48 w-full rounded-lg object-cover"
+                  :src="article.imageUrl" width="630" height="290" alt=""
+                >
+              </NuxtLink>
+              <div class="flex flex-1 flex-col justify-between pb-6 text-left">
+                <div class="flex-1">
+                  <NuxtLink :to="article._path" class="no-underline	">
+                    <p class="mt-0 font-mont text-xl font-semibold">
+                      {{ article.title }}
+                    </p>
+                  </NuxtLink>
+                  <p class="mt-3 mb-2 text-sm">
+                    {{ article.description }}
+                  </p>
+                </div>
                 <span class="text-xs italic">
                   <time>
                     {{ article.date }}
                   </time>
                   · Dauer: {{ article.readingTime }}
                 </span>
-                <img class="mt-1 h-48 w-full object-cover" :src="article.imageUrl" width="630" height="290" alt="">
               </div>
-              <div class="flex flex-1 flex-col justify-between px-6 pb-6 text-left dark:bg-zinc-800">
-                <div class="flex-1">
-                  <p class="mt-0 font-mont text-xl font-semibold">
-                    {{ article.title }}
-                  </p>
-                  <p class="mt-3 mb-2 text-sm">
-                    {{ article.description }}
-                  </p>
-                </div>
-              </div>
-            </NuxtLink>
+            </article>
           </ContentList>
         </div>
       </div>
