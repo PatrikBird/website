@@ -40,7 +40,7 @@ const query: QueryBuilderParams = { path: '/posts', sort: [{ date: -1 }] }
               </NuxtLink>
               <div class="flex flex-1 flex-col justify-between pb-6 text-left">
                 <div class="flex-1">
-                  <NuxtLink :to="article._path" class="no-underline	">
+                  <NuxtLink :to="article._path" class="no-underline">
                     <p class="mt-0 font-mont text-xl font-semibold">
                       {{ article.title }}
                     </p>
