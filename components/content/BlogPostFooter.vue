@@ -13,7 +13,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
       Weitere Beiträge
     </p>
     <div
-      class="mx-auto gap-1 rounded-lg sm:grid"
+      class="flex flex-col gap-5 rounded-lg sm:grid"
       :class="{ 'lg:grid-cols-2': hasTwoAdjacentBlogPosts, 'max-w-2xl': !hasTwoAdjacentBlogPosts }"
     >
       <div
