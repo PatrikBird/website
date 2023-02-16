@@ -1,13 +1,13 @@
 <template>
-  <div class="m-auto py-10 px-4 sm:rounded sm:px-8">
-    <main class="prose mx-auto max-w-none text-center dark:prose-invert sm:px-4 sm:pt-14">
-      <slot>
-        <h1 class="text-2xl">
-          Page not found
-        </h1>
-      </slot>
-    </main>
-  </div>
+  <main
+    class="prose m-auto max-w-none py-10 px-4 text-center dark:prose-invert sm:px-12 sm:pt-14"
+  >
+    <slot>
+      <h1 class="text-2xl">
+        Page not found
+      </h1>
+    </slot>
+  </main>
 </template>
 
 <style lang="postcss">
