@@ -27,7 +27,7 @@ const props = defineProps<{ article: any }>()
       <time>
         {{ article.date }}
       </time>
-      · Dauer: {{ article.readingTime }}
+      · {{ article.readingTime.text }}
     </span>
   </div>
 </template>

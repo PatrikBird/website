@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   content: {
     documentDriven: true,
     markdown: {
+      remarkPlugins: ['remark-reading-time'],
       toc: {
         depth: 3,
         searchDepth: 3,
