@@ -1,14 +1,15 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
-    '@nuxtjs/tailwindcss',
+    '@nuxt/devtools',
+    '@nuxt/image-edge',
     '@nuxtjs/color-mode',
-    'nuxt-icon',
     '@nuxtjs/critters',
     '@nuxtjs/plausible',
-    '@nuxtjs/web-vitals',
-    '@nuxt/devtools',
     '@nuxtjs/robots',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/web-vitals',
+    'nuxt-icon',
   ],
   app: {
     head: {
