@@ -1,17 +1,14 @@
 <script setup lang='ts'>
 const props = defineProps<{ article: any }>()
-watchEffect(() => {
-  console.log(props.article.imageUrl)
-})
 </script>
 
 <template>
   <NuxtLink
-    :to="article._path"
+    :to="props.article._path"
   >
     <img
       class="my-0 h-48 w-full rounded-lg object-cover"
-      :src="article.imageUrl"
+      :src="props.article.imageUrl"
       width="630"
       height="290"
       alt="blog post cover image"
@@ -28,20 +25,20 @@ watchEffect(() => {
   </NuxtLink>
   <div class="flex flex-1 flex-col justify-between pb-6 text-left">
     <div class="flex-1">
-      <NuxtLink :to="article._path" class="no-underline">
+      <NuxtLink :to="props.article._path" class="no-underline">
         <p class="mt-0 font-mont text-xl font-semibold">
-          {{ article.title }}
+          {{ props.article.title }}
         </p>
       </NuxtLink>
       <p class="mt-3 mb-2 text-sm">
-        {{ article.description }}
+        {{ props.article.description }}
       </p>
     </div>
     <span class="text-xs italic">
       <time>
-        {{ article.date }}
+        {{ props.article.date }}
       </time>
-      · {{ article.readingTime.text }}
+      · {{ props.article.readingTime.text }}
     </span>
   </div>
 </template>
