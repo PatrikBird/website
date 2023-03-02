@@ -38,11 +38,11 @@ export default defineNuxtConfig({
       theme: 'vitesse-dark',
     },
   },
-  image: {
-    domains: [
-      'avatars0.githubusercontent.com',
-    ],
-  },
+  // image: {
+  //   domains: [
+  //     'avatars0.githubusercontent.com',
+  //   ],
+  // },
   build: {
     transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps'],
   },

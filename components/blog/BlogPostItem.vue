@@ -1,13 +1,22 @@
 <script setup lang='ts'>
-// eslint-disable-next-line unused-imports/no-unused-vars
 const props = defineProps<{ article: any }>()
+watchEffect(() => {
+  console.log(props.article.imageUrl)
+})
 </script>
 
 <template>
   <NuxtLink
     :to="article._path"
   >
-    <nuxt-img
+    <img
+      class="my-0 h-48 w-full rounded-lg object-cover"
+      :src="article.imageUrl"
+      width="630"
+      height="290"
+      alt="blog post cover image"
+    >
+    <!-- <nuxt-img
       class="my-0 h-48 w-full rounded-lg object-cover"
       :src="article.imageUrl"
       width="630"
@@ -15,7 +24,7 @@ const props = defineProps<{ article: any }>()
       alt="blog post cover image"
       format="webp"
       quality="90"
-    />
+    /> -->
   </NuxtLink>
   <div class="flex flex-1 flex-col justify-between pb-6 text-left">
     <div class="flex-1">
