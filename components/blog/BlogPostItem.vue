@@ -7,10 +7,15 @@ const props = defineProps<{ article: any }>()
   <NuxtLink
     :to="article._path"
   >
-    <img
+    <nuxt-img
       class="my-0 h-48 w-full rounded-lg object-cover"
-      :src="article.imageUrl" width="630" height="290" alt=""
-    >
+      :src="article.imageUrl"
+      width="630"
+      height="290"
+      alt="blog post cover image"
+      format="webp"
+      quality="90"
+    />
   </NuxtLink>
   <div class="flex flex-1 flex-col justify-between pb-6 text-left">
     <div class="flex-1">
