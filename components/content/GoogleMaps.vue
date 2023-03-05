@@ -31,12 +31,12 @@ function openMarker(id: any) {
 
 const colorMode = useColorMode()
 const backgroundColor = computed(() => {
-  return colorMode.value === 'dark' ? '#1F2937' : '#fff'
+  return colorMode.value === 'dark' ? '#18181b' : '#fafafa'
 })
 </script>
 
 <template>
-  <div class="border">
+  <div class="border border-zinc-200 dark:border-zinc-600">
     <GMapMap
       :center="center"
       :options="{
