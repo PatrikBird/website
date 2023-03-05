@@ -3,30 +3,32 @@ const route = useRoute()
 </script>
 
 <template>
-  <main>
-    <Html lang="de" />
-    <ReadProgressBar />
-    <ScrollToTop />
-    <div class="m-auto max-w-3xl px-4 py-10 sm:rounded sm:px-8 sm:pt-14 lg:relative">
-      <div class="prose prose-gray max-w-none dark:prose-invert">
-        <NuxtLink
-          class="action-btn group mb-8 flex h-10 w-10 lg:absolute  lg:-left-10"
-          :to="route.path.split('/').slice(0, -1).join('/') || '/'"
-          title="Back to blog"
-        >
-          <Icon
-            name="line-md:arrow-small-left"
-            class="text-teal-800 opacity-75 group-hover:opacity-100 dark:text-gray-100"
-            aria-hidden="true"
-          />
-        </NuxtLink>
-        <article>
-          <slot />
-        </article>
+  <div>
+    <main>
+      <Html lang="de" />
+      <ReadProgressBar />
+      <ScrollToTop />
+      <div class="m-auto max-w-3xl px-4 py-10 sm:rounded sm:px-8 sm:pt-14 lg:relative">
+        <div class="prose prose-gray max-w-none dark:prose-invert">
+          <NuxtLink
+            class="action-btn group mb-8 flex h-10 w-10 lg:absolute  lg:-left-10"
+            :to="route.path.split('/').slice(0, -1).join('/') || '/'"
+            title="Back to blog"
+          >
+            <Icon
+              name="line-md:arrow-small-left"
+              class="text-teal-800 opacity-75 group-hover:opacity-100 dark:text-gray-100"
+              aria-hidden="true"
+            />
+          </NuxtLink>
+          <article>
+            <slot />
+          </article>
+        </div>
       </div>
-    </div>
-  </main>
-  <BlogPostFooter class="mx-auto max-w-2xl lg:max-w-4xl" />
+    </main>
+    <BlogPostFooter class="mx-auto max-w-2xl lg:max-w-4xl" />
+  </div>
 </template>
 
 <style lang="postcss">
