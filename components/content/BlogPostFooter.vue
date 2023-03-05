@@ -2,7 +2,7 @@
 const { prev, next } = useContent()
 
 const hasTwoAdjacentBlogPosts = computed(() => {
-  return prev.value && prev.value._path.includes('blog') && next.value && next.value._path.includes('blog')
+  return prev.value && prev.value._path.includes('blog/') && next.value && next.value._path.includes('blog/')
 })
 </script>
 
@@ -17,7 +17,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
       :class="{ 'lg:grid-cols-2': hasTwoAdjacentBlogPosts, 'max-w-2xl': !hasTwoAdjacentBlogPosts }"
     >
       <div
-        v-if="prev && prev._path.includes('blog')"
+        v-if="prev && prev._path.includes('blog/')"
         class="flex flex-row gap-2 p-1 text-center"
       >
         <NuxtLink :to="prev._path">
@@ -43,7 +43,7 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         </div>
       </div>
       <div
-        v-if="next && next._path.includes('blog')"
+        v-if="next && next._path.includes('blog/')"
         class="flex flex-row justify-end gap-2 p-1 text-center"
       >
         <div class="self-center text-end">
