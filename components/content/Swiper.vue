@@ -29,7 +29,6 @@ const modules = [Pagination]
     :pagination="{ clickable: true }"
   >
     <SwiperSlide v-for="image in images" :key="image.src">
-      <!-- TODO: dont use postImg, create a new component instead -->
       <post-image :pic="image.src" :alt="image.alt">
         {{ image.alt }}
       </post-image>

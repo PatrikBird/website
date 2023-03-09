@@ -1,14 +1,19 @@
 <script setup lang="ts">
-// eslint-disable-next-line unused-imports/no-unused-vars
 const props = defineProps<{ pic: string; alt: string }>()
 </script>
 
 <template>
   <figure>
-    <img :src="pic" loading="lazy" :alt="alt" width="800" height="400">
+    <img
+      :src="props.pic"
+      :alt="props.alt"
+      loading="lazy"
+      width="800"
+      height="400"
+    >
     <figcaption>
       <slot>
-        <p>{{ alt }}</p>
+        <span>{{ props.alt }}</span>
       </slot>
     </figcaption>
   </figure>
