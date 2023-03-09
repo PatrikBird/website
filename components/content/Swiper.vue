@@ -29,9 +29,9 @@ const modules = [Pagination]
     :pagination="{ clickable: true }"
   >
     <SwiperSlide v-for="image in images" :key="image.src">
-      <post-image :pic="image.src" :alt="image.alt">
+      <prose-img :src="image.src" :pic="image.src" :alt="image.alt">
         {{ image.alt }}
-      </post-image>
+      </prose-img>
     </SwiperSlide>
   </SwiperContainer>
 </template>
