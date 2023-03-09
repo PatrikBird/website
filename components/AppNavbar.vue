@@ -44,7 +44,6 @@ const appConfig = useAppConfig()
               v-for="link of navigation"
               :key="link._path"
               :to="link._path"
-              rel="prefetch"
               active-class="active-navbar-link"
               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium opacity-75 hover:border-gray-300 hover:opacity-100 dark:text-gray-100"
             >
