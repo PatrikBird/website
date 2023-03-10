@@ -49,6 +49,13 @@ export default defineNuxtConfig({
           width: 600,
         },
       },
+      cover: {
+        modifiers: {
+          format: 'webp',
+          width: 630,
+          height: 290,
+        },
+      },
     },
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/df5skrrwb/image/upload/v1677729457/',
