@@ -7,6 +7,7 @@ import 'swiper/css/pagination'
 
 const props = defineProps<{
   pics: string[][] // [src, alt]
+  landscape?: boolean
 }>()
 
 const images = computed(() => {
@@ -29,7 +30,12 @@ const modules = [Pagination]
     :pagination="{ clickable: true }"
   >
     <SwiperSlide v-for="image in images" :key="image.src">
-      <prose-img :src="image.src" :pic="image.src" :alt="image.alt">
+      <prose-img
+        :src="image.src"
+        :pic="image.src"
+        :alt="image.alt"
+        :landscape="props.landscape"
+      >
         {{ image.alt }}
       </prose-img>
     </SwiperSlide>

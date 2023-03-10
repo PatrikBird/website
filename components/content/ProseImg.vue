@@ -5,15 +5,23 @@ const props = withDefaults(defineProps<{
   lazy?: boolean | 'false' | 'true'
   width?: number | string
   height?: number | string
+  landscape?: boolean
 }>(), {
   lazy: true,
-  width: '600',
-  height: '800',
+  width: '700',
+  height: '900',
 })
 
 const loadingType = computed(() => {
   return (props.lazy === true || props.lazy === 'true') ? 'lazy' : 'eager'
 })
+
+const width = ref(props.width)
+const height = ref(props.height)
+if (props.landscape) {
+  width.value = 1000
+  height.value = 750
+}
 </script>
 
 <template>
@@ -21,8 +29,8 @@ const loadingType = computed(() => {
     <nuxt-img
       :src="props.src"
       :alt="props.alt"
-      :width="props.width"
-      :height="props.height"
+      :width="width"
+      :height="height"
       :loading="loadingType"
       preset="blogImg"
       provider="cloudinary"
