@@ -14,11 +14,11 @@ const props = defineProps<{ article: any }>()
       alt="blog post cover image"
     >
     <!-- <nuxt-img
-      class="my-0 h-48 w-full rounded-lg object-cover"
-      :src="article.imageUrl"
-      width="630"
-      height="290"
+      :src="props.article.imageUrl"
+      class="my-0 h-48 w-96 rounded-lg object-cover"
       alt="blog post cover image"
+      preset="cover"
+      provider="cloudinary"
       format="webp"
       quality="90"
     /> -->

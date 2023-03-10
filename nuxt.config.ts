@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Patrik Bird',
+      link: [
+        { rel: 'preconnect', href: 'https://res.cloudinary.com' },
+      ],
       meta: [
         { name: 'description', content: 'Personal website' },
       ],
@@ -38,11 +41,30 @@ export default defineNuxtConfig({
       theme: 'vitesse-dark',
     },
   },
-  // image: {
-  //   domains: [
-  //     'avatars0.githubusercontent.com',
-  //   ],
-  // },
+  image: {
+    presets: {
+      blogImg: {
+        modifiers: {
+          format: 'webp',
+          width: 600,
+        },
+      },
+      cover: {
+        modifiers: {
+          format: 'webp',
+          width: 630,
+          height: 290,
+        },
+      },
+    },
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/df5skrrwb/image/upload/v1677729457/',
+      modifiers: {
+        // dpr: 'auto',
+        // quality: 'auto:best',
+      },
+    },
+  },
   build: {
     transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps'],
   },
