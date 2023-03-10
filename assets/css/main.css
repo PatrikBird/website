@@ -7,6 +7,7 @@
     @apply bg-zinc-50 dark:bg-zinc-900;
   }
 }
+
 @layer components {
   .active-navbar-link {
     @apply border-black dark:border-white border-b-2 !important;
@@ -20,7 +21,8 @@
   .action-btn {
     @apply inline-block rounded-full items-center justify-center bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20;
   }
-  /* .swiper-pagination-bullet-active {
-    @apply bg-secondary-500 !important;
-  } */
+}
+
+.swiper-pagination-bullet {
+  @apply dark:bg-white !important;
 }
