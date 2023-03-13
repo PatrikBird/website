@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
     '@nuxtjs/critters',
+    '@nuxtjs/html-validator',
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
@@ -39,6 +40,15 @@ export default defineNuxtConfig({
     highlight: {
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
       theme: 'vitesse-dark',
+    },
+  },
+  htmlValidator: {
+    logLevel: 'verbose',
+    failOnError: false,
+    options: {
+      rules: {
+        'attribute-empty-style': 'off',
+      },
     },
   },
   image: {

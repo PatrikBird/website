@@ -20,19 +20,23 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         v-if="prev && prev._path.includes('blog/')"
         class="flex flex-row gap-2 p-1 text-center"
       >
-        <NuxtLink :to="prev._path">
+        <NuxtLink
+          :to="prev._path"
+          aria-hidden="true"
+        >
           <img
             class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
-            :src="prev.imageUrl" alt=""
+            :src="prev.imageUrl"
           >
         </NuxtLink>
-        <div class="self-center text-start">
-          <dd class="text-xs">
+        <dl class="self-center text-start">
+          <dt class="text-xs">
             Vorheriger Beitrag
-          </dd>
+          </dt>
           <dd class="text-xl font-bold tracking-tight text-teal-600">
             <NuxtLink
               :to="prev._path"
+              aria-label="Go to previous post"
             >
               {{ prev.title }}
             </NuxtLink>
@@ -40,19 +44,20 @@ const hasTwoAdjacentBlogPosts = computed(() => {
           <dd class="text-xs">
             {{ prev.description }}
           </dd>
-        </div>
+        </dl>
       </div>
       <div
         v-if="next && next._path.includes('blog/')"
         class="flex flex-row justify-end gap-2 p-1 text-center"
       >
-        <div class="self-center text-end">
-          <dd class="text-xs">
+        <dl class="self-center text-end">
+          <dt class="text-xs">
             Nächster Beitrag
-          </dd>
+          </dt>
           <dd class="text-xl font-bold tracking-tight text-teal-600">
             <NuxtLink
               :to="next._path"
+              aria-label="Go to next post"
             >
               {{ next.title }}
             </NuxtLink>
@@ -60,11 +65,14 @@ const hasTwoAdjacentBlogPosts = computed(() => {
           <dd class="text-xs">
             {{ next.description }}
           </dd>
-        </div>
-        <NuxtLink :to="next._path">
+        </dl>
+        <NuxtLink
+          :to="next._path"
+          aria-hidden="true"
+        >
           <img
             class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
-            :src="next.imageUrl" alt=""
+            :src="next.imageUrl"
           >
         </NuxtLink>
       </div>

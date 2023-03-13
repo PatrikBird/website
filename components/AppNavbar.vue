@@ -15,7 +15,7 @@ const appConfig = useAppConfig()
         <div class="flex h-16 justify-between">
           <div class="flex">
             <div class="flex shrink-0 items-center">
-              <NuxtLink to="/">
+              <NuxtLink to="/" aria-hidden="true">
                 <img class="h-8 w-auto" src="/logo.webp" width="48" height="48" alt="logo">
               </NuxtLink>
               <!-- <img
@@ -55,6 +55,7 @@ const appConfig = useAppConfig()
               target="_blank"
               title="Twitter"
               class="opacity-75 hover:opacity-100 dark:text-gray-100"
+              aria-label="Go to Twitter"
             >
               <Icon name="iconoir:twitter" class="h-5 w-5" />
             </a>
@@ -64,10 +65,15 @@ const appConfig = useAppConfig()
               target="_blank"
               title="GitHub"
               class="opacity-75 hover:opacity-100 dark:text-gray-100"
+              aria-label="Go to GitHub"
             >
               <Icon name="iconoir:github" class="h-5 w-5" />
             </a>
-            <ColorModeSwitch class="opacity-75 hover:opacity-100 dark:text-gray-100" title="Toggle color mode" />
+            <ColorModeSwitch
+              class="opacity-75 hover:opacity-100 dark:text-gray-100"
+              title="Toggle color mode"
+              aria-hidden="true"
+            />
           </div>
 
           <!-- Mobile menu -->
