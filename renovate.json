@@ -1,10 +1,10 @@
 {
   "extends": ["github>patrikbird/renovate-config"],
-    "packageRules": [
-      {
-        "excludeDepNames": [
-          "@fawmi/vue-google-maps"
-        ]
-      }
-    ]
+  "packageRules": [
+    {
+      "excludeDepNames": [
+        "@fawmi/vue-google-maps"
+      ]
+    }
+  ]
 }
