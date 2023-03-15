@@ -3,9 +3,6 @@ const { data: posts } = await usePosts()
 </script>
 
 <template>
-  <!-- <h2 class="font-mont text-3xl font-extrabold tracking-tight sm:text-4xl">
-    Blog
-  </h2> -->
   <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
     For now, the blog will be exclusively about my travels to update
     friends and family and is therefore written in German.
