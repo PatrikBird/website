@@ -6,22 +6,15 @@ const props = defineProps<{ article: any }>()
   <NuxtLink
     :to="props.article._path"
   >
-    <img
-      class="my-0 h-48 w-full rounded-lg object-cover"
+    <nuxt-img
       :src="props.article.imageUrl"
-      width="630"
-      height="290"
+      class="my-0 h-52 w-full rounded-lg object-cover"
       alt="blog post cover image"
-    >
-    <!-- <nuxt-img
-      :src="props.article.imageUrl"
-      class="my-0 h-48 w-96 rounded-lg object-cover"
-      alt="blog post cover image"
-      preset="cover"
+      preset="blogImg"
       provider="cloudinary"
       format="webp"
       quality="90"
-    /> -->
+    />
   </NuxtLink>
   <div class="flex flex-1 flex-col justify-between pb-6 text-left">
     <div class="flex-1">

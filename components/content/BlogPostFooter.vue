@@ -24,10 +24,15 @@ const hasTwoAdjacentBlogPosts = computed(() => {
           :to="prev._path"
           aria-hidden="true"
         >
-          <img
-            class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
+          <nuxt-img
             :src="prev.imageUrl"
-          >
+            class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
+            alt="blog post cover image"
+            preset="blogImg"
+            provider="cloudinary"
+            format="webp"
+            quality="90"
+          />
         </NuxtLink>
         <dl class="self-center text-start">
           <dt class="text-xs">
@@ -70,10 +75,15 @@ const hasTwoAdjacentBlogPosts = computed(() => {
           :to="next._path"
           aria-hidden="true"
         >
-          <img
-            class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
+          <nuxt-img
             :src="next.imageUrl"
-          >
+            class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
+            alt="blog post cover image"
+            preset="blogImg"
+            provider="cloudinary"
+            format="webp"
+            quality="90"
+          />
         </NuxtLink>
       </div>
     </div>
