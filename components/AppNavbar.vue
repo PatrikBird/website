@@ -15,7 +15,7 @@ const appConfig = useAppConfig()
         <div class="flex h-16 justify-between">
           <div class="flex">
             <div class="flex shrink-0 items-center">
-              <NuxtLink to="/" aria-hidden="true">
+              <NuxtLink to="/" aria-label="main">
                 <img class="h-8 w-auto" src="/logo.webp" width="48" height="48" alt="logo">
               </NuxtLink>
               <!-- <img
@@ -72,7 +72,6 @@ const appConfig = useAppConfig()
             <ColorModeSwitch
               class="opacity-75 hover:opacity-100 dark:text-gray-100"
               title="Toggle color mode"
-              aria-hidden="true"
             />
           </div>
 
