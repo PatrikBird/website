@@ -4,8 +4,8 @@ const { data: posts } = await usePosts()
 
 <template>
   <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
-    For now, the blog will be exclusively about my travels to update
-    friends and family and is therefore written in German.
+    For the time being, this blog will only be about my travels
+    to update friends and family and is therefore written in German.
   </p>
   <div class="mx-auto max-w-7xl">
     <div
