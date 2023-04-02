@@ -9,8 +9,7 @@ const { data: posts } = await usePosts()
   </p>
   <div class="mx-auto max-w-7xl">
     <div
-      class="mx-auto mt-12 grid max-w-lg gap-4
-          lg:max-w-none lg:grid-cols-2 xl:grid-cols-3"
+      class="mx-auto mt-12 grid max-w-md gap-4 lg:max-w-none lg:grid-cols-3"
     >
       <article
         v-for="article in posts"
