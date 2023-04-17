@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.38.4
-  '@fawmi/vue-google-maps': 0.9.79
+  '@fawmi/vue-google-maps': 0.9.72
   '@iconify/vue': 4.1.1
   '@nuxt/content': 2.5.2
   '@nuxt/devtools': ^0.4.0
@@ -28,7 +28,7 @@ specifiers:
   vue-tsc: 1.2.0
 
 dependencies:
-  '@fawmi/vue-google-maps': 0.9.79
+  '@fawmi/vue-google-maps': 0.9.72
   '@iconify/vue': 4.1.1
   '@nuxt/content': 2.5.2
   '@nuxtjs/color-mode': 3.2.0
@@ -1512,21 +1512,19 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fawmi/vue-google-maps/0.9.79:
-    resolution: {integrity: sha512-SnITonfrBfT/7uESF8SCs1DRWHSJyr/K0bPv9taONAUp/YiggmlwHOwAzA63UeDl8vP0bBmT56MYC1bZmAdUjQ==}
+  /@fawmi/vue-google-maps/0.9.72:
+    resolution: {integrity: sha512-/eoaV6rvE+eCn0g+OaP9VV2KL19vi2M9I2HL62gDnFdQJ7PYFJliOG6gCeojmX1dYpRWQzEzjhcT5ZzMBkd3Qw==}
     dependencies:
-      '@googlemaps/markerclusterer': 2.0.15
+      '@googlemaps/markerclustererplus': 1.2.10
     dev: false
 
   /@gar/promisify/1.1.3:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
 
-  /@googlemaps/markerclusterer/2.0.15:
-    resolution: {integrity: sha512-/I6Esi5FtyeVHsezN9Kut8zRJoqe7KkTIJXGVqpKFf6BjC7qQ1xRajLMkOz0s8XKgLevbr+KdYjuvmj+LohOGg==}
-    dependencies:
-      fast-deep-equal: 3.1.3
-      supercluster: 7.1.5
+  /@googlemaps/markerclustererplus/1.2.10:
+    resolution: {integrity: sha512-HY4ev+D3kO1+9oQjtKTojxVtJIS/kSWJfry6cpKoXC97kBQc5Vguqu5x6pLnh+70N0Au+16Yl7iu4LZaIOTstw==}
+    deprecated: It is recommended to use @googlemaps/markerclusterer instead of this package.
     dev: false
 
   /@hapi/hoek/9.3.0:
@@ -6709,10 +6707,6 @@ packages:
     dev: false
     optional: true
 
-  /kdbush/3.0.0:
-    resolution: {integrity: sha512-hRkd6/XW4HTsA9vjVpY9tuXJYLSlelnkTmVFu4M9/7MIYQtFcHpbugAU7UbOfjOiVSVYl2fqgBuJ32JUmRo5Ew==}
-    dev: false
-
   /keygrip/1.1.0:
     resolution: {integrity: sha512-iYSchDJ+liQ8iwbSI2QqsQOvqv58eJCEanyJPJi+Khyu8smkcKSFUCbPwzFcL7YVtZ6eONjqRX/38caJ7QjRAQ==}
     engines: {node: '>= 0.6'}
@@ -10140,12 +10134,6 @@ packages:
       mz: 2.7.0
       pirates: 4.0.5
       ts-interface-checker: 0.1.13
-    dev: false
-
-  /supercluster/7.1.5:
-    resolution: {integrity: sha512-EulshI3pGUM66o6ZdH3ReiFcvHpM3vAigyK+vcxdjpJyEbIIrtbmBdY23mGgnI24uXiGFvrGq9Gkum/8U7vJWg==}
-    dependencies:
-      kdbush: 3.0.0
     dev: false
 
   /supports-color/5.5.0:

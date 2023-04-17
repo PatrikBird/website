@@ -23,12 +23,12 @@ export default defineNuxtConfig({
       ],
     },
   },
-  vite: {
-    optimizeDeps: {
-      // vue-google-maps
-      include: ['fast-deep-equal'],
-    },
-  },
+  // vite: {
+  //   optimizeDeps: {
+  //     // vue-google-maps
+  //     include: ['fast-deep-equal'],
+  //   },
+  // },
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: '',
