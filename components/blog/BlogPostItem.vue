@@ -23,7 +23,7 @@ const props = defineProps<{ article: any }>()
           {{ props.article.title }}
         </p>
       </NuxtLink>
-      <p class="mt-3 mb-2 text-sm">
+      <p class="mb-2 mt-3 text-sm">
         {{ props.article.description }}
       </p>
     </div>
