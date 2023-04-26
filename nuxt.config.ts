@@ -21,6 +21,10 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: 'Personal website' },
       ],
+      // set lang attributes for fallback pages
+      htmlAttrs: {
+        lang: 'en',
+      },
     },
   },
   // vite: {
