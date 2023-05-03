@@ -35,7 +35,7 @@
     "@types/node": "^18.15.11",
     "eslint": "8.39.0",
     "eslint-plugin-tailwindcss": "^3.11.0",
-    "nuxt": "3.3.2",
+    "nuxt": "3.4.3",
     "nuxt-icon": "0.4.0",
     "remark-reading-time": "^2.0.1",
     "swiper": "9.2.4",
