@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     enabled: false,
   },
   htmlValidator: {
-    logLevel: 'verbose',
+    logLevel: 'warning',
     failOnError: false,
     options: {
       rules: {
