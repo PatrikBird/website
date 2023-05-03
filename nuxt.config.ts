@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
     '@nuxtjs/critters',
+    '@nuxt/devtools',
     '@nuxtjs/html-validator',
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
