@@ -53,6 +53,9 @@ export default defineNuxtConfig({
       theme: 'vitesse-dark',
     },
   },
+  devtools: {
+    enabled: false,
+  },
   htmlValidator: {
     logLevel: 'verbose',
     failOnError: false,
