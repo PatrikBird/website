@@ -14,6 +14,7 @@
     "types": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@nuxtjs/web-vitals": "^0.2.4",
     "@vueuse/components": "10.0.2",
     "@vueuse/core": "10.0.2"
   },
@@ -30,7 +31,6 @@
     "@nuxtjs/plausible": "0.2.0",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "6.6.6",
-    "@nuxtjs/web-vitals": "^0.2.4",
     "@tailwindcss/typography": "0.5.9",
     "@types/node": "^18.15.11",
     "eslint": "8.38.0",
