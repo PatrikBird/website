@@ -3,25 +3,13 @@ const props = withDefaults(defineProps<{
   alt: string
   src: string
   lazy?: boolean | 'false' | 'true'
-  width?: number | string
-  height?: number | string
-  landscape?: boolean
 }>(), {
   lazy: true,
-  width: '700',
-  height: '900',
 })
 
 const loadingType = computed(() => {
   return (props.lazy === true || props.lazy === 'true') ? 'lazy' : 'eager'
 })
-
-const width = ref(props.width)
-const height = ref(props.height)
-if (props.landscape) {
-  width.value = 1000
-  height.value = 750
-}
 </script>
 
 <template>
@@ -29,13 +17,12 @@ if (props.landscape) {
     <nuxt-img
       :src="props.src"
       :alt="props.alt"
-      :width="width"
-      :height="height"
+      class="w-full"
       :loading="loadingType"
       preset="blogImg"
       provider="cloudinary"
       format="webp"
-      quality="90"
+      quality="95"
     />
     <figcaption v-if="alt">
       {{ alt }}
