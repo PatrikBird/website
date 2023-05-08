@@ -21,7 +21,7 @@ const images = computed(() => {
 const modules = [Pagination]
 
 const initialHeight = computed(() => {
-  return '700px'
+  return '300px'
 })
 </script>
 
