@@ -19,6 +19,10 @@ const images = computed(() => {
 })
 
 const modules = [Pagination]
+
+const initialHeight = computed(() => {
+  return '700px'
+})
 </script>
 
 <template>
@@ -28,6 +32,8 @@ const modules = [Pagination]
     :space-between="10"
     :pagination="{ clickable: true }"
     auto-height
+    :lazy-preload-prev-next="1"
+    :style="{ minHeight: initialHeight }"
   >
     <SwiperSlide v-for="image in images" :key="image.src">
       <prose-img
