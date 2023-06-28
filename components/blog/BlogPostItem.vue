@@ -1,5 +1,7 @@
 <script setup lang='ts'>
-const props = defineProps<{ article: any }>()
+import type { Post } from '~/types'
+
+const props = defineProps<{ article: Post }>()
 </script>
 
 <template>
