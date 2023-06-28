@@ -1,9 +1,10 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
-  alt: string
-  src: string
+import type { SwiperImage } from '~/types'
+
+interface ProseImgProps extends SwiperImage {
   lazy?: boolean | 'false' | 'true'
-}>(), {
+}
+const props = withDefaults(defineProps<ProseImgProps>(), {
   lazy: true,
 })
 

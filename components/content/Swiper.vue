@@ -1,19 +1,20 @@
 <script lang="ts" setup>
 import { Pagination } from 'swiper'
 import { Swiper as SwiperContainer, SwiperSlide } from 'swiper/vue'
+import type { SwiperImage } from '~/types'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 
 const props = defineProps<{
-  pics: string[][] // [src, alt]
+  pics: SwiperImage[]
 }>()
 
 const images = computed(() => {
   return props.pics.map((pic) => {
     return {
-      src: pic[0],
-      alt: pic[1],
+      src: pic.src,
+      alt: pic.alt,
     }
   })
 })

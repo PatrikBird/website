@@ -25,3 +25,8 @@ interface ReadingTime {
   time: number
   words: number
 }
+
+export interface SwiperImage {
+  src: string
+  alt: string
+}
