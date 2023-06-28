@@ -30,3 +30,9 @@ export interface SwiperImage {
   src: string
   alt: string
 }
+
+export interface GoogleMapsPin {
+  lat: number
+  lng: number
+  desc: string
+}

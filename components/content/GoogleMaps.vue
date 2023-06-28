@@ -1,8 +1,10 @@
 <script setup lang='ts'>
+import type { GoogleMapsPin } from '~/types'
+
 interface Props {
   lat: number
   lng: number
-  pins: number[][]
+  pins: GoogleMapsPin[]
   zoom: number
 }
 const props = withDefaults(defineProps<Props>(), {
@@ -15,10 +17,10 @@ const markers = computed(() => {
   return props.pins.map((pin, index) => {
     return {
       id: index,
-      description: pin[2],
+      description: pin.desc,
       position: {
-        lat: pin[0],
-        lng: pin[1],
+        lat: pin.lat,
+        lng: pin.lng,
       },
     }
   })
@@ -53,7 +55,11 @@ const backgroundColor = computed(() => {
       }"
       style="width: 100%; height: 600px; margin: auto"
     >
-      <GMapMarker v-for="marker in markers" :key="marker.id" :position="marker.position" />
+      <GMapMarker
+        v-for="marker in markers"
+        :key="marker.id"
+        :position="marker.position"
+      />
       <GMapMarker
         v-for="(marker, index) in markers"
         :key="index"
@@ -61,7 +67,11 @@ const backgroundColor = computed(() => {
         :clickable="true"
         @click="openMarker(marker.id)"
       >
-        <GMapInfoWindow :closeclick="true" :opened="openedMarkerID === marker.id" @closeclick="openMarker(null)">
+        <GMapInfoWindow
+          :closeclick="true"
+          :opened="openedMarkerID === marker.id"
+          @closeclick="openMarker(null)"
+        >
           <div class="text-black">
             {{ marker.description }}
           </div>
