@@ -1,4 +1,5 @@
 <script setup>
+// this component only exists as a workaround to prevent html validation errors
 const slots = useSlots()
 
 // Hacky check for an image
