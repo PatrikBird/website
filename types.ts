@@ -6,12 +6,22 @@ export interface ParsedContent extends DefaultParsedContent {
 }
 
 export interface Post extends ParsedContent {
-  readingMins: number
   description: string
+  imageUrl: string
+  layout: 'post' | 'default' | 'fullwidth'
   publishedAt: Date
   modifiedAt: Date
   path: string
   renderer: 'post' | 'page'
+  date: Date
+  readingTime: ReadingTime
   icon?: string
   nav?: boolean
+}
+
+interface ReadingTime {
+  text: string
+  minutes: number
+  time: number
+  words: number
 }

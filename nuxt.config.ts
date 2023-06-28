@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     },
   },
   devtools: {
-    enabled: false,
+    enabled: true,
   },
   htmlValidator: {
     logLevel: 'warning',
