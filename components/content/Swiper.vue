@@ -10,15 +10,6 @@ const props = defineProps<{
   pics: SwiperImage[]
 }>()
 
-const images = computed(() => {
-  return props.pics.map((pic) => {
-    return {
-      src: pic.src,
-      alt: pic.alt,
-    }
-  })
-})
-
 const modules = [Pagination]
 
 const initialHeight = computed(() => {
@@ -36,13 +27,13 @@ const initialHeight = computed(() => {
     :lazy-preload-prev-next="1"
     :style="{ minHeight: initialHeight }"
   >
-    <SwiperSlide v-for="image in images" :key="image.src">
+    <SwiperSlide v-for="pic in props.pics" :key="pic.src">
       <prose-img
-        :src="image.src"
-        :pic="image.src"
-        :alt="image.alt"
+        :src="pic.src"
+        :pic="pic.src"
+        :alt="pic.alt"
       >
-        {{ image.alt }}
+        {{ pic.alt }}
       </prose-img>
     </SwiperSlide>
   </SwiperContainer>
