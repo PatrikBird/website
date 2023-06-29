@@ -96,5 +96,8 @@ export default defineNuxtConfig({
       googleMapsApiKey: '', // will be injected in vueGoogleMaps plugin
     },
   },
-  css: ['@/assets/css/main.css', '@/assets/fonts/montserrat/stylesheet.css'],
+  css: [
+    '@/assets/css/main.css',
+    '@/assets/fonts/montserrat/stylesheet.css',
+  ],
 })
