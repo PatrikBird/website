@@ -1,8 +1,4 @@
----
-navigation.title: 'Blog'
-title: 'Blog - Patrik Bird'
-layout: 'fullwidth'
----
-# [Blog]{.font-mont}
+# Blog
+asd
+asd
 
-<PostList />
