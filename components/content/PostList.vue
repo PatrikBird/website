@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const { data: posts } = await usePosts()
+const { data: posts } = await usePosts('blog/')
 </script>
 
 <template>

@@ -89,7 +89,10 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ['tailwindcss/typography', '@fawmi/vue-google-maps'],
+    transpile: [
+      'tailwindcss/typography',
+      '@fawmi/vue-google-maps',
+    ],
   },
   runtimeConfig: {
     public: {

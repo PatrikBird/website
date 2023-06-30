@@ -1,13 +1,12 @@
 <script setup lang='ts'>
 import type { GoogleMapsPin } from '~/types'
 
-interface Props {
+const props = withDefaults(defineProps<{
   lat: number
   lng: number
   pins: GoogleMapsPin[]
   zoom: number
-}
-const props = withDefaults(defineProps<Props>(), {
+}>(), {
   zoom: 6,
 })
 
