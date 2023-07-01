@@ -12,7 +12,7 @@ export interface Post extends ParsedContent {
   publishedAt: Date
   modifiedAt: Date
   path: string
-  renderer: 'post' | 'page'
+  // renderer: 'post' | 'page'
   date: Date
   readingTime: ReadingTime
   icon?: string
