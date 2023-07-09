@@ -18,6 +18,8 @@ export default defineNuxtConfig({
       title: 'Patrik Bird',
       link: [
         { rel: 'preconnect', href: 'https://res.cloudinary.com' },
+        { rel: 'preconnect', href: 'https://vitals.vercel-analytics.com' },
+        { rel: 'preconnect', href: 'https://api.iconify.design' },
       ],
       meta: [
         { name: 'description', content: 'Personal website' },
