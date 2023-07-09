@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@nuxtjs/web-vitals':
     specifier: 0.2.6
@@ -13,7 +17,7 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config':
-    specifier: ^0.39.7
+    specifier: 0.39.7
     version: 0.39.7(eslint@8.44.0)(typescript@5.1.6)
   '@fawmi/vue-google-maps':
     specifier: 0.9.72
@@ -43,7 +47,7 @@ devDependencies:
     specifier: 0.2.1
     version: 0.2.1
   '@nuxtjs/robots':
-    specifier: ^3.0.0
+    specifier: 3.0.0
     version: 3.0.0
   '@nuxtjs/tailwindcss':
     specifier: 6.8.0
@@ -55,7 +59,7 @@ devDependencies:
     specifier: 20.4.1
     version: 20.4.1
   '@unlighthouse/nuxt':
-    specifier: ^0.9.0
+    specifier: 0.9.0
     version: 0.9.0(puppeteer@20.8.0)(typescript@5.1.6)(webpack@5.88.1)
   eslint:
     specifier: 8.44.0
@@ -1835,7 +1839,7 @@ packages:
   /@nuxtjs/robots@3.0.0:
     resolution: {integrity: sha512-qsHGW1KXBvV5Kq7u3huPnFCUTbHS4Fk8Za2mNPgmUXcwLgp3exvhPtdZfIdjrCF/aZk3A8OZONNmGghs6CecBA==}
     dependencies:
-      '@nuxt/kit': 3.6.1
+      '@nuxt/kit': 3.6.2
       h3: 1.7.1
     transitivePeerDependencies:
       - rollup
