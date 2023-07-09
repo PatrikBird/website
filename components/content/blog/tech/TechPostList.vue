@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-import TechBlogPostItem from '~/components/blog/TechBlogPostItem.vue';
 import type { Post } from '~/types'
 
 const props = defineProps<{ posts: Post[] }>()
