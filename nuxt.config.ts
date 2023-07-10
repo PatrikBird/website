@@ -106,7 +106,7 @@ export default defineNuxtConfig({
     '@/assets/css/main.css',
     '@/assets/fonts/montserrat/stylesheet.css',
   ],
-  nitro: {
-    preset: 'vercel-edge',
-  },
+  // nitro: {
+  //   preset: 'vercel-edge',
+  // },
 })
