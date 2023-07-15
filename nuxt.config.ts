@@ -4,12 +4,13 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
-    '@nuxtjs/critters',
+    // '@nuxtjs/critters',
     '@nuxtjs/html-validator',
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/web-vitals',
+    // '@unlighthouse/nuxt',
     'nuxt-icon',
   ],
   app: {
@@ -17,6 +18,8 @@ export default defineNuxtConfig({
       title: 'Patrik Bird',
       link: [
         { rel: 'preconnect', href: 'https://res.cloudinary.com' },
+        { rel: 'preconnect', href: 'https://vitals.vercel-analytics.com' },
+        { rel: 'preconnect', href: 'https://api.iconify.design' },
       ],
       meta: [
         { name: 'description', content: 'Personal website' },
@@ -103,4 +106,7 @@ export default defineNuxtConfig({
     '@/assets/css/main.css',
     '@/assets/fonts/montserrat/stylesheet.css',
   ],
+  // nitro: {
+  //   preset: 'vercel-edge',
+  // },
 })
