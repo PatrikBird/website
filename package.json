@@ -26,21 +26,21 @@
     "@nuxt/devtools": "0.6.7",
     "@nuxt/image-edge": "1.0.0-rc.1-28143901.afe4120",
     "@nuxtjs/color-mode": "3.3.0",
-    "@nuxtjs/critters": "0.4.1",
-    "@nuxtjs/html-validator": "1.5.0",
+    "@nuxtjs/critters": "0.5.0",
+    "@nuxtjs/html-validator": "1.5.1",
     "@nuxtjs/plausible": "0.2.1",
     "@nuxtjs/robots": "3.0.0",
     "@nuxtjs/tailwindcss": "6.8.0",
     "@tailwindcss/typography": "0.5.9",
-    "@types/node": "20.4.1",
+    "@types/node": "20.4.2",
     "@unlighthouse/nuxt": "0.9.0",
-    "eslint": "8.44.0",
+    "eslint": "8.45.0",
     "eslint-plugin-tailwindcss": "3.13.0",
-    "nuxt": "3.6.2",
+    "nuxt": "3.6.3",
     "nuxt-icon": "0.4.2",
     "remark-reading-time": "2.0.1",
     "swiper": "10.0.4",
     "typescript": "5.1.6",
-    "vue-tsc": "1.8.4"
+    "vue-tsc": "1.8.5"
   }
 }
