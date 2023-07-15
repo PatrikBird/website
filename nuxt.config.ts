@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/web-vitals',
-    '@unlighthouse/nuxt',
+    // '@unlighthouse/nuxt',
     'nuxt-icon',
   ],
   app: {
