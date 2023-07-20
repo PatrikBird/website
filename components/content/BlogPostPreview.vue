@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import type { Post } from 'types'
+
 const props = defineProps<{
-  post: any
+  post: Post
   label: string
   reverse?: boolean
 }>()
+
+watchEffect(() => {
+  console.log(props.reverse)
+  console.log(props.post)
+})
 </script>
 
 <template>
