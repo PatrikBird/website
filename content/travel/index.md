@@ -1,5 +1,5 @@
 ---
-navigation.title: 'Travel Blog'
+navigation.title: 'Travel'
 title: 'Travel Blog - Patrik Bird'
 layout: 'fullwidth'
 ---
@@ -7,7 +7,7 @@ layout: 'fullwidth'
 
 ::PostList
 ---
-path: 'blog/travel/'
+path: 'travel/'
 ---
 Feel free to join me on my travels 😊
 ::
