@@ -49,7 +49,7 @@ const appConfig = useAppConfig()
             >
               {{ link.title }}
             </NuxtLink>
-            <a
+            <!-- <a
               v-if="appConfig.socials?.twitter"
               :href="`https://twitter.com/${appConfig.socials?.twitter}`"
               target="_blank"
@@ -58,7 +58,7 @@ const appConfig = useAppConfig()
               aria-label="Go to Twitter"
             >
               <Icon name="iconoir:twitter" class="h-5 w-5" />
-            </a>
+            </a> -->
             <a
               v-if="appConfig.socials?.github"
               :href="`https://github.com/${appConfig.socials?.github}`"
