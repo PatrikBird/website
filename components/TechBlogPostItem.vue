@@ -5,7 +5,7 @@ const props = defineProps<{ article: Post }>()
 </script>
 
 <template>
-  <p>I am a tech Blog Post!</p>
+  <p>I am a TechBlogPostItem.</p>
   <!-- <NuxtLink
     :to="props.article._path"
   >

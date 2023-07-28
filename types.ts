@@ -17,6 +17,7 @@ export interface Post extends ParsedContent {
   readingTime: ReadingTime
   icon?: string
   nav?: boolean
+  lang: 'en' | 'de'
 }
 
 interface ReadingTime {
