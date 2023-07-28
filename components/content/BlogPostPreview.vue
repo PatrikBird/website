@@ -6,11 +6,6 @@ const props = defineProps<{
   label: string
   reverse?: boolean
 }>()
-
-watchEffect(() => {
-  console.log(props.reverse)
-  console.log(props.post)
-})
 </script>
 
 <template>

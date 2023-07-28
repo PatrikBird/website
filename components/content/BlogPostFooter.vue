@@ -2,18 +2,14 @@
 const { prev, next } = useContent()
 
 const filteredPrev = computed(() => {
-  return prev.value && prev.value._dir !== 'travel' ? prev.value : null
+  return prev.value && prev.value._dir === 'travel' ? prev.value : null
 })
 const filteredNext = computed(() => {
-  return next.value && next.value._dir !== 'travel' ? next.value : null
+  return next.value && next.value._dir === 'travel' ? next.value : null
 })
 const hasTwoAdjacentBlogPosts = computed(() => {
   return !!(filteredPrev.value && filteredNext.value)
 })
-
-// watchEffect(() => {
-//   console.log(filteredNext.value)
-// })
 </script>
 
 <template>
@@ -28,8 +24,8 @@ const hasTwoAdjacentBlogPosts = computed(() => {
         'max-w-2xl': !hasTwoAdjacentBlogPosts,
       }"
     >
-      <BlogPostPreview :post="prev" label="Vorheriger Beitrag" />
-      <BlogPostPreview :post="next" label="Nächster Beitrag" reverse />
+      <BlogPostPreview v-if="filteredPrev" :post="filteredPrev" label="Vorheriger Beitrag" />
+      <BlogPostPreview v-if="filteredNext" :post="filteredNext" label="Nächster Beitrag" reverse />
     </div>
   </footer>
 </template>
