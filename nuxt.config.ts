@@ -57,6 +57,9 @@ export default defineNuxtConfig({
   },
   devtools: {
     enabled: true,
+    timeline: {
+      enabled: true,
+    },
   },
   htmlValidator: {
     logLevel: 'warning',
