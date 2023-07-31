@@ -3,7 +3,6 @@ export default defineAppConfig({
     size: '22px', // default <Icon> size applied
   },
   socials: {
-    twitter: 'PatBirdMe',
     github: 'PatrikBird',
   },
 })
