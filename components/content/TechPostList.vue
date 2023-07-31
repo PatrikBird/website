@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-const { data: posts } = await usePosts('articles/')
+const { data: articles } = await usePosts('articles/')
 </script>
 
 <template>
@@ -11,7 +11,7 @@ const { data: posts } = await usePosts('articles/')
       class="mx-auto mt-12 grid max-w-md gap-4 lg:max-w-none lg:grid-cols-3"
     >
       <article
-        v-for="article in posts"
+        v-for="article in articles"
         :key="article._path"
         class="flex flex-col gap-3 overflow-hidden rounded-lg"
       >

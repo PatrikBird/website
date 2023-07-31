@@ -1,6 +1,6 @@
 ---
 navigation.title: 'Travel'
-title: 'Travel Blog - Patrik Bird'
+title: 'Travels - Patrik Bird'
 layout: 'fullwidth'
 ---
 # [Travel]{.font-mont}
