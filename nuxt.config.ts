@@ -57,6 +57,9 @@ export default defineNuxtConfig({
   },
   devtools: {
     enabled: true,
+    timeline: {
+      enabled: true,
+    },
   },
   htmlValidator: {
     logLevel: 'warning',
@@ -102,6 +105,9 @@ export default defineNuxtConfig({
       googleMapsApiKey: '', // will be injected in vueGoogleMaps plugin
     },
   },
+  // routeRules: {
+  //   '/blog': { redirect: { to: '/travel', statusCode: 308 } },
+  // },
   css: [
     '@/assets/css/main.css',
     '@/assets/fonts/montserrat/stylesheet.css',

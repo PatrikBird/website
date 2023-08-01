@@ -1,91 +1,31 @@
 <script setup lang='ts'>
 const { prev, next } = useContent()
 
+const filteredPrev = computed(() => {
+  return prev.value && prev.value._dir === 'travel' ? prev.value : null
+})
+const filteredNext = computed(() => {
+  return next.value && next.value._dir === 'travel' ? next.value : null
+})
 const hasTwoAdjacentBlogPosts = computed(() => {
-  return prev.value && prev.value._path.includes('blog/') && next.value && next.value._path.includes('blog/')
+  return !!(filteredPrev.value && filteredNext.value)
 })
 </script>
 
 <template>
-  <!-- TODO: refactor this mess -->
   <footer class="py-10">
     <p class="pb-4 text-center font-mont text-2xl font-bold">
       Weitere Beiträge
     </p>
     <div
       class="flex flex-col gap-5 rounded-lg sm:grid"
-      :class="{ 'lg:grid-cols-2': hasTwoAdjacentBlogPosts, 'max-w-2xl': !hasTwoAdjacentBlogPosts }"
+      :class="{
+        'lg:grid-cols-2': hasTwoAdjacentBlogPosts,
+        'max-w-2xl': !hasTwoAdjacentBlogPosts,
+      }"
     >
-      <div
-        v-if="prev && prev._path.includes('blog/')"
-        class="flex flex-row gap-2 p-1 text-center"
-      >
-        <NuxtLink
-          :to="prev._path"
-          aria-hidden="true"
-        >
-          <nuxt-img
-            :src="prev.imageUrl"
-            class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
-            alt="blog post cover image"
-            preset="blogImg"
-            provider="cloudinary"
-            format="webp"
-            quality="90"
-          />
-        </NuxtLink>
-        <dl class="self-center text-start">
-          <dt class="text-xs">
-            Vorheriger Beitrag
-          </dt>
-          <dd class="text-xl font-bold tracking-tight text-teal-600">
-            <NuxtLink
-              :to="prev._path"
-              aria-label="Go to previous post"
-            >
-              {{ prev.title }}
-            </NuxtLink>
-          </dd>
-          <dd class="text-xs">
-            {{ prev.description }}
-          </dd>
-        </dl>
-      </div>
-      <div
-        v-if="next && next._path.includes('blog/')"
-        class="flex flex-row justify-end gap-2 p-1 text-center"
-      >
-        <dl class="self-center text-end">
-          <dt class="text-xs">
-            Nächster Beitrag
-          </dt>
-          <dd class="text-xl font-bold tracking-tight text-teal-600">
-            <NuxtLink
-              :to="next._path"
-              aria-label="Go to next post"
-            >
-              {{ next.title }}
-            </NuxtLink>
-          </dd>
-          <dd class="text-xs">
-            {{ next.description }}
-          </dd>
-        </dl>
-        <NuxtLink
-          :to="next._path"
-          aria-hidden="true"
-        >
-          <nuxt-img
-            :src="next.imageUrl"
-            class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
-            alt="blog post cover image"
-            preset="blogImg"
-            provider="cloudinary"
-            format="webp"
-            quality="90"
-          />
-        </NuxtLink>
-      </div>
+      <BlogPostPreview v-if="filteredPrev" :post="filteredPrev" label="Vorheriger Beitrag" />
+      <BlogPostPreview v-if="filteredNext" :post="filteredNext" label="Nächster Beitrag" reverse />
     </div>
   </footer>
 </template>

@@ -44,12 +44,12 @@ const appConfig = useAppConfig()
               v-for="link of navigation"
               :key="link._path"
               :to="link._path"
-              active-class="active-navbar-link"
+              active-class="!border-black !dark:border-white"
               class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium opacity-75 hover:border-gray-300 hover:opacity-100 dark:text-gray-100"
             >
               {{ link.title }}
             </NuxtLink>
-            <a
+            <!-- <a
               v-if="appConfig.socials?.twitter"
               :href="`https://twitter.com/${appConfig.socials?.twitter}`"
               target="_blank"
@@ -58,7 +58,7 @@ const appConfig = useAppConfig()
               aria-label="Go to Twitter"
             >
               <Icon name="iconoir:twitter" class="h-5 w-5" />
-            </a>
+            </a> -->
             <a
               v-if="appConfig.socials?.github"
               :href="`https://github.com/${appConfig.socials?.github}`"
