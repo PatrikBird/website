@@ -82,9 +82,6 @@ onBeforeUnmount(() => clear)
 <template>
   <div
     class="fixed inset-x-0 top-0 z-50 w-0 bg-teal-400 opacity-100"
-    :class="{
-      'nuxt-progress-failed': !data.canSucceed,
-    }"
     :style="{
       width: `${data.percent}%`,
       left: data.left,
