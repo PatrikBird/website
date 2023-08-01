@@ -8,12 +8,11 @@ const { data: articles } = await usePosts('articles/')
   </p>
   <div class="mx-auto max-w-7xl">
     <div
-      class="mx-auto mt-12 grid max-w-md gap-4 lg:max-w-none lg:grid-cols-3"
+      class="mx-auto mt-12 grid gap-6 px-6"
     >
       <article
         v-for="article in articles"
         :key="article._path"
-        class="flex flex-col gap-3 overflow-hidden rounded-lg"
       >
         <TechBlogPostItem :article="article" />
       </article>
