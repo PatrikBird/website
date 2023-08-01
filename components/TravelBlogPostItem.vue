@@ -31,7 +31,7 @@ const props = defineProps<{ post: Post }>()
     </div>
     <span class="text-xs italic">
       <time>
-        {{ props.post.date }}
+        {{ formatDate(props.post.date) }}
       </time>
       · {{ props.post.readingTime.text }}
     </span>
