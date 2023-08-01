@@ -9,13 +9,9 @@ export interface Post extends ParsedContent {
   imageUrl?: string
   description: string
   layout: 'travel' | 'articles' | 'default' | 'fullwidth'
-  publishedAt: Date
-  modifiedAt: Date
   path: string
   date: Date
   readingTime: ReadingTime
-  icon?: string
-  nav?: boolean
   lang: 'en' | 'de'
 }
 
