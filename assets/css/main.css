@@ -23,5 +23,10 @@
 }
 
 .swiper-pagination-bullet {
-  @apply dark:bg-white !important;
+  @apply dark:bg-white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply dark:bg-primary-800 dark:text-primary-50;
 }
