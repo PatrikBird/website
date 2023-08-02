@@ -11,7 +11,7 @@ const route = useRoute()
   >
     <Icon
       name="line-md:arrow-small-left"
-      class="text-teal-800 opacity-75 group-hover:opacity-100 dark:text-primary-100"
+      class="text-secondary-800 opacity-75 group-hover:opacity-100 dark:text-primary-100"
     />
   </NuxtLink>
 </template>
