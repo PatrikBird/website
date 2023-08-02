@@ -7,7 +7,8 @@ const props = defineProps<{ article: Post }>()
 <template>
   <NuxtLink
     :to="props.article._path"
-    class="color-base relative flex min-h-[40px] flex-col items-start gap-3 border no-underline transition-colors duration-150 md:flex-row"
+    class="relative flex min-h-[40px] flex-col items-start gap-3 border
+    no-underline opacity-75 transition-opacity duration-200 hover:opacity-100 md:flex-row"
   >
     <div class="md:self-center">
       {{ props.article.title }}
