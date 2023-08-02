@@ -1,7 +1,7 @@
 <template>
   <div class="dark:text-white">
     <Meta property="og:image" content="/cover.jpg" />
-    <AppLoadingBar />
+    <NuxtLoadingIndicator color="#FF0000" />
     <AppNavbar />
     <slot />
   </div>
