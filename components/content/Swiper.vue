@@ -45,13 +45,13 @@ const initialHeight = computed(() => {
 .swiper-button-prev,
 .swiper-button-next {
   color: rgb(17 94 89);
-  padding: 1.5rem;
+  padding: 1.4em;
   border-radius: 100%;
   background-color: rgba(255,255,255, 0.9);
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  font-size: 1.2rem;
+  font-size: 1em;
 }
 .swiper-pagination-bullet {
   background-color: black;
