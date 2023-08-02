@@ -4,16 +4,21 @@
 
 @layer base {
   body {
-    @apply bg-zinc-50 dark:bg-zinc-900;
+    @apply bg-primary-50 dark:bg-primary-900 dark:text-white;
   }
 }
 
 @layer components {
   .action-btn {
-    @apply inline-block rounded-full items-center justify-center bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20;
+    @apply inline-block rounded-full items-center justify-center bg-white/90
+    shadow-lg shadow-primary-800/5 ring-1 ring-primary-900/5 backdrop-blur
+    dark:bg-primary-800/90 dark:ring-white/10 dark:hover:ring-white/20;
   }
   .color-base {
-    @apply text-zinc-900 dark:text-zinc-300;
+    @apply text-primary-900 dark:text-primary-300;
+  }
+  .border-base {
+    @apply border-primary-900 dark:border-primary-300;
   }
 }
 
