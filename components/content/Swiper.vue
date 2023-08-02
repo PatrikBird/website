@@ -45,9 +45,9 @@ const initialHeight = computed(() => {
 .swiper-button-prev,
 .swiper-button-next {
   color: rgb(17 94 89);
-  padding: 1.4em;
+  padding: 1.3em;
   border-radius: 100%;
-  background-color: rgba(255,255,255, 0.9);
+  background-color: rgba(255,255,255, 0.5);
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -56,4 +56,15 @@ const initialHeight = computed(() => {
 .swiper-pagination-bullet {
   background-color: black;
 }
+
+/* @media (max-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    padding: 1.3em;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 1em;
+  }
+} */
 </style>

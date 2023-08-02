@@ -28,5 +28,5 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  @apply dark:bg-primary-800 dark:text-primary-50;
+  @apply dark:bg-primary-800/60 dark:text-primary-50;
 }
