@@ -5,7 +5,7 @@
       <ReadProgressBar />
       <ScrollToTop />
       <div class="m-auto max-w-3xl px-4 py-10 sm:rounded sm:px-8 sm:pt-14 lg:relative">
-        <div class="prose prose-gray max-w-none dark:prose-invert">
+        <div class="prose prose-zinc max-w-none dark:prose-invert">
           <GoUpOnePageBtn />
           <article>
             <slot />
