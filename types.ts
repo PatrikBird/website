@@ -7,7 +7,7 @@ export interface ParsedContent extends DefaultParsedContent {
 
 export interface Post extends ParsedContent {
   imageUrl?: string
-  description: string
+  description?: string
   layout: 'travel' | 'articles' | 'default' | 'fullwidth'
   path: string
   date: Date
