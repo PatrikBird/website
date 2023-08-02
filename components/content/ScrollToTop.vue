@@ -19,7 +19,11 @@ function scrollToTop() {
       aria-label="Scroll to top"
       @click="scrollToTop"
     >
-      <Icon name="line-md:arrow-small-left" class="rotate-90 text-teal-800 opacity-75 group-hover:opacity-100 dark:text-gray-100" aria-hidden="true" />
+      <Icon
+        name="line-md:arrow-small-left"
+        class="rotate-90 text-teal-800 opacity-75 group-hover:opacity-100 dark:text-primary-100"
+        aria-hidden="true"
+      />
     </button>
   </div>
 </template>

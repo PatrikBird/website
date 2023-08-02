@@ -37,7 +37,7 @@ const backgroundColor = computed(() => {
 </script>
 
 <template>
-  <div class="border border-zinc-200 dark:border-zinc-600">
+  <div class="border border-primary-200 dark:border-primary-600">
     <GMapMap
       :center="center"
       :options="{

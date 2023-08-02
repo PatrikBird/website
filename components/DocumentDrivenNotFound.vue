@@ -6,7 +6,7 @@
           404
         </p>
         <div class="sm:ml-6">
-          <div class="sm:border-l sm:border-gray-200 sm:pl-6">
+          <div class="sm:border-l sm:border-primary-200 sm:pl-6">
             <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
               Page not found
             </h1>
