@@ -44,8 +44,10 @@ const appConfig = useAppConfig()
               v-for="link of navigation"
               :key="link._path"
               :to="link._path"
-              active-class="!border-black !dark:border-white"
-              class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium opacity-75 hover:border-gray-300 hover:opacity-100 dark:text-gray-100"
+              active-class="!border-opacity-100"
+              class="inline-flex items-center border-b-2 border-primary-900 border-opacity-0 px-1 pt-1
+              text-sm font-medium opacity-75 hover:border-opacity-75
+              dark:border-primary-300 dark:border-opacity-0 dark:hover:border-opacity-75"
             >
               {{ link.title }}
             </NuxtLink>
