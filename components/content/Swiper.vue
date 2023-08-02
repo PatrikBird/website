@@ -57,14 +57,14 @@ const initialHeight = computed(() => {
   background-color: black;
 }
 
-/* @media (max-width: 640px) {
+@media (max-width: 640px) {
   .swiper-button-prev,
   .swiper-button-next {
-    padding: 1.3em;
+    background-color: rgba(255,255,255, 0);
   }
   .swiper-button-next:after,
   .swiper-button-prev:after {
-    font-size: 1em;
+    font-size: 0em;
   }
-} */
+}
 </style>
