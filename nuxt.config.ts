@@ -51,9 +51,9 @@ export default defineNuxtConfig({
       },
     },
     highlight: {
-      // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
       theme: {
         default: 'vitesse-light',
+        light: 'vitesse-light',
         dark: 'vitesse-dark',
       },
     },

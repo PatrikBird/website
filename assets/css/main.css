@@ -30,3 +30,7 @@
 .swiper-button-next {
   @apply dark:sm:bg-primary-800/60 dark:sm:text-primary-50;
 }
+
+.prose :where(pre):not(:where([class~="not-prose"] *)) {
+    @apply bg-white dark:bg-primary-800
+}
