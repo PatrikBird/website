@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-primary-50 dark:bg-primary-900 dark:text-white;
+    @apply bg-white dark:bg-primary-950 dark:text-white;
   }
 }
 
@@ -14,23 +14,17 @@
     shadow-lg shadow-primary-800/5 ring-1 ring-primary-900/5 backdrop-blur
     dark:bg-primary-800/90 dark:ring-white/10 dark:hover:ring-white/20;
   }
-  .color-base {
-    @apply text-primary-900 dark:text-primary-300;
-  }
-  .border-base {
-    @apply border-primary-900 dark:border-primary-300;
-  }
 }
 
 .swiper-pagination-bullet {
   @apply dark:bg-white;
 }
-
 .swiper-button-prev,
 .swiper-button-next {
   @apply dark:sm:bg-primary-800/60 dark:sm:text-primary-50;
 }
 
+/* ProseCode background */
 .prose :where(pre):not(:where([class~="not-prose"] *)) {
-    @apply bg-white dark:bg-primary-800
+    @apply bg-primary-50 dark:bg-primary-900
 }
