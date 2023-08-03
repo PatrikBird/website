@@ -27,7 +27,7 @@ defineProps({
   <div class="relative">
     <span
       v-if="filename"
-      class="absolute right-0 top-0 p-4 text-sm"
+      class="absolute right-0 top-0 px-4 py-3 text-sm"
     >
       {{ filename }}
     </span>
