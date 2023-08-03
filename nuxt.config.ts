@@ -4,13 +4,11 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
-    // '@nuxtjs/critters',
     '@nuxtjs/html-validator',
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/web-vitals',
-    // '@unlighthouse/nuxt',
     'nuxt-icon',
   ],
   app: {
