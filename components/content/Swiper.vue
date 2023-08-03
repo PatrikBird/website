@@ -60,11 +60,11 @@ const initialHeight = computed(() => {
 @media (max-width: 640px) {
   .swiper-button-prev,
   .swiper-button-next {
-    background-color: rgba(255,255,255, 0);
+    display: none;
   }
   .swiper-button-next:after,
   .swiper-button-prev:after {
-    font-size: 0em;
+    display: none;
   }
 }
 </style>
