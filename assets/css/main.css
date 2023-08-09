@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: #f6edff;
+}
+
+html.dark ::selection {
+  background-color: #280050;
+}
+
 @layer base {
   body {
     @apply bg-white dark:bg-primary-950 dark:text-white;
