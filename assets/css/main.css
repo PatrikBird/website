@@ -5,7 +5,6 @@
 ::selection {
   background-color: #f6edff;
 }
-
 html.dark ::selection {
   background-color: #280050;
 }
