@@ -14,7 +14,6 @@
     "types": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxtjs/web-vitals": "0.2.6",
     "@vueuse/components": "10.4.0",
     "@vueuse/core": "10.4.0"
   },

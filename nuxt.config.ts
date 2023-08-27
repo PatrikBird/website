@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/web-vitals',
     'nuxt-icon',
   ],
   app: {
@@ -16,7 +15,6 @@ export default defineNuxtConfig({
       title: 'Patrik Bird',
       link: [
         { rel: 'preconnect', href: 'https://res.cloudinary.com' },
-        { rel: 'preconnect', href: 'https://vitals.vercel-analytics.com' },
         { rel: 'preconnect', href: 'https://api.iconify.design' },
       ],
       meta: [
