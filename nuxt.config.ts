@@ -28,6 +28,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  // https://github.com/nuxt/content/issues/2254#issuecomment-1694496697
+  alias: {
+    'micromark/lib/preprocess.js': 'micromark',
+    'micromark/lib/postprocess.js': 'micromark',
+  },
   // vite: {
   //   optimizeDeps: {
   //     // vue-google-maps
