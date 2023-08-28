@@ -65,6 +65,10 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  experimental: {
+    viewTransition: true,
+    headNext: true,
+  },
   htmlValidator: {
     logLevel: 'warning',
     failOnError: false,
