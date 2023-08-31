@@ -7,10 +7,13 @@ function onClick() {
 </script>
 
 <template>
-  <button type="button" aria-label="Switch color mode" class="action-btn h-12 w-12" @click="onClick">
-    <ColorScheme>
-      <Icon v-if="colorMode.value === 'dark'" name="line-md:moon" />
-      <Icon v-else name="line-md:sunny-outline-loop" />
-    </ColorScheme>
+  <button
+    type="button"
+    aria-label="Toggle color mode"
+    class="action-btn h-12 w-12"
+    @click="onClick"
+  >
+    <Icon v-if="colorMode.value === 'dark'" name="line-md:moon" />
+    <Icon v-else name="line-md:sunny-outline-loop" />
   </button>
 </template>
