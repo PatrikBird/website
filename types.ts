@@ -32,3 +32,5 @@ export interface GoogleMapsPin {
   lng: number
   desc: string
 }
+
+export type MaybeRef<T> = T | Ref<T>

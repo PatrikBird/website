@@ -13,10 +13,6 @@
     "lint": "eslint \"**/*.{ts,js,vue,json}\"",
     "types": "vue-tsc --noEmit"
   },
-  "dependencies": {
-    "@vueuse/components": "10.4.1",
-    "@vueuse/core": "10.4.1"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "0.41.0",
     "@fawmi/vue-google-maps": "0.9.72",
