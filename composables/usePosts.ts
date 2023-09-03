@@ -1,5 +1,4 @@
-import type { MaybeRef } from '@vueuse/core'
-import type { Post } from '~/types'
+import type { MaybeRef, Post } from '~/types'
 
 export function usePosts(path: MaybeRef<string>) {
   const pathValue = unref(path)

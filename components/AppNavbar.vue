@@ -1,8 +1,8 @@
 <script setup>
 // import { OnClickOutside } from '@vueuse/components'
 
-const { navigation } = useContent()
-const appConfig = useAppConfig()
+// const { navigation } = useContent()
+// const appConfig = useAppConfig()
 
 // const mobileIsOpen = ref(false)
 </script>
@@ -40,7 +40,7 @@ const appConfig = useAppConfig()
               </div> -->
           </div>
           <div class="flex items-center space-x-6">
-            <NuxtLink
+            <!-- <NuxtLink
               v-for="link of navigation"
               :key="link._path"
               :to="link._path"
@@ -50,10 +50,35 @@ const appConfig = useAppConfig()
               dark:border-primary-300 dark:border-opacity-0 dark:hover:border-opacity-75"
             >
               {{ link.title }}
+            </NuxtLink> -->
+            <NuxtLink
+              to="/"
+              active-class="!border-opacity-100"
+              class="inline-flex items-center border-b-2 border-primary-900 border-opacity-0 px-1 pt-1
+              text-sm font-medium opacity-75 hover:border-opacity-75
+              dark:border-primary-300 dark:border-opacity-0 dark:hover:border-opacity-75"
+            >
+              Home
+            </NuxtLink>
+            <NuxtLink
+              to="/travel"
+              active-class="!border-opacity-100"
+              class="inline-flex items-center border-b-2 border-primary-900 border-opacity-0 px-1 pt-1
+              text-sm font-medium opacity-75 hover:border-opacity-75
+              dark:border-primary-300 dark:border-opacity-0 dark:hover:border-opacity-75"
+            >
+              Travel
+            </NuxtLink>
+            <NuxtLink
+              to="/articles"
+              active-class="!border-opacity-100"
+              class="inline-flex items-center border-b-2 border-primary-900 border-opacity-0 px-1 pt-1
+              text-sm font-medium opacity-75 hover:border-opacity-75
+              dark:border-primary-300 dark:border-opacity-0 dark:hover:border-opacity-75"
+            >
+              Articles
             </NuxtLink>
             <!-- <a
-              v-if="appConfig.socials?.twitter"
-              :href="`https://twitter.com/${appConfig.socials?.twitter}`"
               target="_blank"
               title="Twitter"
               class="opacity-75 hover:opacity-100 dark:text-primary-100"
@@ -62,8 +87,7 @@ const appConfig = useAppConfig()
               <Icon name="iconoir:twitter" class="h-5 w-5" />
             </a> -->
             <a
-              v-if="appConfig.socials?.github"
-              :href="`https://github.com/${appConfig.socials?.github}`"
+              href="https://github.com/PatrikBird"
               target="_blank"
               title="GitHub"
               class="opacity-75 hover:opacity-100 dark:text-primary-100"

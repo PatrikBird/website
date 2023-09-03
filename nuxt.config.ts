@@ -26,27 +26,18 @@ export default defineNuxtConfig({
       },
     },
   },
-  // vite: {
-  //   optimizeDeps: {
-  //     // vue-google-maps
-  //     include: ['fast-deep-equal'],
-  //   },
-  // },
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: '',
   },
   // https://content.nuxtjs.org
   content: {
-    documentDriven: true,
+    // documentDriven: true,
     markdown: {
       remarkPlugins: ['remark-reading-time'],
-      toc: {
-        depth: 3,
-        searchDepth: 3,
-      },
     },
     highlight: {
+      preload: ['js', 'ts', 'json', 'vue'],
       theme: {
         default: 'vitesse-light',
         light: 'vitesse-light',
@@ -101,14 +92,8 @@ export default defineNuxtConfig({
       googleMapsApiKey: '', // will be injected in vueGoogleMaps plugin
     },
   },
-  // routeRules: {
-  //   '/blog': { redirect: { to: '/travel', statusCode: 308 } },
-  // },
   css: [
     '@/assets/css/main.css',
     '@/assets/fonts/montserrat/stylesheet.css',
   ],
-  // nitro: {
-  //   preset: 'vercel-edge',
-  // },
 })
