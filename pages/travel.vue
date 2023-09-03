@@ -1,9 +1,5 @@
 <script setup lang='ts'>
 const { data: posts } = await usePosts('travel/')
-
-// watchEffect(() => {
-//   console.log(posts.value)
-// })
 </script>
 
 <template>

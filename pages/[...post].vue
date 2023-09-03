@@ -17,7 +17,7 @@ onUnmounted(() => {
 
 <template>
   <main>
-    <!-- <Html lang="de" /> -->
+    <Html lang="de" />
     <ReadProgressBar />
     <ScrollToTop v-show="visible" />
     <div class="m-auto max-w-3xl px-4 py-10 sm:rounded sm:px-8 sm:pt-14 lg:relative">
