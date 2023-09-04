@@ -1,5 +1,8 @@
 <script setup lang='ts'>
 const { data: posts } = await usePosts('travel/')
+useHead({
+  title: 'Travel Blog - Patrik Bird',
+})
 </script>
 
 <template>
@@ -26,16 +29,3 @@ const { data: posts } = await usePosts('travel/')
     </div>
   </main>
 </template>
-
-<!-- <style lang="postcss">
-/* Customize headers to remove default underline */
-.prose h1 a,
-.prose h2 a,
-.prose h3 a {
-  @apply no-underline;
-
-  &:hover {
-    @apply border-b border-primary-600 dark:border-primary-300;
-  }
-}
-</style> -->

@@ -1,3 +1,9 @@
+<script setup lang='ts'>
+useHead({
+  title: 'Patrik Bird',
+})
+</script>
+
 <template>
   <main class="prose prose-zinc m-auto max-w-2xl px-4 py-10 dark:prose-invert sm:px-8 sm:pt-14">
     <h1 class="font-mont">
