@@ -35,9 +35,14 @@ defineProps({
   </div>
 </template>
 
-<style>
-pre code .line {
-  display: block;
-  min-height: 1rem;
+<style scoped>
+:slotted(pre code .line.highlight) {
+  background-color: hotpink !important;
+}
+
+/* TODO: class 'highlight' is not added to the lines... dunno why */
+
+:slotted(pre code .highlight) {
+  background-color: hotpink !important;
 }
 </style>

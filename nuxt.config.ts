@@ -26,13 +26,13 @@ export default defineNuxtConfig({
       },
     },
   },
-  // https://color-mode.nuxtjs.org
   colorMode: {
+    classPrefix: '',
     classSuffix: '',
+    preference: 'system',
+    fallback: 'light',
   },
-  // https://content.nuxtjs.org
   content: {
-    // documentDriven: true,
     markdown: {
       remarkPlugins: ['remark-reading-time'],
     },
