@@ -1,18 +1,19 @@
-import type { ParsedContent as DefaultParsedContent } from '@nuxt/content/dist/runtime/types'
-
-export interface ParsedContent extends DefaultParsedContent {
-  prose?: boolean
-  schemaOrg: Record<string, any>
-}
-
-export interface Post extends ParsedContent {
-  imageUrl?: string
-  description?: string
-  layout: 'travel' | 'articles' | 'default' | 'fullwidth'
-  path: string
+export interface Post {
   date: Date
+  description?: string
+  imageUrl?: string
+  layout: 'travel' | 'articles' | 'default' | 'fullwidth'
   readingTime: ReadingTime
-  lang: 'en' | 'de'
+  title: string
+  _draft: boolean
+  _extension: string | 'md'
+  _file: string
+  _id: string
+  _partial: boolean
+  _path: string
+  _source: string | 'content'
+  _type: string | 'markdown'
+  lang: 'en' | 'de' // _locale
 }
 
 interface ReadingTime {
@@ -32,5 +33,3 @@ export interface GoogleMapsPin {
   lng: number
   desc: string
 }
-
-export type MaybeRef<T> = T | Ref<T>

@@ -1,4 +1,4 @@
-import type { MaybeRef, Post } from '~/types'
+import type { Post } from '~/types'
 
 export function usePosts(path: MaybeRef<string>) {
   const pathValue = unref(path)
