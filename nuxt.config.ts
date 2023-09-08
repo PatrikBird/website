@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/devtools',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/html-validator',
     '@nuxtjs/plausible',
