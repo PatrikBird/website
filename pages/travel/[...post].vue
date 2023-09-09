@@ -31,12 +31,7 @@ if (!currentParsedContent) {
       <h1 class="text-4xl">
         {{ currentParsedContent.title }}
       </h1>
-      <p>
-        Published: {{ formatDate(currentParsedContent.date) }}
-      </p>
-      <p>
-        Length: {{ currentParsedContent.readingTime.text }}
-      </p>
+      <p>{{ formatDate(currentParsedContent.date) }} · {{ currentParsedContent.readingTime.text }}</p>
     </header>
     <article>
       <ContentRendererMarkdown :value="currentParsedContent" tag="div" />

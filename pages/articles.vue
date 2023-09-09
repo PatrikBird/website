@@ -4,9 +4,7 @@ const { data: articles } = await usePosts('articles/')
 
 <template>
   <main class="prose prose-zinc m-auto max-w-none px-4 py-10 text-center dark:prose-invert sm:px-8 sm:pt-14">
-    <h1 class="font-mont">
-      Articles
-    </h1>
+    <h1>Articles</h1>
     <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
       Tech articles introduction blabla.
     </p>

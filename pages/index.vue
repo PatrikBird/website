@@ -5,10 +5,8 @@ useHead({
 </script>
 
 <template>
-  <main class="prose prose-zinc m-auto max-w-2xl px-4 py-10 dark:prose-invert sm:px-8 sm:pt-14">
-    <h1 class="font-mont">
-      Patrik Bird
-    </h1>
+  <div>
+    <h1>Patrik Bird</h1>
     <p>Hey 👋</p>
     <p>
       I am Patrik, a software engineer who's passionate about the web, especially front-end technologies
@@ -30,5 +28,5 @@ useHead({
     You can find me on <a href="https://github.com/PatrikBird" target="_blank" rel="noopener noreferrer">GitHub</a> and
     <a href="https://www.instagram.com/patbirdo" target="_blank" rel="noopener noreferrer">Instagram</a> or
     contact me via <a href="mailto:hi@patbird.me">hi@patbird.me</a>.
-  </main>
+  </div>
 </template>
