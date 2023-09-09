@@ -26,7 +26,7 @@ const allTravelPosts = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div class="m-auto">
     <h1>Travel</h1>
     <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
       For the time being, this blog will only be about my travels to update friends

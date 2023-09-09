@@ -2,7 +2,7 @@
 import type { Post } from '~/types'
 
 definePageMeta({
-  layout: false,
+  layout: 'post',
 })
 
 const currentPath = useRoute().path
@@ -22,7 +22,7 @@ if (!currentParsedContent) {
 </script>
 
 <template>
-  <main class="prose prose-zinc m-auto max-w-3xl px-4 py-10 dark:prose-invert sm:rounded sm:px-8 sm:pt-14 lg:relative">
+  <main>
     <Html lang="de" />
     <ReadProgressBar />
     <ScrollToTop />

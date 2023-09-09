@@ -1,11 +1,7 @@
 <template>
-  <div class="prose prose-zinc m-auto max-w-3xl px-4 py-10 dark:prose-invert sm:rounded sm:px-8 sm:pt-14 lg:relative">
-    <GoUpOnePageBtn />
-    <main>
-      <slot />
-    </main>
+  <div class="post-layout prose prose-zinc m-auto max-w-3xl px-4 py-10 dark:prose-invert sm:rounded sm:px-8 sm:pt-14 lg:relative">
+    <slot />
   </div>
-  <!-- <BlogPostFooter class="mx-auto max-w-2xl lg:max-w-4xl" /> -->
 </template>
 
 <style lang="postcss">
