@@ -1,19 +1,12 @@
-export interface Post {
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
+export interface Post extends ParsedContent {
   date: Date
   description?: string
   imageUrl?: string
   layout: 'travel' | 'articles' | 'default' | 'fullwidth'
   readingTime: ReadingTime
-  title: string
-  _draft: boolean
-  _extension: string | 'md'
-  _file: string
-  _id: string
-  _partial: boolean
-  _path: string
-  _source: string | 'content'
-  _type: string | 'markdown'
-  lang: 'en' | 'de' // _locale
+  lang: 'en' | 'de' // TODO: use `_locale`
 }
 
 interface ReadingTime {

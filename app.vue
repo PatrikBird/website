@@ -1,10 +1,12 @@
 <template>
-  <div>
+  <div class="app">
     <Html lang="en" />
     <Meta property="og:image" content="/cover.jpg" />
     <!-- <NuxtLoadingIndicator color="#FF0000" /> -->
     <AppLoadingBar />
     <AppNavbar />
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

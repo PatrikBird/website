@@ -31,6 +31,7 @@
     "eslint-plugin-tailwindcss": "3.13.0",
     "nuxt": "3.7.1",
     "nuxt-icon": "0.5.0",
+    "nuxt-time": "^0.1.1",
     "remark-reading-time": "2.0.1",
     "swiper": "10.2.0",
     "typescript": "5.2.2",

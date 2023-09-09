@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
+    'nuxt-time',
   ],
   app: {
     head: {
@@ -54,6 +55,7 @@ export default defineNuxtConfig({
   experimental: {
     viewTransition: true,
     headNext: true,
+    componentIslands: true,
   },
   htmlValidator: {
     logLevel: 'warning',
