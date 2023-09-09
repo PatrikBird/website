@@ -26,7 +26,7 @@ const allArticles = computed(() => {
 </script>
 
 <template>
-  <div>
+  <main>
     <h1>Articles</h1>
     <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
       Bla intro technical articles here.
@@ -53,5 +53,5 @@ const allArticles = computed(() => {
         </article>
       </div>
     </div>
-  </div>
+  </main>
 </template>

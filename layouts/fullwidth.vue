@@ -1,5 +1,5 @@
 <template>
-  <main class="fullwidth-layout prose prose-zinc m-auto max-w-none px-4 py-10 text-center dark:prose-invert sm:px-8 sm:pt-14">
+  <div class="fullwidth-layout prose prose-zinc m-auto max-w-none px-4 py-10 text-center dark:prose-invert sm:px-8 sm:pt-14">
     <slot />
-  </main>
+  </div>
 </template>

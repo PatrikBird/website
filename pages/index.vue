@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <main>
     <h1>Patrik Bird</h1>
     <p>Hey 👋</p>
     <p>
@@ -28,5 +28,5 @@ useHead({
     You can find me on <a href="https://github.com/PatrikBird" target="_blank" rel="noopener noreferrer">GitHub</a> and
     <a href="https://www.instagram.com/patbirdo" target="_blank" rel="noopener noreferrer">Instagram</a> or
     contact me via <a href="mailto:hi@patbird.me">hi@patbird.me</a>.
-  </div>
+  </main>
 </template>
