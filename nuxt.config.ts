@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
+    'nuxt-time',
   ],
   app: {
     head: {
@@ -25,6 +26,8 @@ export default defineNuxtConfig({
         lang: 'en',
       },
     },
+    pageTransition: false,
+    layoutTransition: false,
   },
   colorMode: {
     classPrefix: '',
@@ -52,8 +55,9 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    viewTransition: true,
+    // viewTransition: true,
     headNext: true,
+    // componentIslands: true,
   },
   htmlValidator: {
     logLevel: 'warning',
@@ -94,6 +98,8 @@ export default defineNuxtConfig({
   },
   css: [
     '@/assets/css/main.css',
+    '@/assets/css/common.css',
     '@/assets/fonts/montserrat/stylesheet.css',
+    '@/assets/fonts/cabin/stylesheet.css',
   ],
 })

@@ -61,6 +61,9 @@ devDependencies:
   nuxt-icon:
     specifier: 0.5.0
     version: 0.5.0(vue@3.3.4)
+  nuxt-time:
+    specifier: ^0.1.1
+    version: 0.1.1
   remark-reading-time:
     specifier: 2.0.1
     version: 2.0.1
@@ -8106,6 +8109,17 @@ packages:
       - rollup
       - supports-color
       - vue
+    dev: true
+
+  /nuxt-time@0.1.1:
+    resolution: {integrity: sha512-MXgvzAf2+ByCsGc66qP+XbPUZRMVGwbRX5nGXlsyot+uwLVpBqQNnR8b3X46nBaEXEPy/Jqj6qaXwjTk0AYosA==}
+    dependencies:
+      '@nuxt/kit': 3.7.1
+      defu: 6.1.2
+      pathe: 1.1.1
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /nuxt@3.7.1(@types/node@20.5.9)(eslint@8.48.0)(typescript@5.2.2)(vue-tsc@1.8.10):

@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         mont: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        cabin: ['Cabin', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.zinc,

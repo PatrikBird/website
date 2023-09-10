@@ -5,10 +5,8 @@ useHead({
 </script>
 
 <template>
-  <main class="prose prose-zinc m-auto max-w-2xl px-4 py-10 dark:prose-invert sm:px-8 sm:pt-14">
-    <h1 class="font-mont">
-      Patrik Bird
-    </h1>
+  <main>
+    <h1>Patrik Bird</h1>
     <p>Hey 👋</p>
     <p>
       I am Patrik, a software engineer who's passionate about the web, especially front-end technologies
@@ -32,3 +30,16 @@ useHead({
     contact me via <a href="mailto:hi@patbird.me">hi@patbird.me</a>.
   </main>
 </template>
+
+<style scoped>
+h1 {
+  view-transition-name: header;
+}
+</style>
+
+<style>
+::view-transition-old(header),
+::view-transition-new(header) {
+  width: auto;
+}
+</style>
