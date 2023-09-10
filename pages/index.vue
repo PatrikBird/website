@@ -8,7 +8,7 @@ useHead({
   <main>
     <h1>Patrik Bird</h1>
     <p>Hey 👋</p>
-    <p class="font-cabin">
+    <p>
       I am Patrik, a software engineer who's passionate about the web, especially front-end technologies
       and <a href="https://openprocessing.org" target="_blank" rel="noopener noreferrer">creative coding</a>.
     </p>
