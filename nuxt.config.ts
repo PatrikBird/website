@@ -55,9 +55,9 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    viewTransition: true,
+    // viewTransition: true,
     headNext: true,
-    componentIslands: true,
+    // componentIslands: true,
   },
   htmlValidator: {
     logLevel: 'warning',
