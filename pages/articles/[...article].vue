@@ -27,11 +27,29 @@ if (!currentParsedContent) {
     <ReadProgressBar />
     <ScrollToTop />
     <GoUpOnePageBtn />
-    <header v-if="currentParsedContent">
+    <header>
       <h1 class="text-4xl">
         {{ currentParsedContent.title }}
       </h1>
-      <p>{{ formatDate(currentParsedContent.date) }} · {{ currentParsedContent.readingTime.text }}</p>
+      <dl class="mt-1 flex flex-row flex-wrap text-xs uppercase">
+        <dt class="font-normal">
+          Published
+        </dt>
+        <dd class="mr-5 self-end pl-3 font-semibold">
+          <NuxtTime
+            :datetime="currentParsedContent.date"
+            day="numeric"
+            month="long"
+            year="numeric"
+          />
+        </dd>
+        <dt class="font-normal">
+          Reading time
+        </dt>
+        <dd class="self-end pl-3 font-semibold">
+          {{ currentParsedContent.readingTime.text }}
+        </dd>
+      </dl>
     </header>
     <article>
       <ContentRendererMarkdown :value="currentParsedContent" tag="div" />

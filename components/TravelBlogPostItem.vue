@@ -30,10 +30,12 @@ const props = defineProps<{ post: Post }>()
       </p>
     </div>
     <span class="text-xs italic">
-      <time>
-        {{ formatDate(props.post.date) }}
-      </time>
-      · {{ props.post.readingTime.text }}
+      <NuxtTime
+        :datetime="props.post.date"
+        day="numeric"
+        month="long"
+        year="numeric"
+      /> · {{ props.post.readingTime.text }}
     </span>
   </div>
 </template>

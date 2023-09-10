@@ -47,7 +47,12 @@ const allArticles = computed(() => {
               {{ article.title }}
             </div>
             <div class="text-xs md:self-center">
-              {{ formatDate(article.date) }} · {{ article.readingTime.text }}
+              <NuxtTime
+                :datetime="article.date"
+                day="numeric"
+                month="long"
+                year="numeric"
+              /> · {{ article.readingTime.text }}
             </div>
           </NuxtLink>
         </article>
