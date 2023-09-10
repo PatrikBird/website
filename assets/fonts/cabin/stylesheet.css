@@ -1,0 +1,48 @@
+/* cabin-regular */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cabin'),
+       url('./Cabin-Regular') format('ttf'),
+}
+/* cabin-medium */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Cabin'),
+       url('./Cabin-Medium') format('ttf'),
+}
+/* cabin-semibold */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Cabin'),
+       url('./Cabin-SemiBold') format('ttf'),
+}
+/* cabin-bold */
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cabin'),
+       url('./Cabin-Bold') format('ttf'),
+}
+/* cabin-italic-regular */
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Cabin'),
+       url('./Cabin-Italic') format('ttf'),
+}
+/* cabin-italic-medium */
+@font-face {
+  font-family: 'Cabin';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Cabin'),
+       url('./Cabin-MediumItalic') format('ttf'),
+}
