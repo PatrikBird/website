@@ -47,7 +47,7 @@ if (!currentParsedContent) {
           Reading time
         </dt>
         <dd class="self-end pl-3 font-semibold">
-          {{ currentParsedContent.readingTime.text }}
+          {{ currentParsedContent.readingTime.text.substring(0, 5) }}
         </dd>
       </dl>
     </header>

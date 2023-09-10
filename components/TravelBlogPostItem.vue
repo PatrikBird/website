@@ -25,17 +25,28 @@ const props = defineProps<{ post: Post }>()
           {{ props.post.title }}
         </p>
       </NuxtLink>
-      <p class="mb-2 mt-3 text-sm">
+      <p class="mb-0 mt-3 text-sm">
         {{ props.post.description }}
       </p>
     </div>
-    <span class="text-xs italic">
-      <NuxtTime
-        :datetime="props.post.date"
-        day="numeric"
-        month="long"
-        year="numeric"
-      /> · {{ props.post.readingTime.text }}
-    </span>
+    <dl class="mt-0 flex flex-row flex-wrap text-xs uppercase">
+      <dt class="font-normal">
+        Published
+      </dt>
+      <dd class="mr-5 self-end pl-3 font-semibold">
+        <NuxtTime
+          :datetime="props.post.date"
+          day="numeric"
+          month="long"
+          year="numeric"
+        />
+      </dd>
+      <dt class="font-normal">
+        Reading time
+      </dt>
+      <dd class="self-end pl-3 font-semibold">
+        {{ props.post.readingTime.text.substring(0, 5) }}
+      </dd>
+    </dl>
   </div>
 </template>

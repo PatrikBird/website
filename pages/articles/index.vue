@@ -52,7 +52,7 @@ const allArticles = computed(() => {
                 day="numeric"
                 month="long"
                 year="numeric"
-              /> · {{ article.readingTime.text }}
+              /> · {{ article.readingTime.text.substring(0, 5) }}
             </div>
           </NuxtLink>
         </article>
