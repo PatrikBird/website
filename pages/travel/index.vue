@@ -49,3 +49,9 @@ const allTravelPosts = computed(() => {
     </div>
   </main>
 </template>
+
+<style scoped>
+h1 {
+  view-transition-name: header;
+}
+</style>

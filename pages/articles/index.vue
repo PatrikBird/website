@@ -47,7 +47,7 @@ const allArticles = computed(() => {
               {{ article.title }}
             </div>
             <div class="text-xs md:self-center">
-              {{ formatDate(article.date) }} &times; {{ article.readingTime.text }}
+              {{ formatDate(article.date) }} · {{ article.readingTime.text }}
             </div>
           </NuxtLink>
         </article>
@@ -55,3 +55,9 @@ const allArticles = computed(() => {
     </div>
   </main>
 </template>
+
+<style scoped>
+h1 {
+  view-transition-name: header;
+}
+</style>

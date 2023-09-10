@@ -38,3 +38,9 @@ if (!currentParsedContent) {
     </article>
   </main>
 </template>
+
+<style scoped>
+h1 {
+  view-transition-name: header;
+}
+</style>

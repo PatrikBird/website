@@ -30,3 +30,9 @@ useHead({
     contact me via <a href="mailto:hi@patbird.me">hi@patbird.me</a>.
   </main>
 </template>
+
+<style scoped>
+h1 {
+  view-transition-name: header;
+}
+</style>

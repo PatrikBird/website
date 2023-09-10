@@ -26,6 +26,8 @@ export default defineNuxtConfig({
         lang: 'en',
       },
     },
+    pageTransition: false,
+    layoutTransition: false,
   },
   colorMode: {
     classPrefix: '',

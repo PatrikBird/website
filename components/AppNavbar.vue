@@ -69,7 +69,7 @@
             >
               Travel
             </NuxtLink>
-            <!-- <NuxtLink
+            <NuxtLink
               to="/articles"
               active-class="!border-opacity-100"
               class="inline-flex items-center border-b-2 border-primary-900 border-opacity-0 px-1 pt-1
@@ -77,7 +77,7 @@
               dark:border-primary-300 dark:border-opacity-0 dark:hover:border-opacity-75"
             >
               Articles
-            </NuxtLink> -->
+            </NuxtLink>
             <!-- <a
               target="_blank"
               title="Twitter"
