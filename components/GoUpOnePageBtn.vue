@@ -9,9 +9,9 @@ const route = useRoute()
     title="Back to overview"
     aria-label="Go back to overview"
   >
-    <Icon
-      name="line-md:arrow-small-left"
-      class="text-teal-800 opacity-75 group-hover:opacity-100 dark:text-zinc-100"
+    <div
+      i-line-md:arrow-small-left
+      class="text-teal-800 w-5 h-5 opacity-75 group-hover:opacity-100 dark:text-zinc-100"
     />
   </NuxtLink>
 </template>
