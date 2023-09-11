@@ -29,24 +29,29 @@ const props = defineProps<{ post: Post }>()
         {{ props.post.description }}
       </p>
     </div>
-    <dl class="mt-0 flex flex-row flex-wrap text-xs uppercase">
-      <dt class="font-normal">
-        Published
-      </dt>
-      <dd class="mr-5 self-end pl-3 font-semibold">
-        <NuxtTime
-          :datetime="props.post.date"
-          day="numeric"
-          month="long"
-          year="numeric"
-        />
-      </dd>
-      <dt class="font-normal">
-        Reading time
-      </dt>
-      <dd class="self-end pl-3 font-semibold">
-        {{ props.post.readingTime.text.substring(0, 5) }}
-      </dd>
+    <dl class="mt-1 flex flex-row gap-2 text-xs uppercase">
+      <div class="flex flex-row">
+        <dt class="font-normal">
+          Published
+        </dt>
+        <dd class="self-end pl-2 font-semibold">
+          <NuxtTime
+            :datetime="props.post.date"
+            day="numeric"
+            month="long"
+            year="numeric"
+          />
+        </dd>
+      </div>
+      <span class="inline-block self-end">&middot;</span>
+      <div class="flex flex-row">
+        <dt class="font-normal">
+          Reading time
+        </dt>
+        <dd class="self-end pl-2 font-semibold">
+          {{ props.post.readingTime.text.substring(0, 5) }}
+        </dd>
+      </div>
     </dl>
   </div>
 </template>
