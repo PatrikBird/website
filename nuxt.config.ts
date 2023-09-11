@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
     '@unocss/nuxt',
-    'nuxt-icon',
     'nuxt-time',
   ],
   app: {
@@ -87,7 +86,6 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: [
-      // 'tailwindcss/typography',
       '@fawmi/vue-google-maps',
     ],
   },
@@ -97,7 +95,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    '@/assets/css/main.css',
+    // '@/assets/css/main.css',
     '@/assets/css/common.sass',
     // '@/assets/fonts/montserrat/stylesheet.css',
     // '@/assets/fonts/cabin/stylesheet.css',
