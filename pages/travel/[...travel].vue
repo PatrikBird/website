@@ -31,24 +31,29 @@ if (!currentParsedContent) {
       <h1 class="text-4xl">
         {{ currentParsedContent.title }}
       </h1>
-      <dl class="mt-1 flex flex-row flex-wrap text-xs uppercase">
-        <dt class="font-normal">
-          Published
-        </dt>
-        <dd class="mr-5 self-end pl-3 font-semibold">
-          <NuxtTime
-            :datetime="currentParsedContent.date"
-            day="numeric"
-            month="long"
-            year="numeric"
-          />
-        </dd>
-        <dt class="font-normal">
-          Reading time
-        </dt>
-        <dd class="self-end pl-3 font-semibold">
-          {{ currentParsedContent.readingTime.text.substring(0, 5) }}
-        </dd>
+      <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row sm:gap-5">
+        <div class="flex flex-row">
+          <dt class="font-normal">
+            Published
+          </dt>
+          <dd class="self-end font-semibold">
+            <NuxtTime
+              :datetime="currentParsedContent.date"
+              day="numeric"
+              month="long"
+              year="numeric"
+            />
+          </dd>
+        </div>
+        <span class="hidden self-end sm:inline-block">&middot;</span>
+        <div class="flex flex-row">
+          <dt class="font-normal">
+            Reading time
+          </dt>
+          <dd class="self-end font-semibold">
+            {{ currentParsedContent.readingTime.text.substring(0, 5) }}
+          </dd>
+        </div>
       </dl>
     </header>
     <article>
