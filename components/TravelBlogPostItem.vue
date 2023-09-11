@@ -29,26 +29,26 @@ const props = defineProps<{ post: Post }>()
         {{ props.post.description }}
       </p>
     </div>
-    <dl class="mt-1 flex flex-row gap-2 text-xs uppercase">
+    <dl class="mt-1 flex text-xs uppercase flex-row gap-2">
       <div class="flex flex-row">
-        <dt class="font-normal">
+        <dt>
           Published
         </dt>
-        <dd class="self-end pl-2 font-semibold">
+        <dd class="font-semibold ml-3">
           <NuxtTime
             :datetime="props.post.date"
             day="numeric"
-            month="long"
+            month="numeric"
             year="numeric"
           />
         </dd>
       </div>
-      <span class="inline-block self-end">&middot;</span>
+      <span class="inline-block">&middot;</span>
       <div class="flex flex-row">
-        <dt class="font-normal">
+        <dt>
           Reading time
         </dt>
-        <dd class="self-end pl-2 font-semibold">
+        <dd class="ml-3 font-semibold">
           {{ props.post.readingTime.text.substring(0, 5) }}
         </dd>
       </div>
