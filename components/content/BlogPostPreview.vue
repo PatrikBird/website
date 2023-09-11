@@ -35,7 +35,7 @@ const props = defineProps<{
       <dt class="text-xs">
         {{ props.label }}
       </dt>
-      <dd class="text-xl font-bold tracking-tight text-secondary-600">
+      <dd class="text-xl font-bold tracking-tight text-teal-600">
         <NuxtLink
           :to="props.post._path"
           :aria-label="`Go to ${props.label === 'Vorheriger Beitrag' ? 'previous' : 'next'} post`"
