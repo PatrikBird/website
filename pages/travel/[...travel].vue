@@ -27,7 +27,7 @@ if (!currentParsedContent) {
     <ReadProgressBar />
     <ScrollToTop />
     <GoUpOnePageBtn />
-    <header>
+    <header class="mb-7">
       <h1 class="text-4xl">
         {{ currentParsedContent.title }}
       </h1>
