@@ -24,7 +24,7 @@ onUnmounted(() => {
 <template>
   <div class="fixed left-0 top-0 z-50 block h-1 w-full bg-transparent">
     <span
-      class="block h-1 bg-teal-500"
+      class="block h-1 bg-#e6ccff dark:bg-#481180"
       :style="{ width: `${readProgress}%` }"
     />
   </div>
