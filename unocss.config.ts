@@ -29,6 +29,8 @@ export default defineConfig({
     {
       // 'bg-base': 'bg-white dark:bg-black',
       // 'border-base': 'border-[#8884]',
+      'underlined-link':
+        'no-underline relative before:content-empty before:bg-#e6deff before:dark:bg-#481180 before:absolute before:left-0 before:bottom-3px before:w-full before:h-8px before:z--1 before:hover:bottom-0 before:hover:h-full before:transition-all before:duration-100 before:ease-in-out',
       'action-btn': 'rounded-full border-none bg-zinc-200/40 dark:bg-zinc-800/90 inline-block items-center justify-center cursor-pointer',
     },
     // [/^btn-(\w+)$/, ([_, color]) => `op50 px2.5 py1 transition-all duration-200 ease-out no-underline! hover:(op100 text-${color} bg-${color}/10) border border-base! rounded`],
