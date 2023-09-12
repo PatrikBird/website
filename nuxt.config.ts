@@ -7,8 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/html-validator',
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
-    '@nuxtjs/tailwindcss',
-    'nuxt-icon',
+    '@unocss/nuxt',
     'nuxt-time',
   ],
   app: {
@@ -87,7 +86,6 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: [
-      'tailwindcss/typography',
       '@fawmi/vue-google-maps',
     ],
   },
@@ -97,9 +95,9 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    '@/assets/css/main.css',
-    '@/assets/css/common.css',
-    '@/assets/fonts/montserrat/stylesheet.css',
-    '@/assets/fonts/cabin/stylesheet.css',
+    // '@/assets/css/main.css',
+    '@/assets/css/common.sass',
+    // '@/assets/fonts/montserrat/stylesheet.css',
+    // '@/assets/fonts/cabin/stylesheet.css',
   ],
 })

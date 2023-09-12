@@ -41,20 +41,31 @@ const initialHeight = computed(() => {
   </SwiperContainer>
 </template>
 
-<style>
+<style lang="postcss">
 .swiper-button-prev,
 .swiper-button-next {
   color: rgb(17 94 89);
-  padding: 1.3em;
   border-radius: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: rgba(255,255,255, 0.5);
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 1em;
 }
+
 .swiper-pagination-bullet {
-  background-color: black;
+  @apply bg-black dark:bg-white;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply mb--10px;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  display: none;
 }
 
 @media (max-width: 640px) {

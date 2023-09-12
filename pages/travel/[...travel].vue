@@ -27,16 +27,16 @@ if (!currentParsedContent) {
     <ReadProgressBar />
     <ScrollToTop />
     <GoUpOnePageBtn />
-    <header>
+    <header class="mb-7">
       <h1 class="text-4xl">
         {{ currentParsedContent.title }}
       </h1>
-      <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row sm:gap-5">
+      <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row gap-2">
         <div class="flex flex-row">
-          <dt class="font-normal">
+          <dt>
             Published
           </dt>
-          <dd class="self-end font-semibold">
+          <dd class="font-semibold ml-3">
             <NuxtTime
               :datetime="currentParsedContent.date"
               day="numeric"
@@ -45,12 +45,12 @@ if (!currentParsedContent) {
             />
           </dd>
         </div>
-        <span class="hidden self-end sm:inline-block">&middot;</span>
+        <span class="hidden sm:inline-block">&middot;</span>
         <div class="flex flex-row">
-          <dt class="font-normal">
+          <dt>
             Reading time
           </dt>
-          <dd class="self-end font-semibold">
+          <dd class="ml-3 font-semibold">
             {{ currentParsedContent.readingTime.text.substring(0, 5) }}
           </dd>
         </div>

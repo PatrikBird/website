@@ -11,7 +11,7 @@
   @apply no-underline;
 
   &:hover {
-    @apply border-b border-primary-600 dark:border-primary-300;
+    @apply border-b border-zinc-600 dark:border-zinc-300;
   }
 }
 </style>
