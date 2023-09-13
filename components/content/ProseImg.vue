@@ -22,7 +22,9 @@ const loadingType = computed(() =>
       :loading="loadingType"
       provider="cloudinary"
       format="webp"
+      width="1000"
       quality="95"
+      placeholder
     />
     <figcaption v-if="alt">
       {{ alt }}
