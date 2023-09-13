@@ -14,7 +14,7 @@ const props = defineProps<{
 const modules = [Navigation, Pagination]
 
 const initialHeight = computed(() => {
-  return '300px'
+  return '70vh'
 })
 </script>
 
@@ -26,7 +26,7 @@ const initialHeight = computed(() => {
     navigation
     :pagination="{ clickable: true }"
     auto-height
-    :lazy-preload-prev-next="1"
+    :lazy-preload-prev-next="2"
     :style="{ minHeight: initialHeight }"
   >
     <SwiperSlide v-for="pic in props.pics" :key="pic.src">
