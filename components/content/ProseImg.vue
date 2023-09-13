@@ -8,9 +8,9 @@ const props = withDefaults(defineProps<ProseImgProps>(), {
   lazy: true,
 })
 
-const loadingType = computed(() => {
-  return (props.lazy === true || props.lazy === 'true') ? 'lazy' : 'eager'
-})
+const loadingType = computed(() =>
+  (props.lazy === true || props.lazy === 'true') ? 'lazy' : 'eager',
+)
 </script>
 
 <template>
@@ -20,7 +20,6 @@ const loadingType = computed(() => {
       :alt="props.alt"
       class="w-full"
       :loading="loadingType"
-      preset="blogImg"
       provider="cloudinary"
       format="webp"
       quality="95"
