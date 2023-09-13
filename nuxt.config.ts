@@ -68,14 +68,6 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    presets: {
-      blogImg: {
-        modifiers: {
-          format: 'webp',
-          width: 600,
-        },
-      },
-    },
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/df5skrrwb/image/upload/v1677729457/',
       modifiers: {
