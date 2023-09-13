@@ -14,7 +14,7 @@ const props = defineProps<{
 const modules = [Navigation, Pagination]
 
 const initialHeight = computed(() => {
-  return '70vh'
+  return '300px'
 })
 </script>
 
