@@ -18,13 +18,12 @@ const loadingType = computed(() =>
     <nuxt-img
       :src="props.src"
       :alt="props.alt"
-      class="w-full"
       :loading="loadingType"
+      class="w-full"
       provider="cloudinary"
       format="webp"
-      width="1000"
+      width="600"
       quality="95"
-      placeholder
     />
     <figcaption v-if="alt">
       {{ alt }}
