@@ -40,7 +40,7 @@ defineProps({
   background-color: hotpink !important;
 }
 
-/* TODO: class 'highlight' is not added to the lines... dunno why */
+/* TODO: highlights will be fixed as soon as nuxt/mdc gets released  */
 
 :slotted(pre code .highlight) {
   background-color: hotpink !important;
