@@ -8,10 +8,6 @@
 /* Customize headers to remove default underline */
 .prose h2 a,
 .prose h3 a {
-  @apply no-underline;
-
-  &:hover {
-    @apply border-b border-zinc-600 dark:border-zinc-300;
-  }
+  @apply no-underline hover:border-b-solid hover:border-zinc-600 dark:hover:border-zinc-300;
 }
 </style>
