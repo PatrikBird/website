@@ -9,7 +9,7 @@ export interface Post extends ParsedContent {
   lang: 'en' | 'de' // TODO: use `_locale`
 }
 
-interface ReadingTime {
+export interface ReadingTime {
   text: string
   minutes: number
   time: number

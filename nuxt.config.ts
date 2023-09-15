@@ -64,6 +64,7 @@ export default defineNuxtConfig({
     options: {
       rules: {
         'attribute-empty-style': 'off',
+        'element-permitted-content': 'warn',
       },
     },
   },

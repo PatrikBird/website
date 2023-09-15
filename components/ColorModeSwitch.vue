@@ -13,7 +13,7 @@ function onClick() {
     class="action-btn h-12 w-12"
     @click="onClick"
   >
-    <div v-if="colorMode.value === 'dark'" i-line-md:moon class="w-5 h-5 m-auto" />
-    <div v-else i-line-md:sunny-outline-loop class="w-5 h-5 m-auto" />
+    <span v-if="colorMode.value === 'dark'" i-line-md:moon />
+    <span v-else i-line-md:sunny-outline-loop />
   </button>
 </template>

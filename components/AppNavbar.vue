@@ -37,7 +37,7 @@
               class="opacity-75 hover:opacity-100 dark:text-zinc-100 text-black"
               aria-label="Go to GitHub"
             >
-              <div i-iconoir:github />
+              <span i-iconoir:github />
             </a>
             <ColorModeSwitch
               class="opacity-75 hover:opacity-100 text-black dark:text-zinc-100"

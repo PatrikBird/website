@@ -39,8 +39,12 @@ export default defineConfig({
     PresetAttributify({
     }),
     PresetIcons({
+      extraProperties: {
+        'display': 'inline-block',
+        'vertical-align': 'middle',
+      },
       prefix: 'i-',
-      scale: 1.2,
+      scale: 1.5,
       warn: true,
     }),
     PresetTypography({
