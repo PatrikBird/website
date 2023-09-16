@@ -84,9 +84,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    // '@/assets/css/main.css',
+    '@/assets/css/main.sass',
     '@/assets/css/common.sass',
-    // '@/assets/fonts/montserrat/stylesheet.css',
-    // '@/assets/fonts/cabin/stylesheet.css',
   ],
 })
