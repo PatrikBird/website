@@ -35,9 +35,8 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
-/* TODO: highlights will be fixed as soon as nuxt/mdc gets released  */
-:slotted(pre code .line.highlight) {
-  background-color: hotpink !important;
+<style scoped lang="postcss">
+:slotted(pre) {
+  @apply bg-zinc-50 dark:bg-zinc-900
 }
 </style>
