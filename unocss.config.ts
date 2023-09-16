@@ -7,23 +7,8 @@ import PresetIcons from '@unocss/preset-icons'
 import PresetTypography from '@unocss/preset-typography'
 import PresetUno from '@unocss/preset-uno'
 import PresetWebFonts from '@unocss/preset-web-fonts'
-
-// Transformers
-// https://unocss.dev/presets/
-//   NOTE: Transformers has no page
 import TransformerDirectives from '@unocss/transformer-directives'
 
-// import { range } from './code/utils/range'
-// interface FontOptions {
-//   italic?: boolean
-//   weights?: number[]
-// }
-// const font = (name: string, options?: FontOptions) => {
-//   const { italic, weights } = { ...{ italic: true, weights: range(100, 900, { step: 100 }) }, ...options }
-//   return { name, italic, weights }
-// }
-
-// https://unocss.dev/config/
 export default defineConfig({
   shortcuts: [
     {
@@ -61,23 +46,17 @@ export default defineConfig({
         mont: 'Montserrat:600,700,800',
       },
     })],
-  // rules: [
-  //   // PERCENT: Margins
-  //   [/^m-block-(\d+)p$/, ([, percent]) => ({ 'margin-block': `${percent}%` })],
-  //   [/^m-block-s-(\d+)p$/, ([, percent]) => ({ 'margin-block-start': `${percent}%` })],
-  //   [/^m-block-e-(\d+)p$/, ([, percent]) => ({ 'margin-block-end': `${percent}%` })],
-
-  //   [/^m-inline-(\d+)p$/, ([, percent]) => ({ 'margin-inline': `${percent}%` })],
-  //   [/^m-inline-s-(\d+)p$/, ([, percent]) => ({ 'margin-inline-start': `${percent}%` })],
-  //   [/^m-inline-e-(\d+)p$/, ([, percent]) => ({ 'margin-inline-end': `${percent}%` })],
-
-  //   [/^m-(\d+)p$/, ([, percent]) => ({ margin: `${percent}%` })],
-
-  //   [/^ml-(\d+)p$/, ([, percent]) => ({ 'margin-left': `${percent}%` })],
-  //   [/^mr-(\d+)p$/, ([, percent]) => ({ 'margin-right': `${percent}%` })],
-  //   [/^mt-(\d+)p$/, ([, percent]) => ({ 'margin-top': `${percent}%` })],
-  //   [/^mb-(\d+)p$/, ([, percent]) => ({ 'margin-bottom': `${percent}%` })],
-  // ],
+  theme: {
+    breakpoints: {
+      'xs': '470px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+      'xxl': '1536px',
+    },
+  },
   transformers: [
     TransformerDirectives({
     }),

@@ -10,6 +10,6 @@ const toggleDark = useToggle(isDark)
     class="action-btn h-12 w-12"
     @click="toggleDark()"
   >
-    <span i-line-md:sunny-outline-loop dark:i-line-md:moon />
+    <span class="i-line-md:sunny-outline-loop dark:i-line-md:moon h-5 w-5" />
   </button>
 </template>
