@@ -27,7 +27,7 @@ defineProps({
   <div class="relative">
     <span
       v-if="filename"
-      class="absolute right-0 top-0 px-4 py-3 text-sm"
+      class="absolute right-0 top-0 px-6 py-5 text-sm op70 font-mono"
     >
       {{ filename }}
     </span>
@@ -36,13 +36,8 @@ defineProps({
 </template>
 
 <style scoped>
-:slotted(pre code .line.highlight) {
-  background-color: hotpink !important;
-}
-
 /* TODO: highlights will be fixed as soon as nuxt/mdc gets released  */
-
-:slotted(pre code .highlight) {
+:slotted(pre code .line.highlight) {
   background-color: hotpink !important;
 }
 </style>
