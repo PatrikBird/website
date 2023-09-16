@@ -2,7 +2,7 @@
   "name": "patbirdwebsite",
   "version": "1.0.0",
   "private": false,
-  "packageManager": "pnpm@8.7.4",
+  "packageManager": "pnpm@8.7.5",
   "license": "MIT",
   "main": "nuxt.config.ts",
   "scripts": {
