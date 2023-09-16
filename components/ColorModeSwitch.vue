@@ -1,9 +1,6 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
-
-function onClick() {
-  colorMode.value === 'light' ? (colorMode.preference = 'dark') : (colorMode.preference = 'light')
-}
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 </script>
 
 <template>
@@ -11,9 +8,8 @@ function onClick() {
     type="button"
     aria-label="Toggle color mode"
     class="action-btn h-12 w-12"
-    @click="onClick"
+    @click="toggleDark()"
   >
-    <span v-if="colorMode.value === 'dark'" i-line-md:moon />
-    <span v-else i-line-md:sunny-outline-loop />
+    <span i-line-md:sunny-outline-loop dark:i-line-md:moon />
   </button>
 </template>

@@ -3,11 +3,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/devtools',
     '@nuxt/image',
-    '@nuxtjs/color-mode',
     '@nuxtjs/html-validator',
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
     '@unocss/nuxt',
+    '@vueuse/nuxt',
     'nuxt-time',
   ],
   app: {
@@ -27,12 +27,6 @@ export default defineNuxtConfig({
     },
     pageTransition: false,
     layoutTransition: false,
-  },
-  colorMode: {
-    classPrefix: '',
-    classSuffix: '',
-    preference: 'system',
-    fallback: 'light',
   },
   content: {
     markdown: {

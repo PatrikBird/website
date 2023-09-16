@@ -30,9 +30,9 @@ function openMarker(id: any) {
   openedMarkerID.value = id
 }
 
-const colorMode = useColorMode()
+const isDark = useDark()
 const backgroundColor = computed(() => {
-  return colorMode.value === 'dark' ? '#18181b' : '#fafafa'
+  return isDark.value === true ? '#18181b' : '#fafafa'
 })
 </script>
 

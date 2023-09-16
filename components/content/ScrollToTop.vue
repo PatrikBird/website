@@ -1,6 +1,4 @@
 <script setup lang='ts'>
-import { useWindowScroll } from '@vueuse/core'
-
 const { y } = useWindowScroll()
 const isHidden = computed(() => y.value < 2000)
 
