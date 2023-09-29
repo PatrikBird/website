@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       preload: ['js', 'ts', 'json', 'vue'],
       theme: {
         default: 'vitesse-light',
-        light: 'vitesse-light',
+        // light: 'vitesse-light',
         dark: 'vitesse-dark',
       },
     },
