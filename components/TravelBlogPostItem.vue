@@ -43,7 +43,9 @@ const props = defineProps<{ post: Post }>()
           />
         </dd>
       </div>
-      <span class="inline-block">&middot;</span>
+      <dd class="inline-block m0">
+        &middot;
+      </dd>
       <div class="flex flex-row">
         <dt>
           Reading time

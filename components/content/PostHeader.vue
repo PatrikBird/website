@@ -23,7 +23,9 @@ const props = defineProps<{ title: string; date: string; readingTime: ReadingTim
           />
         </dd>
       </div>
-      <span class="hidden sm:inline-block">&middot;</span>
+      <dd class="hidden m0 sm:inline-block">
+        &middot;
+      </dd>
       <div class="flex flex-row">
         <dt>
           Reading time
