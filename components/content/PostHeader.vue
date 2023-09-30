@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 import type { ReadingTime } from '~/types'
 
-const props = defineProps<{ title: string; date: string; readingTime: ReadingTime }>()
+const props = defineProps<{ title: string; date: Date; readingTime: ReadingTime }>()
 </script>
 
 <template>
