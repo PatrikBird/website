@@ -6,5 +6,5 @@ throw createError({
 </script>
 
 <template>
-  <div />
+  <p>test 123</p>
 </template>
