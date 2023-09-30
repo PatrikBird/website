@@ -39,7 +39,7 @@ export default defineConfig({
       /* Inherits: @unocss/preset-wind, @unocss/preset-mini */
     }),
     PresetWebFonts({
-      provider: 'google',
+      provider: 'bunny',
       fonts: {
         sans: 'Inter:400,600,800',
         mono: 'DM Mono:400,600',
