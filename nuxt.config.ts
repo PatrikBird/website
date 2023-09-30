@@ -78,6 +78,6 @@ export default defineNuxtConfig({
   },
   css: [
     '@/assets/css/main.sass',
-    '@/assets/css/common.sass',
+    '@/assets/css/text.sass',
   ],
 })
