@@ -47,8 +47,10 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    // viewTransition: true,
+    payloadExtraction: true,
+    typedPages: true,
     headNext: true,
+    // viewTransition: true,
     // componentIslands: true,
   },
   htmlValidator: {
