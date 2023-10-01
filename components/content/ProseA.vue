@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   href: {
     type: String,
     default: '',
@@ -10,10 +10,22 @@ defineProps({
     required: false,
   },
 })
+
+const isInternal = computed(() => props.href && props.href.includes('patbird.me'))
 </script>
 
 <template>
-  <NuxtLink :href="href" class="underlined-link" :target="target">
+  <NuxtLink
+    v-if="isInternal"
+    :to="props.href" class="underlined-link" :target="props.target"
+  >
     <slot />
   </NuxtLink>
+  <a
+    v-else
+    :href="props.href" class="underlined-link" target="_blank"
+    rel="noopener noreferrer"
+  >
+    <slot />
+  </a>
 </template>
