@@ -12,7 +12,7 @@ const props = defineProps<{ post: Post }>()
       :src="props.post.imageUrl"
       class="my-0 h-52 w-full xs:rounded-lg object-cover"
       alt="blog post cover image"
-      width="450"
+      width="300"
     />
   </NuxtLink>
   <div class="flex flex-1 flex-col justify-between pb-6 text-left">
@@ -26,7 +26,7 @@ const props = defineProps<{ post: Post }>()
         {{ props.post.description }}
       </p>
     </div>
-    <dl class="mt-1 flex text-xs uppercase flex-row gap-2">
+    <div class="mt-1 flex text-xs uppercase flex-row gap-2">
       <div class="flex flex-row gap3">
         <span>
           Published
@@ -51,6 +51,6 @@ const props = defineProps<{ post: Post }>()
           {{ props.post.readingTime.text.substring(0, 5) }}
         </span>
       </div>
-    </dl>
+    </div>
   </div>
 </template>
