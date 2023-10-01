@@ -23,9 +23,6 @@ const props = defineProps<{
         class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
         alt="blog post cover image"
         width="600"
-        provider="cloudinary"
-        format="webp"
-        quality="90"
       />
     </NuxtLink>
     <dl
@@ -57,9 +54,6 @@ const props = defineProps<{
         class="my-0 aspect-video max-w-[10rem] rounded-lg object-cover"
         alt="blog post cover image"
         width="600"
-        provider="cloudinary"
-        format="webp"
-        quality="90"
       />
     </NuxtLink>
   </div>

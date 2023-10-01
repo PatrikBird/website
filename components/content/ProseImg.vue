@@ -20,10 +20,7 @@ const loadingType = computed(() =>
       :alt="props.alt"
       :loading="loadingType"
       class="w-full"
-      provider="cloudinary"
-      format="webp"
       width="600"
-      quality="95"
     />
     <figcaption v-if="alt">
       {{ alt }}

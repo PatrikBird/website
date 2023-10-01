@@ -13,9 +13,6 @@ const props = defineProps<{ post: Post }>()
       class="my-0 h-52 w-full xs:rounded-lg object-cover"
       alt="blog post cover image"
       width="450"
-      provider="cloudinary"
-      format="webp"
-      quality="90"
     />
   </NuxtLink>
   <div class="flex flex-1 flex-col justify-between pb-6 text-left">
@@ -43,9 +40,9 @@ const props = defineProps<{ post: Post }>()
           />
         </dd>
       </div>
-      <dd class="inline-block m0">
+      <dt class="inline-block m0">
         &middot;
-      </dd>
+      </dt>
       <div class="flex flex-row">
         <dt>
           Reading time
