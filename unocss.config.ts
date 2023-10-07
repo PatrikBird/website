@@ -45,7 +45,8 @@ export default defineConfig({
         mono: 'DM Mono:400,600',
         mont: 'Montserrat:600,700,800',
       },
-    })],
+    }),
+  ],
   theme: {
     breakpoints: {
       'xs': '470px',

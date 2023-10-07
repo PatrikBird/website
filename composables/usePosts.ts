@@ -6,6 +6,5 @@ export function usePosts(path: MaybeRef<string>) {
     .sort({
       date: -1,
     })
-    .find(),
-  )
+    .find())
 }
