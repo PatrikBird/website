@@ -12,5 +12,6 @@
   "eslint.format.enable": true,
   "editor.rulers": [80, 100],
   "editor.glyphMargin": false,
+  "eslint.experimental.useFlatConfig": true,
   "tailwindCSS.experimental.configFile": "tailwind.config.js"
 }
