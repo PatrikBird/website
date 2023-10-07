@@ -2,15 +2,11 @@
 import type { SwiperImage } from '~/types'
 
 interface ProseImgProps extends SwiperImage {
-  lazy?: boolean | 'false' | 'true'
+  loading?: 'eager' | 'lazy'
 }
 const props = withDefaults(defineProps<ProseImgProps>(), {
-  lazy: true,
+  loading: 'lazy',
 })
-
-const loadingType = computed(() =>
-  (props.lazy === true || props.lazy === 'true') ? 'lazy' : 'eager',
-)
 </script>
 
 <template>
@@ -18,7 +14,7 @@ const loadingType = computed(() =>
     <nuxt-img
       :src="props.src"
       :alt="props.alt"
-      :loading="loadingType"
+      :loading="loading"
       class="w-full"
       width="600"
     />
