@@ -27,7 +27,7 @@ defineProps({
   <div class="relative">
     <span
       v-if="filename"
-      class="absolute right-0 top-0 px-6 py-5 text-sm op70 font-mono"
+      class="absolute right-0 top-0 px-3 py-3 text-xs op70 font-mono"
     >
       {{ filename }}
     </span>
@@ -40,6 +40,6 @@ defineProps({
   @apply bg-zinc-50 dark:bg-zinc-900
 }
 :slotted(pre code span.line.highlight) {
-  @apply bg-#e6deff dark:bg-#701AC7
+  @apply bg-#f6edff dark:bg-#280050
 }
 </style>
