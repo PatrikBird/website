@@ -39,7 +39,7 @@ defineProps({
 :slotted(pre) {
   @apply bg-zinc-50 dark:bg-zinc-900
 }
-/* :slotted(pre .line.highlight) {
+:slotted(pre code span.line.highlight) {
   @apply bg-#e6deff dark:bg-#701AC7
-} */
+}
 </style>
