@@ -6,7 +6,8 @@ definePageMeta({
 })
 
 const currentPath = useRoute().path
-const currentPost = await useAsyncData(`post-[${currentPath}]`, () => queryContent<Post>(currentPath).findOne())
+const currentPost = await useAsyncData(`post-[${currentPath}]`, () =>
+  queryContent<Post>(currentPath).findOne())
 
 const currentError = currentPost.error.value
 if (currentError)
@@ -33,7 +34,10 @@ if (!currentParsedContent) {
       :reading-time="currentParsedContent.readingTime"
     />
     <article>
-      <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
+      <ContentRendererMarkdown
+        :value="currentParsedContent"
+        tag="div"
+      />
     </article>
   </main>
 </template>
