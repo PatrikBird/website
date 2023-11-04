@@ -4,7 +4,6 @@ export interface Post extends ParsedContent {
   date: Date
   description?: string
   imageUrl?: string
-  layout: 'travel' | 'articles' | 'default' | 'fullwidth'
   readingTime: ReadingTime
   lang: 'en' | 'de' // TODO: use `_locale`
 }
