@@ -35,7 +35,7 @@ const props = defineProps<{ post: Post }>()
           <NuxtTime
             :datetime="props.post.date"
             day="numeric"
-            month="numeric"
+            month="short"
             year="numeric"
           />
         </span>
