@@ -3,6 +3,7 @@
     <main class="prose prose-gray dark:prose-invert max-w-none">
       <slot />
     </main>
+    <p>bLALBALBLABLA</p>
   </div>
 </template>
 
