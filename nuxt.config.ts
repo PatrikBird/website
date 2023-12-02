@@ -76,6 +76,9 @@ export default defineNuxtConfig({
       '@fawmi/vue-google-maps',
     ],
   },
+  routeRules: {
+    '/': { prerender: false, ssr: true },
+  },
   runtimeConfig: {
     public: {
       googleMapsApiKey: '', // will be injected in vueGoogleMaps plugin
