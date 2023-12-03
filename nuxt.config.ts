@@ -35,7 +35,6 @@ export default defineNuxtConfig({
       preload: ['js', 'ts', 'json', 'vue'],
       theme: {
         default: 'vitesse-light',
-        // light: 'vitesse-light',
         dark: 'vitesse-dark',
       },
     },
@@ -75,9 +74,6 @@ export default defineNuxtConfig({
     transpile: [
       '@fawmi/vue-google-maps',
     ],
-  },
-  routeRules: {
-    '/': { prerender: false, ssr: true },
   },
   runtimeConfig: {
     public: {
