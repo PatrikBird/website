@@ -46,7 +46,6 @@ useHead({
       href="mailto:hi@patbird.me"
       class="underlined-link"
     >hi@patbird.me</a>.
-    <a href="hi@patbird.me">mail me test.</a>
   </main>
 </template>
 
