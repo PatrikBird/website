@@ -42,10 +42,11 @@ useHead({
       rel="noopener noreferrer"
       class="underlined-link"
     >Instagram</a> or
-    contact me via <a
-      href="mailto:hi@patbird.me"
+    contact me via
+    <a
       class="underlined-link"
-    >hi@patbird.me</a>.
+      href="mailto:&#x0068;&#x0069;&#x0040;&#x0070;&#x0061;&#x0074;&#x0062;&#x0069;&#x0072;&#x0064;&#x002e;&#x006d;&#x0065;"
+    >  &#x0068;&#x0069;&#x0040;&#x0070;&#x0061;&#x0074;&#x0062;&#x0069;&#x0072;&#x0064;&#x002e;&#x006d;&#x0065;</a>.
   </main>
 </template>
 
