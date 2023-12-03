@@ -20,11 +20,13 @@ if (!currentParsedContent) {
     message: `Post not found at location '${currentPath}'`,
   })
 }
+
+const locale = currentPost.data.value?._locale
 </script>
 
 <template>
   <main>
-    <Html lang="de" />
+    <Html :lang="locale" />
     <ReadProgressBar />
     <ScrollToTop />
     <GoUpOnePageBtn />
@@ -34,10 +36,7 @@ if (!currentParsedContent) {
       :reading-time="currentParsedContent.readingTime"
     />
     <article>
-      <ContentRendererMarkdown
-        :value="currentParsedContent"
-        tag="div"
-      />
+      <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
     </article>
   </main>
 </template>

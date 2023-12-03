@@ -6,7 +6,8 @@ definePageMeta({
 })
 
 const currentPath = useRoute().path
-const currentPost = await useAsyncData(`post-[${currentPath}]`, () => queryContent<Post>(currentPath).findOne())
+const currentPost = await useAsyncData(`post-[${currentPath}]`, () =>
+  queryContent<Post>(currentPath).findOne())
 
 const currentError = currentPost.error.value
 if (currentError)
@@ -19,11 +20,13 @@ if (!currentParsedContent) {
     message: `Post not found at location '${currentPath}'`,
   })
 }
+
+const locale = currentPost.data.value?._locale
 </script>
 
 <template>
   <main>
-    <Html lang="de" />
+    <Html :lang="locale" />
     <ReadProgressBar />
     <ScrollToTop />
     <GoUpOnePageBtn />

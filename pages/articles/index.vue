@@ -61,8 +61,8 @@ const allArticles = computed(() => {
   </main>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 h1 {
   view-transition-name: header;
 }
-</style>
+</style> -->

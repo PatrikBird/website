@@ -5,7 +5,7 @@ export interface Post extends ParsedContent {
   description?: string
   imageUrl?: string
   readingTime: ReadingTime
-  lang: 'en' | 'de' // TODO: use `_locale`
+  _locale: 'en' | 'de'
 }
 
 export interface ReadingTime {
