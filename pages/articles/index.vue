@@ -6,7 +6,7 @@ useHead({
 })
 
 definePageMeta({
-  layout: 'fullwidth',
+  layout: 'articles',
 })
 
 const postsLatestQuery = useLazyAsyncData(
@@ -34,9 +34,9 @@ const allArticles = computed(() => {
     <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
       Bla intro technical articles here.
     </p>
-    <div class="mx-auto max-w-7xl">
+    <div class="mx-auto max-w-7xl py-8">
       <div
-        class="mx-auto mt-12 grid gap-6 px-6"
+        class="mx-auto mt-12 grid gap-6"
       >
         <article
           v-for="article in allArticles"
@@ -50,6 +50,10 @@ const allArticles = computed(() => {
             rel="noopener"
           >
             <span class="flex">
+              <span
+                v-if="article._locale === 'de'"
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--8 mr2 my-auto hidden md:block"
+              >DE</span>
               {{ article.title }}
               <span
                 v-if="article._path?.startsWith('http')"
@@ -64,6 +68,10 @@ const allArticles = computed(() => {
                 month="long"
                 year="numeric"
               /> · {{ article.readingTime.text.substring(0, 5) }}
+              <span
+                v-if="article._locale === 'de'"
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
+              >DE</span>
             </div>
           </NuxtLink>
         </article>
@@ -77,7 +85,7 @@ const allArticles = computed(() => {
   view-transition-name: header;
 } */
 .text-xxs {
-font-size: 0.6rem;
-line-height: 0.8rem;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
 }
 </style>
