@@ -21,7 +21,10 @@ const postsLatestQuery = useLazyAsyncData(
 )
 
 const allArticles = computed(() => {
-  return postsLatestQuery.data.value
+  return postsLatestQuery.data.value?.map(i => ({
+    ...i,
+    _path: i.external || i._path,
+  }))
 })
 </script>
 
@@ -41,12 +44,20 @@ const allArticles = computed(() => {
         >
           <NuxtLink
             :to="article._path"
-            class="relative flex min-h-[40px] flex-col items-start gap-3 border no-underline opacity-75 transition-opacity duration-200 hover:opacity-100 md:flex-row"
+            class="relative flex min-h-[40px] flex-col items-baseline gap-3 border
+            no-underline opacity-75 transition-opacity duration-200 hover:opacity-100 md:flex-row"
+            :target="article._path?.startsWith('http') ? '_blank' : '_self'"
+            rel="noopener"
           >
-            <div class="md:self-center">
+            <span class="flex">
               {{ article.title }}
-            </div>
-            <div class="text-xs md:self-center">
+              <span
+                v-if="article._path?.startsWith('http')"
+                class="op75 self-start text-xxs"
+                i-carbon-arrow-up-right
+              />
+            </span>
+            <div class="text-xs">
               <NuxtTime
                 :datetime="article.date"
                 day="numeric"
@@ -61,8 +72,12 @@ const allArticles = computed(() => {
   </main>
 </template>
 
-<!-- <style scoped>
-h1 {
+<style scoped>
+/* h1 {
   view-transition-name: header;
+} */
+.text-xxs {
+font-size: 0.6rem;
+line-height: 0.8rem;
 }
-</style> -->
+</style>
