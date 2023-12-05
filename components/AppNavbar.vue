@@ -18,18 +18,17 @@
               Home
             </NuxtLink>
             <NuxtLink
+              to="/articles"
+              class="no-underline opacity-75 hover:opacity-100 p-1 text-black dark:text-white"
+            >
+              Articles
+            </NuxtLink>
+            <NuxtLink
               to="/travel"
               class="no-underline opacity-75 hover:opacity-100 p-1 text-black dark:text-white"
             >
               Travel
             </NuxtLink>
-            <!-- <NuxtLink
-              to="/articles"
-              active-class="!b-black"
-              class="no-underline opacity-75 hover:opacity-100 p-1"
-            >
-              Articles
-            </NuxtLink> -->
             <a
               href="https://github.com/PatrikBird"
               target="_blank"

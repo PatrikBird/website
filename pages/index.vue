@@ -9,25 +9,18 @@ useHead({
     <h1>Patrik Bird</h1>
     <p>Hey 👋</p>
     <p>
-      I am Patrik, a software engineer who's passionate about the web, especially front-end technologies
-      and <a
-        href="https://openprocessing.org"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="underlined-link"
-      >creative coding</a>.
+      I am Patrik, a software engineer who is fascinated by the web, especially front-end technologies.
+      I recently started writing technical
+      <NuxtLink to="/articles" class="underlined-link">articles</NuxtLink> about it.
     </p>
     <p>
-      I'm currently backpacking in asia.
+      I am currently backpacking in Asia.
       You can follow my journey on the
-      <NuxtLink to="/travel" class="underlined-link">
-        Travel Blog
-      </NuxtLink>
-      which is, as of now, only written in German.
+      <NuxtLink to="/travel" class="underlined-link">Travel Blog</NuxtLink>, though it is currently only accessible in German.
     </p>
     <p>
-      Besides the nerd stuff, I enjoy to climb, hike, travel and do all those things with my partner.
-      I also try to live a sustainable life by pursuing a vegan and <i>less</i> waste lifestyle.
+      Besides my interests in nerdy things, I like to climb, hike, eat, and share those activities with my partner.
+      Additionally, I strive to live an ethical life by following a vegan lifestyle.
     </p>
     <hr>
     You can find me on <a
@@ -50,7 +43,7 @@ useHead({
   </main>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 h1 {
   view-transition-name: header;
 }
@@ -61,4 +54,4 @@ h1 {
 ::view-transition-new(header) {
   width: auto;
 }
-</style>
+</style> -->

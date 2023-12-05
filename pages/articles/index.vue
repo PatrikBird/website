@@ -32,7 +32,7 @@ const allArticles = computed(() => {
   <main>
     <h1>Articles</h1>
     <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
-      Bla intro technical articles here.
+      Various technical articles, some published on other blogs and some here.
     </p>
     <div class="mx-auto max-w-7xl py-8">
       <div
@@ -67,7 +67,9 @@ const allArticles = computed(() => {
                 day="numeric"
                 month="long"
                 year="numeric"
-              /> · {{ article.readingTime.text.substring(0, 5) }}
+              /> <span v-if="!article.external">
+                · {{ article.readingTime.text.substring(0, 5) }}
+              </span>
               <span
                 v-if="article._locale === 'de'"
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
