@@ -13,7 +13,7 @@
           <div class="flex items-center space-x-5 text-sm">
             <NuxtLink
               to="/"
-              class="no-underline opacity-75 hover:opacity-100 p-1 text-black dark:text-white"
+              class="no-underline opacity-75 hover:opacity-100 p-1 text-black dark:text-white hidden xs:block"
             >
               Home
             </NuxtLink>
