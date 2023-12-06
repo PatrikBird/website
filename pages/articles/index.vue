@@ -31,10 +31,10 @@ const allArticles = computed(() => {
 <template>
   <main>
     <h1>Articles</h1>
-    <p class="mx-auto mt-3 max-w-2xl text-xl sm:mt-4">
+    <p class="mt-3 max-w-2xl text-lg sm:mt-4">
       Various technical articles, some published on other blogs and some here.
     </p>
-    <div class="mx-auto max-w-7xl py-8">
+    <div class="mx-auto max-w-7xl py-2 md:py-8">
       <div
         class="mx-auto mt-12 grid gap-6"
       >
