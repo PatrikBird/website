@@ -12,14 +12,14 @@ function scrollToTop() {
     <button
       type="button"
       :class="{ hidden: isHidden }"
-      class="action-btn opacity-75 group fixed bottom-4 right-4 z-50 h-10 w-10 p-1 sm:bottom-12 sm:right-12"
+      class="action-btn opacity-75 group fixed bottom-4 right-4 z-50 size-10 p-1 sm:bottom-12 sm:right-12"
       title="Scroll to top"
       aria-label="Scroll to top"
       @click="scrollToTop"
     >
       <span
         i-line-md:arrow-small-left
-        class="m-auto rotate-90 w-5 h-5 text-teal-800 opacity-75 group-hover:opacity-100 dark:text-zinc-100"
+        class="m-auto rotate-90 size-5 text-teal-800 opacity-75 group-hover:opacity-100 dark:text-zinc-100"
         aria-hidden="true"
       />
     </button>

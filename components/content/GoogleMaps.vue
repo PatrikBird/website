@@ -77,5 +77,6 @@ const backgroundColor = computed(() => {
         </GMapInfoWindow>
       </GMapMarker>
     </GMapMap>
+    <ContentSlot :use="$slots.default" unwrap="p" />
   </div>
 </template>

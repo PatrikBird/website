@@ -7,9 +7,12 @@ const toggleDark = useToggle(isDark)
   <button
     type="button"
     aria-label="Toggle color mode"
-    class="action-btn h-12 w-12"
+    class="action-btn size-12"
     @click="toggleDark()"
   >
-    <span class="i-line-md:sunny-outline-loop dark:i-line-md:moon h-5 w-5" />
+    <span
+      i-line-md:sunny-outline-loop dark:i-line-md:moon
+      class="size-5 dark:size-5"
+    />
   </button>
 </template>

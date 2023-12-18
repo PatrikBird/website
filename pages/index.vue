@@ -8,15 +8,22 @@ useHead({
   <main>
     <h1>Patrik Bird</h1>
     <p>Hey 👋</p>
+    <!-- <span i-openmoji:desert-island />
+    <span i-fluent-emoji-high-contrast:sleeping-face />
+    i-emojione-monotone:flag-for-singapore -->
     <p>
       I am Patrik, a software engineer who is fascinated by the web, especially front-end technologies.
       I recently started writing technical
-      <NuxtLink to="/articles" class="underlined-link">articles</NuxtLink> about it.
+      <NuxtLink to="/articles" class="underlined-link">
+        articles
+      </NuxtLink> about it.
     </p>
     <p>
       I am currently backpacking in Asia.
       You can follow my journey on the
-      <NuxtLink to="/travel" class="underlined-link">Travel Blog</NuxtLink>, though it is currently only accessible in German.
+      <NuxtLink to="/travel" class="underlined-link">
+        Travel Blog
+      </NuxtLink>, though it is currently only accessible in German.
     </p>
     <p>
       Besides my interests in nerdy things, I like to climb, hike, eat, and share those activities with my partner.

@@ -57,7 +57,7 @@ const allArticles = computed(() => {
               {{ article.title }}
               <span
                 v-if="article._path?.startsWith('http')"
-                class="op75 self-start text-xxs"
+                class="op75 self-start text-xs"
                 i-carbon-arrow-up-right
               />
             </span>
@@ -86,8 +86,4 @@ const allArticles = computed(() => {
 /* h1 {
   view-transition-name: header;
 } */
-.text-xxs {
-  font-size: 0.6rem;
-  line-height: 0.8rem;
-}
 </style>
