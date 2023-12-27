@@ -15,10 +15,10 @@ const props = withDefaults(defineProps<{ icon?: string }>(), {
         />
       </div>
       <div>
-        <p class="m-0 text-lg">
+        <p class="m0">
           <ContentSlot :use="$slots.title" unwrap="p" />
         </p>
-        <div class="text-sm">
+        <div>
           <ContentSlot :use="$slots.default" unwrap="p" />
         </div>
       </div>
