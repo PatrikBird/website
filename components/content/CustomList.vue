@@ -7,8 +7,12 @@ const props = defineProps<{
 
 <template>
   <ul class="list-none">
-    <li v-for="item in props.items" :key="item" class="flex items-center gap2">
-      <span i-carbon:information-filled class="w-5 h-5" /> {{ item }}
+    <li
+      v-for="item in props.items" :key="item"
+      class="flex items-center gap2"
+    >
+      <span :class="props.icon" class="w-4 h-4" />
+      {{ item }}
     </li>
   </ul>
 </template>
