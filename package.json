@@ -11,7 +11,7 @@
     "build": "nuxi build",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
-    "lint": "eslint \"**/*.{ts,js,vue,json}\"",
+    "lint": "eslint \"**/*.{ts,js,vue,json,md}\"",
     "types": "vue-tsc --noEmit"
   },
   "devDependencies": {
