@@ -19,7 +19,7 @@ function scrollToTop() {
     >
       <span
         i-line-md:arrow-small-left
-        class="m-auto rotate-90 size-5 text-teal-800 opacity-75 group-hover:opacity-100 dark:text-zinc-100"
+        class="m-auto rotate-90 size-5 text-primary opacity-75 group-hover:opacity-100 dark:text-secondary"
         aria-hidden="true"
       />
     </button>

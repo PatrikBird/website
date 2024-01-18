@@ -11,7 +11,7 @@ const route = useRoute()
   >
     <span
       i-line-md:arrow-small-left
-      class="text-teal-800 size-5 opacity-75 group-hover:opacity-100 dark:text-zinc-100"
+      class="text-primary size-5 opacity-75 group-hover:opacity-100 dark:text-secondary"
     />
   </NuxtLink>
 </template>

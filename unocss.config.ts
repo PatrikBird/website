@@ -55,6 +55,10 @@ export default defineConfig({
     }),
   ],
   theme: {
+    colors: {
+      primary: '#701AC7',
+      secondary: '#E6DEFF',
+    },
     breakpoints: {
       'xs': '470px',
       'sm': '640px',
