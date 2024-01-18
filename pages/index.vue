@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/singleline-html-element-content-newline -->
 <script setup lang='ts'>
 useHead({
   title: 'Patrik Bird',
@@ -9,9 +8,6 @@ useHead({
   <main>
     <h1>Patrik Bird</h1>
     <p>Hey 👋</p>
-    <!-- <span i-openmoji:desert-island />
-    <span i-fluent-emoji-high-contrast:sleeping-face />
-    i-emojione-monotone:flag-for-singapore -->
     <p>
       I am Patrik, a software engineer who is fascinated by the web, especially front-end technologies.
       I recently started writing technical

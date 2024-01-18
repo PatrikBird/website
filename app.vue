@@ -2,8 +2,7 @@
   <div class="app font-sans">
     <Html lang="en" />
     <Meta property="og:image" content="/cover.webp" />
-    <!-- <AppLoadingBar /> -->
-    <NuxtLoadingIndicator color="red" />
+    <NuxtLoadingIndicator color="text-primary" />
     <AppNavbar />
     <NuxtLayout>
       <NuxtPage />
