@@ -7,6 +7,7 @@ const props = defineProps<{ post: Post }>()
 <template>
   <NuxtLink
     :to="props.post._path"
+    class="border-none!"
   >
     <nuxt-img
       :src="props.post.imageUrl"
@@ -17,7 +18,7 @@ const props = defineProps<{ post: Post }>()
   </NuxtLink>
   <div class="flex flex-1 flex-col justify-between pb-6 text-left">
     <div class="flex-1">
-      <NuxtLink :to="props.post._path" class="no-underline">
+      <NuxtLink :to="props.post._path">
         <p class="mt-0 font-mont text-xl font-semibold">
           {{ props.post.title }}
         </p>

@@ -8,9 +8,8 @@
 </template>
 
 <style lang="postcss">
-/* Customize headers to remove default underline */
 .prose h2 a,
 .prose h3 a {
-  @apply no-underline hover:(border-b-solid border-zinc-600) dark:hover:border-zinc-300;
+  @apply border-none;
 }
 </style>

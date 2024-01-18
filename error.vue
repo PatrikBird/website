@@ -20,7 +20,7 @@ useDark()
       <!-- <p class="mt-4 text-base sm:mt-6">
         {{ error.message }}
       </p> -->
-      <NuxtLink to="/" class="text-sm underlined-link">
+      <NuxtLink to="/" class="text-sm">
         <span aria-hidden="true">&larr;</span>
         Back to home
       </NuxtLink>

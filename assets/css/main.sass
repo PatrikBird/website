@@ -64,3 +64,23 @@ html
 // pre
 //   margin: 0 -50vw !important
 //   padding: 1rem 50vw !important
+
+.prose
+  --fg: #701AC7
+  --fg-deep: #222
+  --fg-deeper: #000
+
+  color: var(--fg)
+
+html.dark .prose
+  --fg: #e6deff
+  --fg-deep: #ddd
+  --fg-deeper: #fff
+
+.prose main a
+  font-weight: inherit
+  text-decoration: none
+  border-bottom: 1.5px solid rgba(125, 125, 125, 0.7)
+  transition: border 0.2s ease-in-out
+  &:hover
+    border-bottom: 1.7px solid var(--fg)

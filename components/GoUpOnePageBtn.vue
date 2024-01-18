@@ -4,7 +4,7 @@ const route = useRoute()
 
 <template>
   <NuxtLink
-    class="action-btn group mb-8 flex size-10 lg:absolute lg:-left-10"
+    class="action-btn group mb-8 flex size-10 lg:absolute lg:-left-10 border-none!"
     :to="route.path.split('/').slice(0, -1).join('/') || '/'"
     title="Back to overview"
     aria-label="Go back to overview"

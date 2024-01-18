@@ -44,8 +44,8 @@ const allArticles = computed(() => {
         >
           <NuxtLink
             :to="article._path"
-            class="relative flex min-h-[40px] flex-col items-baseline gap-3 border
-            no-underline opacity-75 transition-opacity duration-200 hover:opacity-100 md:flex-row"
+            class="border-none! relative flex min-h-[40px] flex-col items-baseline gap-3
+            opacity-75 transition-opacity duration-200 hover:opacity-100 md:flex-row"
             :target="article._path?.startsWith('http') ? '_blank' : '_self'"
             rel="noopener"
           >
@@ -58,7 +58,7 @@ const allArticles = computed(() => {
               <span
                 v-if="article._path?.startsWith('http')"
                 class="op75 self-start text-xs"
-                i-carbon-arrow-up-right
+                i-tabler:external-link
               />
             </span>
             <div class="text-xs">

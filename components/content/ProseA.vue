@@ -17,13 +17,13 @@ const isInternal = computed(() => props.href && props.href.includes('patbird.me'
 <template>
   <NuxtLink
     v-if="isInternal"
-    :to="props.href" class="underlined-link" :target="props.target"
+    :to="props.href" :target="props.target"
   >
     <slot />
   </NuxtLink>
   <a
     v-else
-    :href="props.href" class="underlined-link" target="_blank"
+    :href="props.href" target="_blank"
     rel="noopener noreferrer"
   >
     <slot />
