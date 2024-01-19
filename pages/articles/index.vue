@@ -83,7 +83,7 @@ const allArticles = computed(() => {
 </template>
 
 <style scoped>
-/* h1 {
-  view-transition-name: header;
-} */
+main h1 {
+  view-transition-name: headline;
+}
 </style>

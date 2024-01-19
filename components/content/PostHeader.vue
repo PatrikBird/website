@@ -41,3 +41,21 @@ const props = defineProps<{
     </dl>
   </header>
 </template>
+<!--
+<style scoped>
+header h1 {
+  view-transition-name: heading;
+}
+header dl dt:first-of-type {
+  view-transition-name: published-dt;
+}
+header dl dd:first-of-type {
+  view-transition-name: published-dd;
+}
+header dl dt:last-of-type {
+  view-transition-name: reading-time-dt;
+}
+header dl dd:last-of-type {
+  view-transition-name: reading-time-dd;
+}
+</style> -->

@@ -11,12 +11,16 @@ useHead({
     <p>
       I am Patrik, a software engineer who is fascinated by the web, especially front-end technologies.
       I recently started writing technical
-      <NuxtLink to="/articles">articles</NuxtLink> about it.
+      <NuxtLink to="/articles">
+        articles
+      </NuxtLink> about it.
     </p>
     <p>
       I am currently backpacking in Asia.
       You can follow my journey on the
-      <NuxtLink to="/travel">Travel Blog</NuxtLink>,
+      <NuxtLink to="/travel">
+        Travel Blog
+      </NuxtLink>,
       though it is currently only accessible in German.
     </p>
     <p>
@@ -41,15 +45,8 @@ useHead({
   </main>
 </template>
 
-<!-- <style scoped>
-h1 {
-  view-transition-name: header;
+<style scoped>
+main h1 {
+  view-transition-name: headline;
 }
 </style>
-
-<style>
-::view-transition-old(header),
-::view-transition-new(header) {
-  width: auto;
-}
-</style> -->

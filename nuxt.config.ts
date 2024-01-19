@@ -49,8 +49,7 @@ export default defineNuxtConfig({
     payloadExtraction: true,
     typedPages: true,
     headNext: true,
-    // viewTransition: true,
-    // componentIslands: true,
+    viewTransition: true,
   },
   htmlValidator: {
     logLevel: 'warning',
