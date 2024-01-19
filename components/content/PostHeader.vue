@@ -44,18 +44,13 @@ const props = defineProps<{
 
 <style scoped>
 header h1 {
-  view-transition-name: heading;
+  /* view-transition-name: v-bind('props.title') + 'title'; */
+  view-transition-name: title;
 }
-#pubdt {
-  view-transition-name: published-dt;
+
+dl {
+  /* color: green !important; */
+  /* view-transition-name: v-bind('props.title') + 'meta'; */
+  view-transition-name: meta;
 }
-/* header dl dd:first-of-type {
-  view-transition-name: published-dd;
-} */
-/* header dl dt:last-of-type {
-  view-transition-name: reading-time-dt;
-} */
-/* header dl dd:last-of-type {
-  view-transition-name: reading-time-dd;
-} */
 </style>
