@@ -15,7 +15,7 @@ const props = defineProps<{
     </h1>
     <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row gap-2">
       <div class="flex flex-row">
-        <dt id="pubdt">
+        <dt>
           Published
         </dt>
         <dd class="font-semibold ml-3">

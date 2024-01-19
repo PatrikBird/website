@@ -16,9 +16,8 @@ const props = defineProps<{ post: Post }>()
       width="300"
     />
   </NuxtLink>
-  <div class="flex flex-1 flex-col justify-between pb-6 text-left">
-    <header class="flex-1">
-      <NuxtLink :to="props.post._path">
+  <header class="flex flex-1 flex-col justify-between pb-6 text-left">
+    <NuxtLink :to="props.post._path" class="border-none!">
         <h3 class="mt-0 font-mont text-xl font-semibold">
           {{ props.post.title }}
         </h3>
@@ -28,7 +27,7 @@ const props = defineProps<{ post: Post }>()
       </p>
       <dl class="mt-1 flex text-xs uppercase flex-row gap-2">
       <div class="flex flex-row gap3">
-          <dt class="dt">
+        <dt>
           Published
           </dt>
           <dd class="font-semibold">
@@ -45,16 +44,15 @@ const props = defineProps<{ post: Post }>()
         &middot;
         </dd>
       <div class="flex flex-row gap3">
-          <dt class="reading-time-dt">
+        <dt>
           Reading time
           </dt>
-          <dd class="font-semibold reading-time-dd">
+        <dd class="font-semibold">
           {{ props.post.readingTime.text.substring(0, 5) }}
           </dd>
       </div>
       </dl>
     </header>
-  </div>
 </template>
 
 <style scoped>
