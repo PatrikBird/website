@@ -11,16 +11,12 @@ useHead({
     <p>
       I am Patrik, a software engineer who is fascinated by the web, especially front-end technologies.
       I recently started writing technical
-      <NuxtLink to="/articles">
-        articles
-      </NuxtLink> about it.
+      <NuxtLink to="/articles">articles</NuxtLink> about it.
     </p>
     <p>
       I am currently backpacking in Asia.
       You can follow my journey on the
-      <NuxtLink to="/travel">
-        Travel Blog
-      </NuxtLink>,
+      <NuxtLink to="/travel">Travel Blog</NuxtLink>,
       though it is currently only accessible in German.
     </p>
     <p>
