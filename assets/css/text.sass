@@ -1,3 +1,23 @@
 .prose h1, h2, h3, h4, h5
   font-family: "Montserrat",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
   font-weight: 800
+
+.prose
+  --fg: #701AC7
+  --fg-deep: #222
+  --fg-deeper: #000
+
+  color: var(--fg)
+
+html.dark .prose
+  --fg: #e6deff
+  --fg-deep: #ddd
+  --fg-deeper: #fff
+
+.prose main a
+  font-weight: inherit
+  text-decoration: none
+  border-bottom: 1.5px solid rgba(125, 125, 125, 0.7)
+  transition: border 0.2s ease-in-out
+  &:hover
+    border-bottom: 1.7px solid var(--fg)
