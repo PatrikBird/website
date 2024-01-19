@@ -46,27 +46,32 @@ const props = defineProps<{ post: Post }>()
         &middot;
       </span>
       <div class="flex flex-row gap3">
-        <span>
+        <span class="reading-time-dt">
           Reading time
         </span>
-        <span class="font-semibold">
+        <span class="font-semibold reading-time-dd">
           {{ props.post.readingTime.text.substring(0, 5) }}
         </span>
       </div>
     </div>
   </div>
 </template>
-<!--
+
 <style scoped>
 header a h3 {
   view-transition-name: heading;
 }
-
+/* TODO: remove hacky .dt and .dd classes */
 .dt {
   view-transition-name: published-dt;
 }
-
 .dd {
   view-transition-name: published-dd;
 }
-</style> -->
+.reading-time-dt {
+  view-transition-name: reading-time-dt;
+}
+.reading-time-dd {
+  view-transition-name: reading-time-dd;
+}
+</style>

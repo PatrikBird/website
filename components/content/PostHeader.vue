@@ -15,7 +15,7 @@ const props = defineProps<{
     </h1>
     <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row gap-2">
       <div class="flex flex-row">
-        <dt>
+        <dt id="pubdt">
           Published
         </dt>
         <dd class="font-semibold ml-3">
@@ -41,21 +41,21 @@ const props = defineProps<{
     </dl>
   </header>
 </template>
-<!--
+
 <style scoped>
 header h1 {
   view-transition-name: heading;
 }
-header dl dt:first-of-type {
+#pubdt {
   view-transition-name: published-dt;
 }
-header dl dd:first-of-type {
+/* header dl dd:first-of-type {
   view-transition-name: published-dd;
-}
-header dl dt:last-of-type {
+} */
+/* header dl dt:last-of-type {
   view-transition-name: reading-time-dt;
-}
-header dl dd:last-of-type {
+} */
+/* header dl dd:last-of-type {
   view-transition-name: reading-time-dd;
-}
-</style> -->
+} */
+</style>
