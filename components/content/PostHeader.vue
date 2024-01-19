@@ -44,13 +44,12 @@ const props = defineProps<{
 
 <style scoped>
 header h1 {
-  /* view-transition-name: v-bind('props.title') + 'title'; */
-  view-transition-name: title;
+  view-transition-name: v-bind('props.title') + 'title';
+  /* view-transition-name: title; */
 }
 
 dl {
-  /* color: green !important; */
-  /* view-transition-name: v-bind('props.title') + 'meta'; */
-  view-transition-name: meta;
+  view-transition-name: v-bind('props.title') + 'meta';
+  /* view-transition-name: meta; */
 }
 </style>

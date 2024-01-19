@@ -57,13 +57,12 @@ const props = defineProps<{ post: Post }>()
 
 <style scoped>
 header a h3 {
-  /* view-transition-name: v-bind('props.post.title') + 'title'; */
-  view-transition-name: title;
+  view-transition-name: v-bind('props.post.title') + 'title';
+  /* view-transition-name: title; */
 }
 
 dl {
-  /* color: green !important; */
-  /* view-transition-name: v-bind('props.post.title') + 'meta'; */
-  view-transition-name: meta;
+  view-transition-name: v-bind('props.post.title') + 'meta';
+  /* view-transition-name: meta; */
 }
 </style>
