@@ -50,6 +50,7 @@ export default defineNuxtConfig({
     typedPages: true,
     headNext: true,
     viewTransition: true,
+    // componentIslands: true,
   },
   htmlValidator: {
     logLevel: 'warning',
