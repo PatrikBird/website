@@ -12,7 +12,7 @@ interface Post {
 
 const props = defineProps<{ post: Post }>()
 
-const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(props.post.title!)
+const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(props.post.title!)
 </script>
 
 <template>
@@ -69,6 +69,9 @@ const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(props.post.t
 <style scoped>
 header > a > h2  {
   view-transition-name: v-bind('cleanTitle');
+}
+header > p {
+  view-transition-name: v-bind('postDesc');
 }
 header > dl {
   view-transition-name: v-bind('metaDesc');

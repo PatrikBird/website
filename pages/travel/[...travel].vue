@@ -23,7 +23,7 @@ if (!currentParsedContent) {
 
 const locale = currentPost.data.value?._locale
 
-const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(currentParsedContent.title!)
+const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(currentParsedContent.title!)
 </script>
 
 <template>
@@ -48,6 +48,7 @@ const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(currentParse
         <h1 class="text-4xl">
           {{ currentParsedContent.title }}
         </h1>
+        <span class="text-sm"> {{ currentParsedContent.description }}</span>
         <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row gap-2">
           <div class="flex flex-row">
             <dt>
@@ -85,6 +86,10 @@ const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(currentParse
 <style scoped>
 header > h1 {
   view-transition-name: v-bind('cleanTitle');
+}
+
+header > span {
+  view-transition-name: v-bind('postDesc');
 }
 
 header > dl {
