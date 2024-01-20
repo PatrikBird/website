@@ -22,10 +22,12 @@ if (!currentParsedContent) {
 }
 
 const locale = currentPost.data.value?._locale
+
+const { cleanString: cleanTitle, metaDesc } = useCleanString(currentParsedContent.title!)
 </script>
 
 <template>
-  <main>
+  <div>
     <Html :lang="locale" />
     <ReadProgressBar />
     <ScrollToTop />
@@ -64,15 +66,15 @@ const locale = currentPost.data.value?._locale
     <article>
       <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
     </article>
-  </main>
+  </div>
 </template>
 
 <style scoped>
 header > h1 {
-  view-transition-name: title;
+  view-transition-name: v-bind('cleanTitle');
 }
 
 header > dl {
-  view-transition-name: meta;
+  view-transition-name: v-bind('metaDesc');
 }
 </style>
