@@ -41,15 +41,8 @@ useHead({
   </main>
 </template>
 
-<!-- <style scoped>
-h1 {
-  view-transition-name: header;
+<style scoped>
+main > h1 {
+  view-transition-name: headline;
 }
 </style>
-
-<style>
-::view-transition-old(header),
-::view-transition-new(header) {
-  width: auto;
-}
-</style> -->

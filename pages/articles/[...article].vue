@@ -40,9 +40,3 @@ const locale = currentPost.data.value?._locale
     </article>
   </main>
 </template>
-
-<!-- <style scoped>
-h1 {
-  view-transition-name: header;
-}
-</style> -->

@@ -5,9 +5,9 @@ useHead({
   title: 'Articles - Patrik Bird',
 })
 
-definePageMeta({
-  layout: 'articles',
-})
+// definePageMeta({
+//   layout: 'articles',
+// })
 
 const postsLatestQuery = useLazyAsyncData(
   'articles-latest-data',
@@ -83,7 +83,7 @@ const allArticles = computed(() => {
 </template>
 
 <style scoped>
-/* h1 {
-  view-transition-name: header;
-} */
+main > h1 {
+  view-transition-name: headline;
+}
 </style>

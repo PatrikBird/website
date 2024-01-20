@@ -1,6 +1,4 @@
 <script setup lang='ts'>
-import type { Post } from '~/types'
-
 useHead({
   title: 'Travel Blog - Patrik Bird',
 })
@@ -9,20 +7,38 @@ definePageMeta({
   layout: 'fullwidth',
 })
 
-const postsLatestQuery = useLazyAsyncData(
-  'travel-latest-data',
-  () => queryContent<Post>('travel')
-    // Selects only two kinds of paths:
-    //   /travel/**
-    //   /travel/**/index
-    .where({ _path: /^(?:\/[^\/]+){2}$/ })
-    .sort({ date: -1 })
-    .find(),
-)
+const entries = await queryContent('/travel')
+  .only(['title', 'date', '_path', 'description', 'imageUrl', 'readingTime'])
+  .find()
+  .then((result) => {
+    return (result as Array<{
+      title?: string
+      date: string
+      _path: string
+      description?: string
+      imageUrl?: string
+      readingTime?: {
+        text: string
+      }
+    }>)
+      .map(e => ({
+        ...e,
+        path: e._path,
+      }))
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  })
 
-const allTravelPosts = computed(() => {
-  return postsLatestQuery.data.value
-})
+// const postsLatestQuery = queryContent<Post>('travel')
+// // Selects only two kinds of paths:
+// //   /travel/**
+// //   /travel/**/index
+//   .where({ _path: /^(?:\/[^\/]+){2}$/ })
+//   .sort({ date: -1 })
+//   .find()
+
+// const allTravelPosts = computed(() => {
+//   return postsLatestQuery.data.value
+// })
 </script>
 
 <template>
@@ -37,13 +53,12 @@ const allTravelPosts = computed(() => {
         class="mt-6 grid max-w-md gap-4 lg:max-w-none lg:grid-cols-3"
       >
         <article
-          v-for="travelPost in allTravelPosts"
-          :key="travelPost._path"
-          :to="travelPost._path"
+          v-for="travelPost in entries"
+          :key="travelPost.path"
           :title="travelPost.title"
           class="flex flex-col gap-3 overflow-hidden"
         >
-          <TravelBlogPostItem :post="travelPost" />
+          <TravelPostItem :post="travelPost" />
         </article>
       </div>
     </div>
@@ -51,7 +66,7 @@ const allTravelPosts = computed(() => {
 </template>
 
 <style scoped>
-h1 {
-  view-transition-name: header;
+main > h1 {
+  view-transition-name: headline;
 }
 </style>
