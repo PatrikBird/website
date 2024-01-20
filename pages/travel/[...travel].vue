@@ -31,7 +31,7 @@ const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(currentParse
     <Html :lang="locale" />
     <ReadProgressBar />
     <ScrollToTop />
-    <div class="h-[75vh] w-full">
+    <div class="hidden lg:block h-[75vh] w-full">
       <nuxt-img
         :src="currentParsedContent.imageUrl"
         alt="cover"
