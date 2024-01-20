@@ -39,11 +39,57 @@ const allTravelPosts = computed(() => {
         <article
           v-for="travelPost in allTravelPosts"
           :key="travelPost._path"
-          :to="travelPost._path"
           :title="travelPost.title"
           class="flex flex-col gap-3 overflow-hidden"
         >
-          <TravelBlogPostItem :post="travelPost" />
+          <NuxtLink
+            :to="travelPost._path"
+            class="border-none!"
+          >
+            <nuxt-img
+              :src="travelPost.imageUrl"
+              class="my-0 h-52 w-full xs:rounded-lg object-cover gmaps"
+              alt="blog post cover image"
+              width="300"
+            />
+          </NuxtLink>
+          <header class="flex flex-1 flex-col justify-between pb-6 text-left">
+            <NuxtLink :to="travelPost._path" class="border-none!">
+              <h2 class="mt-0 font-mont text-xl font-semibold">
+                {{ travelPost.title }}
+              </h2>
+            </NuxtLink>
+            <p class="mb-0 mt-3 text-sm">
+              {{ travelPost.description }}
+            </p>
+            <dl class="mt-1 flex text-xs uppercase flex-row gap-2">
+              <div class="flex flex-row gap3">
+                <dt>
+                  Published
+                </dt>
+                <dd class="font-semibold">
+                  <NuxtTime
+                    :datetime="travelPost.date"
+                    day="numeric"
+                    month="short"
+                    year="numeric"
+                    class="dd"
+                  />
+                </dd>
+              </div>
+              <dd class="inline-block">
+                &middot;
+              </dd>
+              <div class="flex flex-row gap3">
+                <dt>
+                  Reading time
+                </dt>
+                <dd class="font-semibold">
+                  {{ travelPost.readingTime.text.substring(0, 5) }}
+                </dd>
+              </div>
+            </dl>
+          </header>
         </article>
       </div>
     </div>
@@ -54,10 +100,13 @@ const allTravelPosts = computed(() => {
 main > h1 {
   view-transition-name: headline;
 }
-header > a > h3 {
+header > a > h2  {
   view-transition-name: title;
 }
 header > dl {
   view-transition-name: meta;
+}
+main div article a img {
+  view-transition-name: map;
 }
 </style>

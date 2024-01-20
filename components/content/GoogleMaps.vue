@@ -39,6 +39,7 @@ const backgroundColor = computed(() => {
 <template>
   <div class="border border-zinc-200 dark:border-zinc-600">
     <GMapMap
+      class="gmaps"
       :center="center"
       :options="{
         zoomControl: false,
@@ -80,3 +81,9 @@ const backgroundColor = computed(() => {
     <ContentSlot :use="$slots.default" unwrap="p" />
   </div>
 </template>
+
+<style scoped>
+.gmaps {
+  view-transition-name: map;
+}
+</style>
