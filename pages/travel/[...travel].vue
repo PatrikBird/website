@@ -23,7 +23,7 @@ if (!currentParsedContent) {
 
 const locale = currentPost.data.value?._locale
 
-const { cleanString: cleanTitle, metaDesc } = useCleanString(currentParsedContent.title!)
+const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(currentParsedContent.title!)
 </script>
 
 <template>
@@ -32,11 +32,16 @@ const { cleanString: cleanTitle, metaDesc } = useCleanString(currentParsedConten
     <ReadProgressBar />
     <ScrollToTop />
     <div class="h-[75vh] w-full">
-      <img src="https://picsum.photos/600/300" alt="asdf" class="object-cover h-full w-full">
+      <nuxt-img
+        :src="currentParsedContent.imageUrl"
+        alt="cover"
+        class="object-cover h-full w-full"
+        loading="eager"
+      />
     </div>
     <div
-      class="post-layout prose prose-zinc m-auto max-w-3xl px-1 pb-10 dark:prose-invert
-    sm:(rounded px-8 pt-4) lg:relative"
+      class="prose prose-zinc m-auto max-w-3xl px-1 pb-10
+      dark:prose-invert sm:(rounded px-8 pt-4) lg:relative"
     >
       <GoUpOnePageBtn />
       <header class="mb-7">
@@ -84,5 +89,9 @@ header > h1 {
 
 header > dl {
   view-transition-name: v-bind('metaDesc');
+}
+
+div > img {
+  view-transition-name: v-bind('imgID');
 }
 </style>
