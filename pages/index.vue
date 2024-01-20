@@ -2,42 +2,27 @@
 useHead({
   title: 'Patrik Bird',
 })
+
+const currentPath = useRoute().path
+const indexContent = await useAsyncData(`content-[${currentPath}]`, () => queryContent(currentPath).findOne())
+
+const currentError = indexContent.error.value
+if (currentError)
+  throw currentError
+
+const currentParsedContent = indexContent.data.value
+if (!currentParsedContent) {
+  throw createError({
+    statusCode: 404,
+    message: `Post not found at location '${currentPath}'`,
+  })
+}
 </script>
 
 <template>
   <main>
     <h1>Patrik Bird</h1>
-    <p>Hey 👋</p>
-    <p>
-      I am Patrik, a software engineer who is fascinated by the web, especially front-end technologies.
-      I recently started writing technical
-      <NuxtLink to="/articles">articles</NuxtLink> about it.
-    </p>
-    <p>
-      I am currently backpacking in Asia.
-      You can follow my journey on the
-      <NuxtLink to="/travel">Travel Blog</NuxtLink>,
-      though it is currently only accessible in German.
-    </p>
-    <p>
-      Besides my interests in nerdy things, I like to climb, hike, eat, and share those activities with my partner.
-      Additionally, I strive to live an ethical life by following a vegan lifestyle.
-    </p>
-    <hr>
-    You can find me on <a
-      href="https://github.com/PatrikBird"
-      target="_blank"
-      rel="noopener noreferrer"
-    >GitHub</a> and
-    <a
-      href="https://www.instagram.com/patbirdo"
-      target="_blank"
-      rel="noopener noreferrer"
-    >Instagram</a> or
-    contact me via
-    <a
-      href="mailto:&#x0068;&#x0069;&#x0040;&#x0070;&#x0061;&#x0074;&#x0062;&#x0069;&#x0072;&#x0064;&#x002e;&#x006d;&#x0065;"
-    >  &#x0068;&#x0069;&#x0040;&#x0070;&#x0061;&#x0074;&#x0062;&#x0069;&#x0072;&#x0064;&#x002e;&#x006d;&#x0065;</a>.
+    <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
   </main>
 </template>
 

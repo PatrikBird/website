@@ -2,7 +2,7 @@
 import type { Post } from '~/types'
 
 definePageMeta({
-  layout: 'post',
+  layout: false,
 })
 
 const currentPath = useRoute().path
@@ -23,7 +23,7 @@ if (!currentParsedContent) {
 
 const locale = currentPost.data.value?._locale
 
-const { cleanString: cleanTitle, metaDesc } = useCleanString(currentParsedContent.title!)
+const { cleanString: cleanTitle, metaDesc, imgID } = useCleanString(currentParsedContent.title!)
 </script>
 
 <template>
@@ -31,41 +31,54 @@ const { cleanString: cleanTitle, metaDesc } = useCleanString(currentParsedConten
     <Html :lang="locale" />
     <ReadProgressBar />
     <ScrollToTop />
-    <GoUpOnePageBtn />
-    <header class="mb-7">
-      <h1 class="text-4xl">
-        {{ currentParsedContent.title }}
-      </h1>
-      <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row gap-2">
-        <div class="flex flex-row">
-          <dt>
-            Published
-          </dt>
-          <dd class="font-semibold ml-3">
-            <NuxtTime
-              :datetime="currentParsedContent.date"
-              day="numeric"
-              month="long"
-              year="numeric"
-            />
+    <div class="h-[75vh] w-full">
+      <nuxt-img
+        :src="currentParsedContent.imageUrl"
+        alt="cover"
+        class="object-cover h-full w-full"
+        loading="eager"
+      />
+    </div>
+    <div
+      class="prose prose-zinc m-auto max-w-3xl px-1 pb-10
+      dark:prose-invert sm:(rounded px-8 pt-4) lg:relative"
+    >
+      <GoUpOnePageBtn />
+      <header class="mb-7">
+        <h1 class="text-4xl">
+          {{ currentParsedContent.title }}
+        </h1>
+        <dl class="mt-1 flex flex-col text-xs uppercase sm:flex-row gap-2">
+          <div class="flex flex-row">
+            <dt>
+              Published
+            </dt>
+            <dd class="font-semibold ml-3">
+              <NuxtTime
+                :datetime="currentParsedContent.date"
+                day="numeric"
+                month="long"
+                year="numeric"
+              />
+            </dd>
+          </div>
+          <dd class="hidden m0 sm:inline-block">
+            &middot;
           </dd>
-        </div>
-        <dd class="hidden m0 sm:inline-block">
-          &middot;
-        </dd>
-        <div class="flex flex-row">
-          <dt>
-            Reading time
-          </dt>
-          <dd class="ml-3 font-semibold">
-            {{ currentParsedContent.readingTime.text.substring(0, 5) }}
-          </dd>
-        </div>
-      </dl>
-    </header>
-    <article>
-      <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
-    </article>
+          <div class="flex flex-row">
+            <dt>
+              Reading time
+            </dt>
+            <dd class="ml-3 font-semibold">
+              {{ currentParsedContent.readingTime.text.substring(0, 5) }}
+            </dd>
+          </div>
+        </dl>
+      </header>
+      <article>
+        <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
+      </article>
+    </div>
   </div>
 </template>
 
@@ -76,5 +89,9 @@ header > h1 {
 
 header > dl {
   view-transition-name: v-bind('metaDesc');
+}
+
+div > img {
+  view-transition-name: v-bind('imgID');
 }
 </style>
