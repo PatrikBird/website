@@ -24,7 +24,8 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(pr
       :src="props.post.imageUrl"
       class="my-0 h-52 w-full xs:rounded-lg object-cover"
       alt="blog post cover image"
-      width="300"
+      width="800"
+      :placeholder="[50, 25, 75, 5]"
     />
   </NuxtLink>
   <header class="flex flex-1 flex-col justify-between pb-6 text-left">

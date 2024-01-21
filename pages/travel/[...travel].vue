@@ -38,7 +38,6 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(cu
         class="object-cover h-full w-full"
         loading="eager"
         width="800"
-        preload
       />
     </div>
     <div
