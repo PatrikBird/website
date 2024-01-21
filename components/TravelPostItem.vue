@@ -26,6 +26,7 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(pr
       alt="blog post cover image"
       width="800"
       preload
+      loading="eager"
       :placeholder="[50, 25, 75, 5]"
     />
   </NuxtLink>
