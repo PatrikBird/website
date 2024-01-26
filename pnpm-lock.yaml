@@ -8,9 +8,6 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: 2.6.3
     version: 2.6.3(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3)
-  '@fawmi/vue-google-maps':
-    specifier: 0.9.72
-    version: 0.9.72
   '@iconify/json':
     specifier: 2.2.172
     version: 2.2.172
@@ -845,17 +842,6 @@ packages:
   /@fastify/busboy@2.1.0:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
-    dev: true
-
-  /@fawmi/vue-google-maps@0.9.72:
-    resolution: {integrity: sha512-/eoaV6rvE+eCn0g+OaP9VV2KL19vi2M9I2HL62gDnFdQJ7PYFJliOG6gCeojmX1dYpRWQzEzjhcT5ZzMBkd3Qw==}
-    dependencies:
-      '@googlemaps/markerclustererplus': 1.2.10
-    dev: true
-
-  /@googlemaps/markerclustererplus@1.2.10:
-    resolution: {integrity: sha512-HY4ev+D3kO1+9oQjtKTojxVtJIS/kSWJfry6cpKoXC97kBQc5Vguqu5x6pLnh+70N0Au+16Yl7iu4LZaIOTstw==}
-    deprecated: It is recommended to use @googlemaps/markerclusterer instead of this package.
     dev: true
 
   /@html-validate/stylish@4.2.0:

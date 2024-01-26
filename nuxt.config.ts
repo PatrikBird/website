@@ -71,16 +71,6 @@ export default defineNuxtConfig({
       baseURL: 'https://res.cloudinary.com/df5skrrwb/image/upload/v1677729457/',
     },
   },
-  build: {
-    transpile: [
-      '@fawmi/vue-google-maps',
-    ],
-  },
-  runtimeConfig: {
-    public: {
-      googleMapsApiKey: '', // will be injected in vueGoogleMaps plugin
-    },
-  },
   css: [
     '@/assets/css/main.sass',
     '@/assets/css/text.sass',
