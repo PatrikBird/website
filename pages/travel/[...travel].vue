@@ -27,7 +27,7 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(cu
 </script>
 
 <template>
-  <div>
+  <main>
     <Html :lang="locale" />
     <ReadProgressBar />
     <ScrollToTop />
@@ -81,7 +81,7 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(cu
         <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
       </article>
     </div>
-  </div>
+  </main>
 </template>
 
 <style scoped>
