@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@unocss/nuxt',
     '@vueuse/nuxt',
+    'nuxt3-leaflet',
     'nuxt-time',
   ],
   app: {
@@ -68,16 +69,6 @@ export default defineNuxtConfig({
     provider: 'cloudinary',
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/df5skrrwb/image/upload/v1677729457/',
-    },
-  },
-  build: {
-    transpile: [
-      '@fawmi/vue-google-maps',
-    ],
-  },
-  runtimeConfig: {
-    public: {
-      googleMapsApiKey: '', // will be injected in vueGoogleMaps plugin
     },
   },
   css: [

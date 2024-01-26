@@ -21,7 +21,7 @@ export interface SwiperImage {
   alt: string
 }
 
-export interface GoogleMapsPin {
+export interface MapMarker {
   lat: number
   lng: number
   desc: string

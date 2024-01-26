@@ -8,9 +8,6 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: 2.6.3
     version: 2.6.3(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3)
-  '@fawmi/vue-google-maps':
-    specifier: 0.9.72
-    version: 0.9.72
   '@iconify/json':
     specifier: 2.2.172
     version: 2.2.172
@@ -65,6 +62,9 @@ devDependencies:
   nuxt-time:
     specifier: 0.1.1
     version: 0.1.1
+  nuxt3-leaflet:
+    specifier: ^1.0.12
+    version: 1.0.12(typescript@5.3.3)
   remark-reading-time:
     specifier: 2.0.1
     version: 2.0.1
@@ -842,17 +842,6 @@ packages:
   /@fastify/busboy@2.1.0:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
-    dev: true
-
-  /@fawmi/vue-google-maps@0.9.72:
-    resolution: {integrity: sha512-/eoaV6rvE+eCn0g+OaP9VV2KL19vi2M9I2HL62gDnFdQJ7PYFJliOG6gCeojmX1dYpRWQzEzjhcT5ZzMBkd3Qw==}
-    dependencies:
-      '@googlemaps/markerclustererplus': 1.2.10
-    dev: true
-
-  /@googlemaps/markerclustererplus@1.2.10:
-    resolution: {integrity: sha512-HY4ev+D3kO1+9oQjtKTojxVtJIS/kSWJfry6cpKoXC97kBQc5Vguqu5x6pLnh+70N0Au+16Yl7iu4LZaIOTstw==}
-    deprecated: It is recommended to use @googlemaps/markerclusterer instead of this package.
     dev: true
 
   /@html-validate/stylish@4.2.0:
@@ -2286,6 +2275,10 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
+  /@types/geojson@7946.0.13:
+    resolution: {integrity: sha512-bmrNrgKMOhM3WsafmbGmC+6dsF2Z308vLFsQ3a/bT8X8Sv5clVYpPars/UPq+sAaJP+5OoLAYgwbkS5QEJdLUQ==}
+    dev: true
+
   /@types/hast@2.3.9:
     resolution: {integrity: sha512-pTHyNlaMD/oKJmS+ZZUyFUcsZeBZpC0lmGquw98CqRVNgAdJZJeD7GoeLiT6Xbx5rU9VCjSt0RwEvDgzh4obFw==}
     dependencies:
@@ -2306,6 +2299,12 @@ packages:
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+    dev: true
+
+  /@types/leaflet@1.9.8:
+    resolution: {integrity: sha512-EXdsL4EhoUtGm2GC2ZYtXn+Fzc6pluVgagvo2VC1RHWToLGlTRwVYoDpqS/7QXa01rmDyBjJk3Catpf60VMkwg==}
+    dependencies:
+      '@types/geojson': 7946.0.13
     dev: true
 
   /@types/mdast@3.0.15:
@@ -2882,6 +2881,22 @@ packages:
     dependencies:
       '@volar/language-core': 1.11.1
       path-browserify: 1.0.1
+    dev: true
+
+  /@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.8)(leaflet@1.9.4)(typescript@5.3.3):
+    resolution: {integrity: sha512-RNEDk8TbnwrJl8ujdbKgZRFygLCxd0aBcWLQ05q/pGv4+d0jamE3KXQgQBqGAteE1mbQsk3xoNcqqUgaIGfWVg==}
+    peerDependencies:
+      '@types/leaflet': ^1.5.7
+      leaflet: ^1.6.0
+    peerDependenciesMeta:
+      '@types/leaflet':
+        optional: true
+    dependencies:
+      '@types/leaflet': 1.9.8
+      leaflet: 1.9.4
+      vue: 3.4.15(typescript@5.3.3)
+    transitivePeerDependencies:
+      - typescript
     dev: true
 
   /@vue-macros/common@1.10.1(vue@3.4.15):
@@ -6006,6 +6021,10 @@ packages:
       readable-stream: 2.3.8
     dev: true
 
+  /leaflet@1.9.4:
+    resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
+    dev: true
+
   /levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -7375,6 +7394,19 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: true
+
+  /nuxt3-leaflet@1.0.12(typescript@5.3.3):
+    resolution: {integrity: sha512-nxG5rqosoX6p+xs/IqB0tGyawcte6FGWUUI/H2ZSVrGCQ7oN6GIj8DvQEb16sFXRlJeUDQfP0v4nLBCcqF58NQ==}
+    dependencies:
+      '@nuxt/kit': 3.9.3
+      '@types/leaflet': 1.9.8
+      '@vue-leaflet/vue-leaflet': 0.10.1(@types/leaflet@1.9.8)(leaflet@1.9.4)(typescript@5.3.3)
+      leaflet: 1.9.4
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - typescript
     dev: true
 
   /nuxt@3.9.3(@types/node@20.11.5)(eslint@8.56.0)(sass@1.70.0)(typescript@5.3.3)(vite@5.0.11)(vue-tsc@1.8.27):
