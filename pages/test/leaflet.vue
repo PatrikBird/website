@@ -3,7 +3,7 @@ const zoom = ref(6)
 </script>
 
 <template>
-  <div style="height:80vh; width:80vw">
+  <div style="width: 100%; height: 600px; margin: auto">
     <LMap
       :zoom="zoom"
       :center="[47.21322, -1.559482]"
