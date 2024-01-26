@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@unocss/nuxt',
     '@vueuse/nuxt',
+    'nuxt3-leaflet',
     'nuxt-time',
   ],
   app: {
