@@ -41,7 +41,6 @@ const tileColor = computed(() => {
     >
       <LTileLayer
         :url="tileColor"
-        attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
         layer-type="base"
         name="OpenStreetMap"
       />
@@ -49,6 +48,9 @@ const tileColor = computed(() => {
         v-for="marker in markers" :key="marker.id"
         :lat-lng="marker.position"
       >
+        <LIcon :icon-size="[36, 36]">
+          <span i-line-md:map-marker-alt-twotone text-2.37rem bg-primary dark:bg-secondary />
+        </LIcon>
         <LPopup>
           <p>{{ marker.description }}</p>
         </LPopup>
@@ -56,3 +58,10 @@ const tileColor = computed(() => {
     </LMap>
   </div>
 </template>
+
+<style>
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+</style>
