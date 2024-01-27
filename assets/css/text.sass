@@ -14,18 +14,14 @@ html.dark .prose
   --fg-deep: #ddd
   --fg-deeper: #fff
 
-.prose a:not(h1 a, h2 a, h3 a, h4 a, h5 a)  
+.prose a
   font-weight: inherit
   text-decoration: none
-  border-bottom: 1.5px solid rgba(125, 125, 125, 0.7)
+
+.prose h1 a, h2 a, h3 a, h4 a, h5 a
   transition: border 0.2s ease-in-out
   &:hover
     border-bottom: 1.7px solid var(--fg)
-
-.prose h1 a, h2 a, h3 a, h4 a, h5 a
-  text-decoration: none !important
-  &:hover
-    text-decoration: underline !important
 
 .prose blockquote
   border-left: 0.25em solid var(--fg)
