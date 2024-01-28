@@ -49,7 +49,10 @@ const tileColor = computed(() => {
         :lat-lng="marker.position"
       >
         <LIcon :icon-size="[36, 36]">
-          <span i-line-md:map-marker-alt-twotone text-2.37rem bg-primary dark:bg-secondary />
+          <span
+            i-line-md:map-marker-alt-twotone
+            class="text-2.37rem bg-primary/90 dark:bg-secondary/90"
+          />
         </LIcon>
         <LPopup>
           <p>{{ marker.description }}</p>
@@ -59,9 +62,23 @@ const tileColor = computed(() => {
   </div>
 </template>
 
-<style>
+<style lang="postcss">
 .leaflet-div-icon {
-  background: transparent;
-  border: none;
+ @apply bg-transparent border-none
+}
+
+.leaflet-control-zoom a {
+  @apply bg-zinc-100 border-zinc hover:bg-zinc-200 dark:(bg-zinc-500 border-zinc-600 hover:bg-zinc-400)
+}
+
+.leaflet-control-zoom.leaflet-bar.leaflet-control {
+  @apply border-zinc border-1 rounded-sm dark:border-zinc-600
+}
+
+.leaflet-control-attribution.leaflet-control {
+  @apply bg-transparent
+}
+.leaflet-control-attribution.leaflet-control a {
+  @apply color-zinc-600 dark:color-zinc-500
 }
 </style>
