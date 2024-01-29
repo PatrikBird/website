@@ -24,7 +24,7 @@ const images = [
 <template>
   <div class="w-full h-full bg-yellow">
     <swiper-container
-      :slides-per-view="2"
+      :slides-per-view="1"
       :space-between="10"
       :centered-slides="true"
       :pagination="{ clickable: true }"
