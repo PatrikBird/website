@@ -12,6 +12,15 @@ export default defineNuxtConfig({
     'nuxt3-leaflet',
     'nuxt-time',
   ],
+  vite: {
+    vue: {
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag.startsWith('swiper-'),
+        },
+      },
+    },
+  },
   app: {
     head: {
       title: 'Patrik Bird',
