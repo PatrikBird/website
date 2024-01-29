@@ -48,7 +48,7 @@ export default defineConfig({
     PresetWebFonts({
       provider: 'bunny',
       fonts: {
-        sans: 'Inter:400,600,800',
+        sans: 'Inter:400,600,800, "Inter fallback"',
         mono: 'DM Mono:400,600',
         mont: 'Montserrat:600,700,800',
       },
