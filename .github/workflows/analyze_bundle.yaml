@@ -6,17 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor != 'renovate'
     steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - name: Install pnpm and dependencies
-        uses: pnpm/action-setup@v2 # Node 20 support https://github.com/pnpm/action-setup/pull/102
-        with:
-          version: 8
-          run_install: true
+          cache: "pnpm"
+      
+      - name: Install dependencies
+        run: pnpm install
+
       - name: Generate types
         run: pnpm exec nuxi prepare
       - name: Run nuxi analyze
