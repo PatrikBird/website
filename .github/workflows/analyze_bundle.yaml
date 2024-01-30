@@ -33,7 +33,7 @@ jobs:
       #     printf '%s\n' 
       #     printf 'Client bundle: ' "$clientBundle" '%s\n' 
       #     printf 'Server bundle: ' "$nitroBundle"
-      - name: Create PR comment
+      - name: Create PR comment # TODO: https://github.com/peter-evans/create-or-update-comment
         run: |
           COMMENT="Client bundle: $((clientBundle / 1024)) KB, Server bundle: $((nitroBundle / 1024)) KB"
           COMMENT_URL=$(gh pr comment ${{ github.event.number }} --body "$COMMENT")
