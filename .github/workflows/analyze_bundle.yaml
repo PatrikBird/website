@@ -4,6 +4,7 @@ on:
 jobs:
   bundle-size:
     runs-on: ubuntu-latest
+    if: github.actor != 'renovate'
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v4
