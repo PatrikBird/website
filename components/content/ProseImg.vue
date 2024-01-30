@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { SwiperImage } from '~/types'
-
-interface ProseImgProps extends SwiperImage {
+interface ProseImgProps {
   loading?: 'eager' | 'lazy'
+  src: string
+  alt: string
 }
 const props = withDefaults(defineProps<ProseImgProps>(), {
   loading: 'lazy',

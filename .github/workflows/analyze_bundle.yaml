@@ -1,0 +1,41 @@
+name: Report bundle size in PR
+on:
+  - pull_request
+jobs:
+  bundle-size:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Install pnpm and dependencies
+        uses: pnpm/action-setup@v2 # Node 20 support https://github.com/pnpm/action-setup/pull/102
+        with:
+          version: 8
+          run_install: true
+      - name: Generate types
+        run: pnpm exec nuxi prepare
+      - name: Run nuxi analyze
+        run: pnpm exec nuxi analyze --no-serve
+      - name: Get size value
+        run: |
+          CLIENT_BUNDLE=$(jq .size.clientBundle .nuxt/analyze/meta.json)
+          NITRO_BUNDLE=$(jq .size.nitroBundle .nuxt/analyze/meta.json)
+          echo "clientBundle=$CLIENT_BUNDLE" >> "$GITHUB_ENV"
+          echo "nitroBundle=$NITRO_BUNDLE" >> "$GITHUB_ENV"
+        shell: bash
+      # - name: Print bundle sizes
+      #   run: |
+      #     printf '%s\n' 
+      #     printf 'Client bundle: ' "$clientBundle" '%s\n' 
+      #     printf 'Server bundle: ' "$nitroBundle"
+      - name: Create PR comment
+        run: |
+          COMMENT="Client bundle: $((clientBundle / 1024)) KB, Server bundle: $((nitroBundle / 1024)) KB"
+          COMMENT_URL=$(gh pr comment ${{ github.event.number }} --body "$COMMENT")
+          COMMENT_ID=${COMMENT_URL##*issuecomment-}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
