@@ -1,83 +1,46 @@
-<script lang="ts">
-export default defineComponent({
-  inheritAttrs: false,
-  props: {
-    items: {
-      type: Array as PropType<any[]>,
-      default: () => [],
-    },
-    arrows: {
-      type: Boolean,
-      default: false,
-    },
-    indicators: {
-      type: Boolean,
-      default: false,
-    },
-    class: {
-      type: [String, Object, Array] as PropType<any>,
-      default: () => '',
-    },
-    ui: {
-      type: Object,
-      default: undefined,
-    },
-  },
-  setup(props) {
-    // const { ui, attrs } = useUI('carousel', toRef(props, 'ui'), config, toRef(props, 'class'))
+<script setup lang="ts">
+const props = defineProps<{
+  items: any
+  arrows: boolean
+  indicators: boolean
+}>()
 
-    const carouselRef = ref<HTMLElement>()
-    const itemWidth = ref(0)
+const carouselRef = ref<HTMLElement>()
+const itemWidth = ref(0)
 
-    const { x, arrivedState } = useScroll(carouselRef, { behavior: 'smooth' })
-    const { width: carouselWidth } = useElementSize(carouselRef)
+const { x, arrivedState } = useScroll(carouselRef, { behavior: 'smooth' })
+const { width: carouselWidth } = useElementSize(carouselRef)
 
-    const { left: isFirst, right: isLast } = toRefs(arrivedState)
+const { left: isFirst, right: isLast } = toRefs(arrivedState)
 
-    useCarouselScroll(carouselRef)
+useCarouselScroll(carouselRef)
 
-    useResizeObserver(carouselRef, (entries) => {
-      const [entry] = entries
+useResizeObserver(carouselRef, (entries) => {
+  const [entry] = entries
 
-      itemWidth.value = entry?.target?.firstElementChild?.clientWidth || 0
-    })
-
-    const currentIndex = computed(() => Math.round(x.value / itemWidth.value) + 1)
-
-    const indicatorsCount = computed(() => {
-      if (!itemWidth.value)
-        return 0
-
-      return props.items.length - Math.round(carouselWidth.value / itemWidth.value) + 1
-    })
-
-    function onClickNext() {
-      x.value += itemWidth.value
-    }
-
-    function onClickPrev() {
-      x.value -= itemWidth.value
-    }
-
-    function onClick(index: number) {
-      x.value = (index - 1) * itemWidth.value
-    }
-
-    return {
-      // ui,
-      // attrs,
-      isFirst,
-      isLast,
-      carouselRef,
-      indicatorsCount,
-      currentIndex,
-      onClickNext,
-      onClickPrev,
-      onClick,
-      // twMerge,
-    }
-  },
+  itemWidth.value = entry?.target?.firstElementChild?.clientWidth || 0
 })
+
+const currentIndex = computed(() => Math.round(x.value / itemWidth.value) + 1)
+
+const indicatorsCount = computed(() => {
+  if (!itemWidth.value)
+    return 0
+
+  return props.items.length - Math.round(carouselWidth.value / itemWidth.value) + 1
+})
+
+function onClickNext() {
+  x.value += itemWidth.value
+}
+
+function onClickPrev() {
+  x.value -= itemWidth.value
+}
+
+function onClick(index: number) {
+  x.value = (index - 1) * itemWidth.value
+}
 </script>
 
 <template>
