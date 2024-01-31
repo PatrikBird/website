@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
   items: any
-  arrows: boolean
   indicators: boolean
 }>()
 
@@ -58,12 +57,12 @@ function onClick(index: number) {
       </div>
     </div>
 
-    <div v-if="arrows" class="flex items-center justify-between">
+    <div class="hidden md:flex items-center justify-between">
       <slot name="prev" :on-click="onClickPrev">
         <button
           v-show="!isFirst"
           class="rtl:[&_span:first-child]:rotate-180 absolute left-4 top-1/2
-          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer 
+          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
           op75 hover:op100 bg-gray-200"
           aria-label="Prev"
           @click="onClickPrev"
@@ -76,7 +75,7 @@ function onClick(index: number) {
         <button
           v-show="!isLast"
           class="rtl:[&_span:last-child]:rotate-180 absolute right-4 top-1/2
-          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer 
+          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
           op75 hover:op100 bg-gray-200"
           aria-label="Next"
           @click="onClickNext"
