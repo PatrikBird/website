@@ -3,6 +3,8 @@ useHead({
   title: 'Patrik Bird',
 })
 
+// TODO: how to handle different image sizes?
+// TODO: fix mobile styles
 const items = [
   { src: 'https://picsum.photos/1920/1080?random=1', alt: 'Image 1' },
   { src: 'https://picsum.photos/1920/1080?random=2', alt: 'Image 2 has a very long caption though and possibly blocks something' },
