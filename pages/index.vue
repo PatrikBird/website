@@ -31,7 +31,7 @@ if (!currentParsedContent) {
 <template>
   <main>
     <h1>Patrik Bird</h1>
-    <Carousel v-slot="{ item }" :items="items">
+    <Carousel v-slot="{ item }" :items="items" arrows indicators>
       <img :src="item" width="300" height="400">
     </Carousel>
     <ContentRendererMarkdown :value="currentParsedContent" tag="div" />

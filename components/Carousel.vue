@@ -17,22 +17,14 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    // prevButton: {
-    //   type: Object as PropType<Button & { class?: string }>,
-    //   default: () => config.default.prevButton as Button & { class?: string },
-    // },
-    // nextButton: {
-    //   type: Object as PropType<Button & { class?: string }>,
-    //   default: () => config.default.nextButton as Button & { class?: string },
-    // },
     class: {
       type: [String, Object, Array] as PropType<any>,
       default: () => '',
     },
-    // ui: {
-    //   type: Object as PropType<Partial<typeof config & { strategy?: Strategy }>>,
-    //   default: undefined,
-    // },
+    ui: {
+      type: Object,
+      default: undefined,
+    },
   },
   setup(props) {
     // const { ui, attrs } = useUI('carousel', toRef(props, 'ui'), config, toRef(props, 'class'))
@@ -107,44 +99,39 @@ export default defineComponent({
     </div>
 
     <div v-if="arrows" class="flex items-center justify-between">
-      <!-- <slot name="prev" :on-click="onClickPrev" :disabled="isFirst">
-        <UButton
-          v-if="prevButton"
+      <slot name="prev" :on-click="onClickPrev" :disabled="isFirst">
+        <button
           :disabled="isFirst"
-          v-bind="{ ...ui.default.prevButton, ...prevButton }"
-          :class="twMerge(ui.default.prevButton.class, prevButton?.class)"
+          class="rounded-full size-10 border-none bg-sky"
           aria-label="Prev"
           @click="onClickPrev"
         />
       </slot>
 
       <slot name="next" :on-click="onClickNext" :disabled="isLast">
-        <UButton
-          v-if="nextButton"
+        <button
           :disabled="isLast"
-          v-bind="{ ...ui.default.nextButton, ...nextButton }"
-          :class="twMerge(ui.default.nextButton.class, nextButton?.class)"
+          class="rounded-full size-10 border-none bg-sky"
           aria-label="Next"
           @click="onClickNext"
         />
       </slot>
-    </div> -->
+    </div>
 
-      <div v-if="indicators" class="absolute flex items-center justify-center gap-3 bottom-4 inset-x-0">
-        <template v-for="index in indicatorsCount" :key="index">
-          <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
-            <button
-              type="button"
-              class="rounded-full h-3 w-3"
-              :class="[
-                index === currentIndex ? 'bg-primary-500 dark:bg-primary-400' : 'bg-gray-100 dark:bg-gray-800 mix-blend-overlay',
-              ]"
-              :aria-label="`set slide ${index}`"
-              @click="onClick(index)"
-            />
-          </slot>
-        </template>
-      </div>
+    <div v-if="indicators" class="absolute flex items-center justify-center gap-3 bottom-4 inset-x-0">
+      <template v-for="index in indicatorsCount" :key="index">
+        <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
+          <button
+            type="button"
+            class="rounded-full h-3 w-3 border-none bg-sky-200"
+            :class="[
+              index === currentIndex ? 'bg-sky-500 dark:bg-sky-500' : 'bg-gray-100 dark:bg-gray-800',
+            ]"
+            :aria-label="`set slide ${index}`"
+            @click="onClick(index)"
+          />
+        </slot>
+      </template>
     </div>
   </div>
 </template>
