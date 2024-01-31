@@ -3,6 +3,15 @@ useHead({
   title: 'Patrik Bird',
 })
 
+const items = [
+  'https://picsum.photos/600/800?random=1',
+  'https://picsum.photos/600/800?random=2',
+  'https://picsum.photos/600/800?random=3',
+  'https://picsum.photos/600/800?random=4',
+  'https://picsum.photos/600/800?random=5',
+  'https://picsum.photos/600/800?random=6',
+]
+
 const currentPath = useRoute().path
 const indexContent = await useAsyncData(`content-[${currentPath}]`, () => queryContent(currentPath).findOne())
 
@@ -22,6 +31,9 @@ if (!currentParsedContent) {
 <template>
   <main>
     <h1>Patrik Bird</h1>
+    <Carousel v-slot="{ item }" :items="items">
+      <img :src="item" width="300" height="400">
+    </Carousel>
     <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
   </main>
 </template>

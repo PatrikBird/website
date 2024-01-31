@@ -1,0 +1,163 @@
+<script lang="ts">
+export default defineComponent({
+  // components: {
+  //   UButton,
+  // },
+  inheritAttrs: false,
+  props: {
+    items: {
+      type: Array as PropType<any[]>,
+      default: () => [],
+    },
+    arrows: {
+      type: Boolean,
+      default: false,
+    },
+    indicators: {
+      type: Boolean,
+      default: false,
+    },
+    // prevButton: {
+    //   type: Object as PropType<Button & { class?: string }>,
+    //   default: () => config.default.prevButton as Button & { class?: string },
+    // },
+    // nextButton: {
+    //   type: Object as PropType<Button & { class?: string }>,
+    //   default: () => config.default.nextButton as Button & { class?: string },
+    // },
+    class: {
+      type: [String, Object, Array] as PropType<any>,
+      default: () => '',
+    },
+    // ui: {
+    //   type: Object as PropType<Partial<typeof config & { strategy?: Strategy }>>,
+    //   default: undefined,
+    // },
+  },
+  setup(props) {
+    // const { ui, attrs } = useUI('carousel', toRef(props, 'ui'), config, toRef(props, 'class'))
+
+    const carouselRef = ref<HTMLElement>()
+    const itemWidth = ref(0)
+
+    const { x, arrivedState } = useScroll(carouselRef, { behavior: 'smooth' })
+    const { width: carouselWidth } = useElementSize(carouselRef)
+
+    const { left: isFirst, right: isLast } = toRefs(arrivedState)
+
+    useCarouselScroll(carouselRef)
+
+    useResizeObserver(carouselRef, (entries) => {
+      const [entry] = entries
+
+      itemWidth.value = entry?.target?.firstElementChild?.clientWidth || 0
+    })
+
+    const currentIndex = computed(() => Math.round(x.value / itemWidth.value) + 1)
+
+    const indicatorsCount = computed(() => {
+      if (!itemWidth.value)
+        return 0
+
+      return props.items.length - Math.round(carouselWidth.value / itemWidth.value) + 1
+    })
+
+    function onClickNext() {
+      x.value += itemWidth.value
+    }
+
+    function onClickPrev() {
+      x.value -= itemWidth.value
+    }
+
+    function onClick(index: number) {
+      x.value = (index - 1) * itemWidth.value
+    }
+
+    return {
+      // ui,
+      // attrs,
+      isFirst,
+      isLast,
+      carouselRef,
+      indicatorsCount,
+      currentIndex,
+      onClickNext,
+      onClickPrev,
+      onClick,
+      // twMerge,
+    }
+  },
+})
+</script>
+
+<template>
+  <div class="relative">
+    <div
+      ref="carouselRef"
+      class="no-scrollbar relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
+    >
+      <div
+        v-for="(item, index) in items"
+        :key="index"
+        class="flex flex-none snap-center"
+      >
+        <slot :item="item" :index="index" />
+      </div>
+    </div>
+
+    <div v-if="arrows" class="flex items-center justify-between">
+      <!-- <slot name="prev" :on-click="onClickPrev" :disabled="isFirst">
+        <UButton
+          v-if="prevButton"
+          :disabled="isFirst"
+          v-bind="{ ...ui.default.prevButton, ...prevButton }"
+          :class="twMerge(ui.default.prevButton.class, prevButton?.class)"
+          aria-label="Prev"
+          @click="onClickPrev"
+        />
+      </slot>
+
+      <slot name="next" :on-click="onClickNext" :disabled="isLast">
+        <UButton
+          v-if="nextButton"
+          :disabled="isLast"
+          v-bind="{ ...ui.default.nextButton, ...nextButton }"
+          :class="twMerge(ui.default.nextButton.class, nextButton?.class)"
+          aria-label="Next"
+          @click="onClickNext"
+        />
+      </slot>
+    </div> -->
+
+      <div v-if="indicators" class="absolute flex items-center justify-center gap-3 bottom-4 inset-x-0">
+        <template v-for="index in indicatorsCount" :key="index">
+          <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
+            <button
+              type="button"
+              class="rounded-full h-3 w-3"
+              :class="[
+                index === currentIndex ? 'bg-primary-500 dark:bg-primary-400' : 'bg-gray-100 dark:bg-gray-800 mix-blend-overlay',
+              ]"
+              :aria-label="`set slide ${index}`"
+              @click="onClick(index)"
+            />
+          </slot>
+        </template>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+</style>
