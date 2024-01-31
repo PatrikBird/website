@@ -1,8 +1,5 @@
 <script lang="ts">
 export default defineComponent({
-  // components: {
-  //   UButton,
-  // },
   inheritAttrs: false,
   props: {
     items: {
@@ -92,7 +89,7 @@ export default defineComponent({
       <div
         v-for="(item, index) in items"
         :key="index"
-        class="flex flex-none snap-center"
+        class="flex flex-none snap-center basis-full"
       >
         <slot :item="item" :index="index" />
       </div>
@@ -102,19 +99,23 @@ export default defineComponent({
       <slot name="prev" :on-click="onClickPrev" :disabled="isFirst">
         <button
           :disabled="isFirst"
-          class="rounded-full size-10 border-none bg-sky"
+          class="rtl:[&_span:first-child]:rotate-180 absolute left-4 top-1/2 transform -translate-y-1/2 rounded-full border-none size-10"
           aria-label="Prev"
           @click="onClickPrev"
-        />
+        >
+          <span i-material-symbols:chevron-left class="size-5" />
+        </button>
       </slot>
 
       <slot name="next" :on-click="onClickNext" :disabled="isLast">
         <button
           :disabled="isLast"
-          class="rounded-full size-10 border-none bg-sky"
+          class="rtl:[&_span:last-child]:rotate-180 absolute right-4 top-1/2 transform -translate-y-1/2 rounded-full border-none size-10"
           aria-label="Next"
           @click="onClickNext"
-        />
+        >
+          <span i-material-symbols:chevron-right class="size-5" />
+        </button>
       </slot>
     </div>
 

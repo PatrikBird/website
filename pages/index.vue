@@ -4,12 +4,12 @@ useHead({
 })
 
 const items = [
-  'https://picsum.photos/600/800?random=1',
-  'https://picsum.photos/600/800?random=2',
-  'https://picsum.photos/600/800?random=3',
-  'https://picsum.photos/600/800?random=4',
-  'https://picsum.photos/600/800?random=5',
-  'https://picsum.photos/600/800?random=6',
+  'https://picsum.photos/1920/1080?random=1',
+  'https://picsum.photos/1080/1920?random=2',
+  'https://picsum.photos/1920/1080?random=3',
+  'https://picsum.photos/1920/1080?random=4',
+  'https://picsum.photos/1920/1080?random=5',
+  'https://picsum.photos/1920/1080?random=6',
 ]
 
 const currentPath = useRoute().path
@@ -32,7 +32,7 @@ if (!currentParsedContent) {
   <main>
     <h1>Patrik Bird</h1>
     <Carousel v-slot="{ item }" :items="items" arrows indicators>
-      <img :src="item" width="300" height="400">
+      <img :src="item" width="300" height="400" class="w-full">
     </Carousel>
     <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
   </main>
