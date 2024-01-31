@@ -59,25 +59,29 @@ function onClick(index: number) {
     </div>
 
     <div v-if="arrows" class="flex items-center justify-between">
-      <slot name="prev" :on-click="onClickPrev" :disabled="isFirst">
+      <slot name="prev" :on-click="onClickPrev">
         <button
-          :disabled="isFirst"
-          class="rtl:[&_span:first-child]:rotate-180 absolute left-4 top-1/2 transform -translate-y-1/2 rounded-full border-none size-10"
+          v-show="!isFirst"
+          class="rtl:[&_span:first-child]:rotate-180 absolute left-4 top-1/2
+          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer 
+          op75 hover:op100 bg-gray-200"
           aria-label="Prev"
           @click="onClickPrev"
         >
-          <span i-material-symbols:chevron-left class="size-5" />
+          <span i-material-symbols:chevron-left class="size-5 text-black" />
         </button>
       </slot>
 
-      <slot name="next" :on-click="onClickNext" :disabled="isLast">
+      <slot name="next" :on-click="onClickNext">
         <button
-          :disabled="isLast"
-          class="rtl:[&_span:last-child]:rotate-180 absolute right-4 top-1/2 transform -translate-y-1/2 rounded-full border-none size-10"
+          v-show="!isLast"
+          class="rtl:[&_span:last-child]:rotate-180 absolute right-4 top-1/2
+          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer 
+          op75 hover:op100 bg-gray-200"
           aria-label="Next"
           @click="onClickNext"
         >
-          <span i-material-symbols:chevron-right class="size-5" />
+          <span i-material-symbols:chevron-right class="size-5 text-black" />
         </button>
       </slot>
     </div>
@@ -87,9 +91,9 @@ function onClick(index: number) {
         <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
           <button
             type="button"
-            class="rounded-full h-3 w-3 border-none bg-sky-200"
+            class="rounded-full size-3 border-none cursor-pointer"
             :class="[
-              index === currentIndex ? 'bg-sky-500 dark:bg-sky-500' : 'bg-gray-100 dark:bg-gray-800',
+              index === currentIndex ? 'bg-primary dark:bg-white' : 'bg-secondary dark:bg-gray-800',
             ]"
             :aria-label="`set slide ${index}`"
             @click="onClick(index)"
