@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const props = defineProps<{
-  items: any
+  images: {
+    src: string
+    alt: string
+  }[]
   indicators: boolean
 }>()
 
@@ -26,7 +29,7 @@ const indicatorsCount = computed(() => {
   if (!itemWidth.value)
     return 0
 
-  return props.items.length - Math.round(carouselWidth.value / itemWidth.value) + 1
+  return props.images.length - Math.round(carouselWidth.value / itemWidth.value) + 1
 })
 
 function onClickNext() {
@@ -49,11 +52,21 @@ function onClick(index: number) {
       class="no-scrollbar relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
     >
       <div
-        v-for="(item, index) in items"
+        v-for="(item, index) in props.images"
         :key="index"
         class="flex flex-none snap-center basis-full"
       >
-        <slot :item="item" :index="index" />
+        <figure class="m0">
+          <img
+            :src="item.src"
+            :alt="item.alt"
+            class="w-full"
+            width="600"
+          >
+          <figcaption v-if="item.alt" class="block">
+            {{ item.alt }}
+          </figcaption>
+        </figure>
       </div>
     </div>
 
@@ -85,7 +98,7 @@ function onClick(index: number) {
       </slot>
     </div>
 
-    <div v-if="indicators" class="absolute flex items-center justify-center gap-3 bottom-4 inset-x-0">
+    <div v-if="indicators" class="absolute flex items-center justify-center gap-3 bottom-7 inset-x-0">
       <template v-for="index in indicatorsCount" :key="index">
         <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
           <button

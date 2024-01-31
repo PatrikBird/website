@@ -4,12 +4,12 @@ useHead({
 })
 
 const items = [
-  'https://picsum.photos/1920/1080?random=1',
-  'https://picsum.photos/1080/1920?random=2',
-  'https://picsum.photos/1920/1080?random=3',
-  'https://picsum.photos/1920/1080?random=4',
-  'https://picsum.photos/1920/1080?random=5',
-  'https://picsum.photos/1920/1080?random=6',
+  { src: 'https://picsum.photos/1920/1080?random=1', alt: 'Image 1' },
+  { src: 'https://picsum.photos/1920/1080?random=2', alt: 'Image 2 has a very long caption though and possibly blocks something' },
+  { src: 'https://picsum.photos/1920/1080?random=3', alt: 'Image 3' },
+  { src: 'https://picsum.photos/1920/1080?random=4', alt: 'Image 4' },
+  { src: 'https://picsum.photos/1920/1080?random=5', alt: 'Image 5' },
+  { src: 'https://picsum.photos/1920/1080?random=6', alt: 'Image 6' },
 ]
 
 const currentPath = useRoute().path
@@ -31,9 +31,7 @@ if (!currentParsedContent) {
 <template>
   <main>
     <h1>Patrik Bird</h1>
-    <Carousel v-slot="{ item }" :items="items" indicators>
-      <img :src="item" width="300" height="400" class="w-full">
-    </Carousel>
+    <Carousel :images="items" indicators />
     <ContentRendererMarkdown :value="currentParsedContent" tag="div" />
   </main>
 </template>
