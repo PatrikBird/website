@@ -52,21 +52,20 @@ function onClick(index: number) {
       class="no-scrollbar relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth"
     >
       <div
-        v-for="(item, index) in props.images"
+        v-for="(image, index) in props.images"
         :key="index"
         class="flex flex-none snap-center basis-full"
       >
         <figure class="m0">
           <nuxt-img
-            :src="item.src"
-            :alt="item.alt"
+            :src="image.src"
+            :alt="image.alt"
             class="w-full"
             width="672"
-          >
-            <figcaption v-if="item.alt">
-              {{ item.alt }}
-            </figcaption>
-          </nuxt-img>
+          />
+          <figcaption v-if="image.alt">
+            {{ image.alt }}
+          </figcaption>
         </figure>
       </div>
     </div>
