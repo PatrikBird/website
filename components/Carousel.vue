@@ -100,17 +100,15 @@ function onClick(index: number) {
       </slot>
     </div>
 
-    <div v-if="indicators" class="flex items-center py1 justify-center gap-3">
+    <div v-if="indicators" class="absolute bottom-4 left-0 w-full flex items-center justify-evenly gap-3">
       <template v-for="index in indicatorsCount" :key="index">
-        <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
-          <button
-            type="button"
-            class="rounded-full size-3 p0 m0 border-none cursor-pointer"
+        <slot name="indicator" :active="index === currentIndex" :index="index">
+          <span
+            class="h-1 p0 m0 border-none"
+            :style="{ width: `${100 / indicatorsCount}%` }"
             :class="[
               index === currentIndex ? 'bg-primary dark:bg-white' : 'bg-secondary dark:bg-gray-800',
             ]"
-            :aria-label="`set slide ${index}`"
-            @click="onClick(index)"
           />
         </slot>
       </template>
