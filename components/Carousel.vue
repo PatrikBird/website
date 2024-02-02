@@ -70,7 +70,7 @@ function onClick(index: number) {
       </div>
     </div>
 
-    <div class="hidden md:flex items-center justify-between">
+    <div class="flex items-center justify-between">
       <slot name="prev" :on-click="onClickPrev">
         <button
           v-show="!isFirst"
