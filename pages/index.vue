@@ -4,7 +4,7 @@ useHead({
 })
 
 // TODO: how to handle different image sizes?
-// TODO: fix mobile styles
+// TODO: how to lazy load images?
 const items = [
   { src: '/travel/longtime/wimtarq1hinsia8mc95p.jpg', alt: 'Spazieren im Nationalpark' },
   { src: '/travel/longtime/ohayfldn3rzgakkhueyl.jpg', alt: 'Baum?!' },
