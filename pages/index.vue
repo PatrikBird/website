@@ -6,12 +6,8 @@ useHead({
 // TODO: how to handle different image sizes?
 // TODO: fix mobile styles
 const items = [
-  { src: 'https://picsum.photos/1200/1600?random=1', alt: 'Image 1' },
-  { src: 'https://picsum.photos/1200/1600?random=2', alt: 'Image 2 has a very long caption though and possibly blocks something' },
-  { src: 'https://picsum.photos/1200/1600?random=3', alt: 'Image 3' },
-  { src: 'https://picsum.photos/1200/1600?random=4', alt: 'Image 4' },
-  { src: 'https://picsum.photos/1200/1600?random=5', alt: 'Image 5' },
-  { src: 'https://picsum.photos/1200/1600?random=6', alt: 'Image 6' },
+  { src: '/travel/longtime/wimtarq1hinsia8mc95p.jpg', alt: 'Spazieren im Nationalpark' },
+  { src: '/travel/longtime/ohayfldn3rzgakkhueyl.jpg', alt: 'Baum?!' },
 ]
 
 const currentPath = useRoute().path

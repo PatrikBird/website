@@ -57,15 +57,16 @@ function onClick(index: number) {
         class="flex flex-none snap-center basis-full"
       >
         <figure class="m0">
-          <img
+          <nuxt-img
             :src="item.src"
             :alt="item.alt"
             class="w-full"
-            width="600"
+            width="672"
           >
-          <figcaption v-if="item.alt">
-            {{ item.alt }}
-          </figcaption>
+            <figcaption v-if="item.alt">
+              {{ item.alt }}
+            </figcaption>
+          </nuxt-img>
         </figure>
       </div>
     </div>
@@ -74,6 +75,7 @@ function onClick(index: number) {
       <slot name="prev" :on-click="onClickPrev">
         <button
           v-show="!isFirst"
+          type="button"
           class="rtl:[&_span:first-child]:rotate-180 absolute left-4 top-1/2
           transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
           op40 hover:op75 bg-gray-200"
@@ -87,6 +89,7 @@ function onClick(index: number) {
       <slot name="next" :on-click="onClickNext">
         <button
           v-show="!isLast"
+          type="button"
           class="rtl:[&_span:last-child]:rotate-180 absolute right-4 top-1/2
           transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
           op40 hover:op75 bg-gray-200"
