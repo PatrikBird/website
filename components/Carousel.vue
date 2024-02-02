@@ -63,7 +63,7 @@ function onClick(index: number) {
             class="w-full"
             width="672"
           />
-          <figcaption v-if="image.alt">
+          <figcaption v-if="image.alt" class="pt1">
             {{ image.alt }}
           </figcaption>
         </figure>
@@ -100,7 +100,7 @@ function onClick(index: number) {
       </slot>
     </div>
 
-    <div v-if="indicators" class="absolute bottom-4 left-0 w-full flex items-center justify-evenly gap-3">
+    <div v-if="indicators" class="absolute bottom-4.5 left-0 w-full flex items-center justify-evenly gap-3">
       <template v-for="index in indicatorsCount" :key="index">
         <slot name="indicator" :active="index === currentIndex" :index="index">
           <span
