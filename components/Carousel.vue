@@ -90,7 +90,7 @@ function onClick(index: number) {
           v-show="!isLast"
           type="button"
           class="rtl:[&_span:last-child]:rotate-180 absolute right-4 top-1/2
-          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
+          transform -translate-y-1/2 rounded-full border-none size-8 p0 cursor-pointer
           op40 hover:op75 bg-gray-200"
           aria-label="Next"
           @click="onClickNext"
