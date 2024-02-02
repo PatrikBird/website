@@ -101,7 +101,7 @@ function onClick(index: number) {
     <div v-if="indicators" class="flex items-center py1 justify-center gap-3">
       <template v-for="index in indicatorsCount" :key="index">
         <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
-          <button
+          <span
             type="button"
             class="rounded-full size-3 border-none cursor-pointer"
             :class="[
