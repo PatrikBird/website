@@ -76,7 +76,7 @@ function onClick(index: number) {
           v-show="!isFirst"
           class="rtl:[&_span:first-child]:rotate-180 absolute left-4 top-1/2
           transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
-          op75 hover:op100 bg-gray-200"
+          op40 hover:op75 bg-gray-200"
           aria-label="Prev"
           @click="onClickPrev"
         >
@@ -89,7 +89,7 @@ function onClick(index: number) {
           v-show="!isLast"
           class="rtl:[&_span:last-child]:rotate-180 absolute right-4 top-1/2
           transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
-          op75 hover:op100 bg-gray-200"
+          op40 hover:op75 bg-gray-200"
           aria-label="Next"
           @click="onClickNext"
         >
@@ -98,7 +98,7 @@ function onClick(index: number) {
       </slot>
     </div>
 
-    <div v-if="indicators" class="absolute flex items-center justify-center gap-3 bottom-11 inset-x-0">
+    <div v-if="indicators" class="flex items-center py1 justify-center gap-3">
       <template v-for="index in indicatorsCount" :key="index">
         <slot name="indicator" :on-click="onClick" :active="index === currentIndex" :index="index">
           <button
