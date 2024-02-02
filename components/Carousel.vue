@@ -76,7 +76,7 @@ function onClick(index: number) {
           v-show="!isFirst"
           type="button"
           class="rtl:[&_span:first-child]:rotate-180 absolute left-4 top-1/2
-          transform -translate-y-1/2 rounded-full border-none size-8 cursor-pointer
+          transform -translate-y-1/2 rounded-full border-none size-8 p0 cursor-pointer
           op40 hover:op75 bg-gray-200"
           aria-label="Prev"
           @click="onClickPrev"
