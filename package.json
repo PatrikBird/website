@@ -32,7 +32,7 @@
     "@unocss/preset-icons": "0.58.4",
     "@unocss/transformer-variant-group": "0.58.4",
     "@vueuse/nuxt": "10.7.2",
-    "eslint": "8.56.0",
+    "eslint": "9.2.0",
     "nuxt": "3.9.3",
     "nuxt-time": "0.1.1",
     "nuxt3-leaflet": "1.0.12",
