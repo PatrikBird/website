@@ -1,0 +1,4 @@
+{
+  "extends": ["github>patrikbird/renovate-config"],
+  "dependencyDashboard": false
+}
