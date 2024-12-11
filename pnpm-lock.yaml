@@ -50,9 +50,6 @@ devDependencies:
   '@unocss/nuxt':
     specifier: 0.58.4
     version: 0.58.4(postcss@8.4.49)(vite@5.4.11)(webpack@5.97.1)
-  '@unocss/preset-icons':
-    specifier: 0.58.4
-    version: 0.58.4
   '@unocss/transformer-variant-group':
     specifier: 0.58.4
     version: 0.58.4

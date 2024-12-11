@@ -49,8 +49,8 @@ const tileColor = computed(() => {
         :lat-lng="marker.position"
       >
         <LIcon :icon-size="[36, 36]">
-          <span
-            i-line-md:map-marker-alt-twotone
+          <Icon
+            name="i-line-md:map-marker-alt-twotone"
             class="text-2.37rem bg-primary/90 dark:bg-secondary/90"
           />
         </LIcon>

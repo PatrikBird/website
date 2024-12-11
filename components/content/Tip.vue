@@ -8,11 +8,7 @@ const props = withDefaults(defineProps<{ icon?: string }>(), {
   <div class="p-4 font-mono rounded-md bg-blue-50 dark:bg-blue-900/35">
     <div class="flex gap3 items-center">
       <div class="flex-shrink-0">
-        <span
-          :class="props.icon"
-          class="size-5"
-          aria-hidden="true"
-        />
+        <Icon :name="props.icon" class="size-5" aria-hidden="true" />
       </div>
       <div class="font-600 text-sm">
         <p class="m0">

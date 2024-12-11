@@ -10,9 +10,15 @@ const toggleDark = useToggle(isDark)
     class="action-btn size-12"
     @click="toggleDark()"
   >
-    <span
-      i-line-md:sunny-outline-loop dark:i-line-md:moon
-      class="size-5 dark:size-5"
+    <Icon
+      v-if="isDark"
+      name="i-line-md:moon"
+      class="size-5 "
+    />
+    <Icon
+      v-else
+      name="i-line-md:sunny-outline-loop"
+      class="size-5 "
     />
   </button>
 </template>

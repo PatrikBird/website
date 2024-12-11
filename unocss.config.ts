@@ -2,7 +2,6 @@
 // https://unocss.dev/presets/
 import PresetAttributify from '@unocss/preset-attributify'
 
-import PresetIcons from '@unocss/preset-icons'
 import PresetTypography from '@unocss/preset-typography'
 import PresetUno from '@unocss/preset-uno'
 import TransformerDirectives from '@unocss/transformer-directives'
@@ -28,15 +27,6 @@ export default defineConfig({
   // ],
   presets: [
     PresetAttributify({
-    }),
-    PresetIcons({
-      extraProperties: {
-        'display': 'inline-block',
-        'vertical-align': 'middle',
-      },
-      prefix: 'i-',
-      scale: 1,
-      warn: true,
     }),
     PresetTypography({
       selectorName: 'prose',
