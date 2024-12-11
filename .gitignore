@@ -10,6 +10,7 @@ dist
 .vscode/settings.json
 .DS_Store
 .vercel
+.data
 
 # Yarn
 .yarn/cache

@@ -2,8 +2,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/devtools',
+    '@nuxt/fonts',
+    '@nuxt/icon',
     '@nuxt/image',
-    '@nuxtjs/fontaine',
     '@nuxtjs/html-validator',
     '@nuxtjs/leaflet',
     '@nuxtjs/plausible',
@@ -83,15 +84,6 @@ export default defineNuxtConfig({
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/df5skrrwb/image/upload/v1677729457/',
     },
-  },
-  fontMetrics: {
-    fonts: [
-      {
-        fallbackName: 'Inter fallback',
-        family: 'Inter',
-        fallbacks: ['Arial'],
-      },
-    ],
   },
   css: [
     '@/assets/css/main.sass',

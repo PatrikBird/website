@@ -5,7 +5,6 @@ import PresetAttributify from '@unocss/preset-attributify'
 import PresetIcons from '@unocss/preset-icons'
 import PresetTypography from '@unocss/preset-typography'
 import PresetUno from '@unocss/preset-uno'
-import PresetWebFonts from '@unocss/preset-web-fonts'
 import TransformerDirectives from '@unocss/transformer-directives'
 import transformerVariantGroup from '@unocss/transformer-variant-group'
 import { defineConfig } from 'unocss'
@@ -44,14 +43,6 @@ export default defineConfig({
     }),
     PresetUno({
       /* Inherits: @unocss/preset-wind, @unocss/preset-mini */
-    }),
-    PresetWebFonts({
-      provider: 'bunny',
-      fonts: {
-        sans: 'Inter:400,600,800, "Inter fallback"',
-        mono: 'DM Mono:400,600',
-        mont: 'Montserrat:600,700,800',
-      },
     }),
   ],
   theme: {
