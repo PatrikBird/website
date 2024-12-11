@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import type { SwiperImage } from '~/types'
 import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper as SwiperContainer, SwiperSlide } from 'swiper/vue'
-import type { SwiperImage } from '~/types'
 
 import 'swiper/css'
 import 'swiper/css/pagination'

@@ -15,7 +15,7 @@ const postsLatestQuery = useLazyAsyncData(
     // Selects only two kinds of paths:
     //   /travel/**
     //   /travel/**/index
-    .where({ _path: /^(?:\/[^\/]+){2}$/ })
+    .where({ _path: /^(?:\/[^/]+){2}$/ })
     .sort({ date: -1 })
     .find(),
 )
