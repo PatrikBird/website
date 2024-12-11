@@ -5,14 +5,17 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/fontaine',
     '@nuxtjs/html-validator',
+    '@nuxtjs/leaflet',
     '@nuxtjs/plausible',
     '@nuxtjs/robots',
     '@unocss/nuxt',
     '@vueuse/nuxt',
-    'nuxt3-leaflet',
     'nuxt-time',
   ],
   vite: {
+    optimizeDeps: {
+      include: ['leaflet'],
+    },
     vue: {
       template: {
         compilerOptions: {
