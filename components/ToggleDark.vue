@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
+const colorMode = useColorMode()
 </script>
 
 <template>
@@ -8,10 +7,10 @@ const toggleDark = useToggle(isDark)
     type="button"
     aria-label="Toggle color mode"
     class="action-btn size-12"
-    @click="toggleDark()"
+    @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'"
   >
     <Icon
-      v-if="isDark"
+      v-if="colorMode.value === 'dark'"
       name="i-line-md:moon"
       class="size-5 "
     />
