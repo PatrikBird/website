@@ -1,8 +1,7 @@
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import type { MarkdownParsedContent } from '@nuxt/content'
 
-export interface Post extends ParsedContent {
+export interface Post extends MarkdownParsedContent {
   date: Date
-  description?: string
   external?: string
   imageUrl?: string
   readingTime: ReadingTime
