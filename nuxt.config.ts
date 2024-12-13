@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/html-validator',
     '@nuxtjs/leaflet',
     '@nuxtjs/plausible',
-    '@nuxtjs/robots',
+    // '@nuxtjs/robots',
     '@unocss/nuxt',
     '@vueuse/nuxt',
     'nuxt-time',

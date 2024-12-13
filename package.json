@@ -26,7 +26,6 @@
     "@nuxtjs/html-validator": "1.8.2",
     "@nuxtjs/leaflet": "1.2.5",
     "@nuxtjs/plausible": "1.2.0",
-    "@nuxtjs/robots": "5.0.1",
     "@stylistic/eslint-plugin": "2.12.1",
     "@types/node": "22.10.2",
     "@unocss/eslint-config": "0.58.4",
