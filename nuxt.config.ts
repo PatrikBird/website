@@ -14,9 +14,17 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-time',
   ],
+
   vite: {
     optimizeDeps: {
       include: ['leaflet'],
+    },
+    css: {
+      preprocessorOptions: {
+        sass: {
+          api: 'modern-compiler', // or "modern"
+        },
+      },
     },
     vue: {
       template: {
@@ -26,12 +34,10 @@ export default defineNuxtConfig({
       },
     },
   },
+
   app: {
     head: {
       title: 'Patrik Bird',
-      link: [
-        { rel: 'preconnect', href: 'https://res.cloudinary.com' },
-      ],
       meta: [
         { name: 'description', content: 'Personal website' },
       ],
@@ -43,6 +49,7 @@ export default defineNuxtConfig({
     pageTransition: false,
     layoutTransition: false,
   },
+
   content: {
     markdown: {
       remarkPlugins: ['remark-reading-time'],
@@ -55,6 +62,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   colorMode: {
     preference: 'system',
     fallback: 'light',
@@ -66,12 +74,14 @@ export default defineNuxtConfig({
     storage: 'localStorage',
     storageKey: 'nuxt-color-mode',
   },
+
   devtools: {
     enabled: true,
     timeline: {
       enabled: true,
     },
   },
+
   experimental: {
     payloadExtraction: true,
     typedPages: true,
@@ -79,6 +89,7 @@ export default defineNuxtConfig({
     viewTransition: true,
     // componentIslands: true,
   },
+
   htmlValidator: {
     logLevel: 'warning',
     failOnError: false,
@@ -89,16 +100,16 @@ export default defineNuxtConfig({
       },
     },
   },
+
   image: {
     format: ['avif', 'webp'],
-    quality: 90,
-    provider: 'cloudinary',
-    cloudinary: {
-      baseURL: 'https://res.cloudinary.com/df5skrrwb/image/upload/v1677729457/',
-    },
+    quality: 100,
   },
+
   css: [
     '@/assets/css/main.sass',
     '@/assets/css/text.sass',
   ],
+
+  compatibilityDate: '2024-12-13',
 })

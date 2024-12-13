@@ -4,9 +4,9 @@ import { register } from 'swiper/element/bundle'
 register()
 
 const images = [
-  { src: '/travel/longtime/wimtarq1hinsia8mc95p.jpg', alt: 'Spazieren im Nationalpark' },
-  { src: '/travel/longtime/ohayfldn3rzgakkhueyl.jpg', alt: 'Baum?!' },
-  { src: '/travel/longtime/tmxgqgauhfp6cudaifxv.jpg', alt: 'Wasserfall mit Pools' },
+  { src: '/travel/longtime/wimtarq1hinsia8mc95p.avif', alt: 'Spazieren im Nationalpark' },
+  { src: '/travel/longtime/ohayfldn3rzgakkhueyl.avif', alt: 'Baum?!' },
+  { src: '/travel/longtime/tmxgqgauhfp6cudaifxv.avif', alt: 'Wasserfall mit Pools' },
 ]
 
 // const isLoaded = ref(false)
