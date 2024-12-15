@@ -42,7 +42,7 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(cu
     </div>
     <div
       class="prose prose-zinc m-auto max-w-3xl px-1 pb-10
-      dark:prose-invert sm:(rounded px-8 pt-4) lg:relative"
+      dark:prose-invert sm:rounded sm:px-8 sm:pt-4 lg:relative"
     >
       <GoUpOnePageBtn />
       <header class="mb-7">

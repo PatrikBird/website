@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/html-validator',
-    '@nuxtjs/leaflet',
+    // '@nuxtjs/leaflet',
     '@nuxtjs/plausible',
     // '@nuxtjs/robots',
     '@unocss/nuxt',
@@ -15,10 +15,10 @@ export default defineNuxtConfig({
     'nuxt-time',
   ],
 
-  vite: {
-    optimizeDeps: {
-      include: ['leaflet'],
-    },
+  // vite: {
+  //   optimizeDeps: {
+  //     include: ['leaflet'],
+  //   },
     css: {
       preprocessorOptions: {
         sass: {
@@ -26,14 +26,14 @@ export default defineNuxtConfig({
         },
       },
     },
-    vue: {
-      template: {
-        compilerOptions: {
-          isCustomElement: tag => tag.startsWith('swiper-'),
-        },
-      },
-    },
-  },
+    // vue: {
+    //   template: {
+    //     compilerOptions: {
+    //       isCustomElement: tag => tag.startsWith('swiper-'),
+    //     },
+    //   },
+    // },
+  // },
 
   app: {
     head: {

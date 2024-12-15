@@ -24,7 +24,6 @@
     "@nuxt/image": "1.8.1",
     "@nuxtjs/color-mode": "3.5.2",
     "@nuxtjs/html-validator": "1.8.2",
-    "@nuxtjs/leaflet": "1.2.5",
     "@nuxtjs/plausible": "1.2.0",
     "@stylistic/eslint-plugin": "2.12.1",
     "@types/node": "22.10.2",
@@ -37,7 +36,6 @@
     "nuxt-time": "1.0.3",
     "remark-reading-time": "2.0.1",
     "sass": "1.82.0",
-    "swiper": "11.1.15",
     "typescript": "5.7.2",
     "vue-tsc": "https://pkg.pr.new/vuejs/language-tools/vue-tsc@3fb59af"
   }

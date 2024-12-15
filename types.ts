@@ -15,13 +15,13 @@ export interface ReadingTime {
   words: number
 }
 
-export interface SwiperImage {
-  src: string
-  alt: string
-}
+// export interface SwiperImage {
+//   src: string
+//   alt: string
+// }
 
-export interface MapMarker {
-  lat: number
-  lng: number
-  desc: string
-}
+// export interface MapMarker {
+//   lat: number
+//   lng: number
+//   desc: string
+// }
