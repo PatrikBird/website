@@ -1,5 +1,6 @@
 :root
-  --c-bg: #fff
+  color: #000
+  --c-bg: #fafefe
   // --c-bg-code: #fafafa
   // --c-bg-code-inline: #f4f4f4
   // --c-bg-code-highlight: #f2cc6040
@@ -9,11 +10,12 @@
   --c-scrollbar-active: #bbb
   --s-scrollbar-size: 6px
   ::selection
-    background-color: #f6edff 
+    background-color: #b4befe
 
 html.dark
   color-scheme: dark
-  --c-bg: #121212
+  color: #fff
+  --c-bg: #222
   // --c-bg-code: #0e0e0e
   // --c-bg-code-inline: #141414
   // --c-bg-code-highlight: #f2cc6020
@@ -22,7 +24,7 @@ html.dark
   --c-scrollbar-hover: #333
   --c-scrollbar-active: #444
   ::selection
-    background-color: #280050 
+    background-color: #4d5bac
 
 html
   background-color: var(--c-bg)
@@ -30,7 +32,7 @@ html
   // width: 100vw
   // overflow: hidden
 
-// Scrollbar start 
+// Scrollbar start
 *
   scrollbar-color: var(--c-scrollbar) var(--c-scrollbar-track)
 
@@ -59,7 +61,7 @@ html
 
 ::-webkit-scrollbar-thumb:active
   background: var(--c-scrollbar-active)
-// Scrollbar end 
+// Scrollbar end
 
 // pre
 //   margin: 0 -50vw !important
@@ -69,7 +71,7 @@ html
 dl, dt, dd
   margin: 0
 
-  
+
 ::view-transition-old(headline),
-::view-transition-new(headline) 
+::view-transition-new(headline)
   height: 100%

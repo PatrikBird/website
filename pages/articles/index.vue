@@ -1,13 +1,14 @@
 <script setup lang='ts'>
 import type { Post } from '~/types'
+import Article from './[...article].vue'
 
 useHead({
   title: 'Articles - Patrik Bird',
 })
 
-// definePageMeta({
-//   layout: 'articles',
-// })
+definePageMeta({
+  layout: 'articles',
+})
 
 const postsLatestQuery = useLazyAsyncData(
   'articles-latest-data',
@@ -31,7 +32,7 @@ const allArticles = computed(() => {
 <template>
   <main>
     <h1>Articles</h1>
-    <p class="mt-3 max-w-2xl text-lg sm:mt-4">
+    <p class="mt-3 max-w-2xl sm:mt-4">
       Various technical articles, some published on other blogs and some here.
     </p>
     <div class="mx-auto max-w-7xl py-2 md:py-8">
@@ -49,32 +50,33 @@ const allArticles = computed(() => {
             :target="article._path?.startsWith('http') ? '_blank' : '_self'"
             rel="noopener"
           >
-            <span class="flex">
+            <span class="flex items-center">
               <span
                 v-if="article._locale === 'de'"
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--8 mr2 my-auto hidden md:block"
+                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--8 mr-2 my-auto hidden md:block"
               >DE</span>
               {{ article.title }}
-              <span
+              <Icon
                 v-if="article._path?.startsWith('http')"
-                class="op75 self-start text-xs"
-                i-tabler:external-link
+                name="line-md:external-link"
+                class="opacity-75 mx-2"
               />
+
+              <div class="text-xs">
+                <NuxtTime
+                  :datetime="article.date"
+                  day="numeric"
+                  month="long"
+                  year="numeric"
+                /> <span v-if="!article.external">
+                  · {{ article.readingTime.text.substring(0, 5) }}
+                </span>
+                <span
+                  v-if="article._locale === 'de'"
+                  class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
+                >DE</span>
+              </div>
             </span>
-            <div class="text-xs">
-              <NuxtTime
-                :datetime="article.date"
-                day="numeric"
-                month="long"
-                year="numeric"
-              /> <span v-if="!article.external">
-                · {{ article.readingTime.text.substring(0, 5) }}
-              </span>
-              <span
-                v-if="article._locale === 'de'"
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
-              >DE</span>
-            </div>
           </NuxtLink>
         </article>
       </div>

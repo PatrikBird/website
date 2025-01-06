@@ -50,7 +50,7 @@ const tileColor = computed(() => {
       >
         <LIcon :icon-size="[36, 36]">
           <Icon
-            name="i-line-md:map-marker-alt-twotone"
+            name="line-md:map-marker-alt-twotone"
             class="text-2.37rem bg-primary/90 dark:bg-secondary/90"
           />
         </LIcon>

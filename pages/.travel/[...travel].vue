@@ -64,7 +64,7 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(cu
               />
             </dd>
           </div>
-          <dd class="hidden m0 sm:inline-block">
+          <dd class="hidden m-0 sm:inline-block">
             &middot;
           </dd>
           <div class="flex flex-row">

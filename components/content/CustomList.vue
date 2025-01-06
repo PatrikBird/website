@@ -9,7 +9,7 @@ const props = defineProps<{
   <ul class="list-none">
     <li
       v-for="item in props.items" :key="item"
-      class="flex items-center gap2"
+      class="flex items-center gap-2"
     >
       <span
         class="flex items-center"

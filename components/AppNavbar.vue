@@ -13,33 +13,27 @@
           <div class="flex items-center space-x-5 text-sm">
             <NuxtLink
               to="/"
-              class="no-underline opacity-75 hover:opacity-100 p-1 text-black dark:text-white hidden xs:block"
+              class="no-underline opacity-75 hover:opacity-100 p-1 xs:block"
             >
               Home
             </NuxtLink>
             <NuxtLink
               to="/articles"
-              class="no-underline opacity-75 hover:opacity-100 p-1 text-black dark:text-white"
+              class="no-underline opacity-75 hover:opacity-100 p-1"
             >
               Articles
             </NuxtLink>
-            <!-- <NuxtLink
-              to="/travel"
-              class="no-underline opacity-75 hover:opacity-100 p-1 text-black dark:text-white"
-            >
-              Travel
-            </NuxtLink> -->
-            <a
+            <NuxtLink
               href="https://github.com/PatrikBird"
               target="_blank"
               title="GitHub"
-              class="opacity-75 hover:opacity-100 dark:text-zinc-100 text-black"
+              class="opacity-75 hover:opacity-100"
               aria-label="Go to GitHub"
             >
-              <Icon name="line-md:github-loop" class="size-5" />
-            </a>
+              <Icon name="line-md:github-loop" class="w-5 h-5" />
+            </NuxtLink>
             <ToggleDark
-              class="opacity-75 hover:opacity-100 text-black dark:text-zinc-100"
+              class="opacity-75 hover:opacity-100"
               title="Toggle color mode"
             />
           </div>

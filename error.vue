@@ -11,7 +11,7 @@ useDark()
 </script>
 
 <template>
-  <main class="flex justify-center items-center h-screen font-sans">
+  <main class="flex justify-center items-center h-screen">
     <div class="max-w-7xl text-center">
       <h1 class="text-8xl my-0">
         {{ error.statusCode }}

@@ -1,5 +1,5 @@
 <template>
-  <div class="app font-sans">
+  <div class="app">
     <Html lang="en" />
     <Meta property="og:image" content="/cover.webp" />
     <NuxtLoadingIndicator color="text-primary" />

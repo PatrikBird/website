@@ -40,7 +40,7 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(pr
       {{ post.description }}
     </p>
     <dl class="mt-1 flex text-xs uppercase flex-row gap-2">
-      <div class="flex flex-row gap3">
+      <div class="flex flex-row gap-3">
         <dt>
           Published
         </dt>
@@ -57,7 +57,7 @@ const { cleanString: cleanTitle, metaDesc, imgID, postDesc } = useCleanString(pr
       <dd class="inline-block">
         &middot;
       </dd>
-      <div class="flex flex-row gap3">
+      <div class="flex flex-row gap-3">
         <dt>
           Reading time
         </dt>

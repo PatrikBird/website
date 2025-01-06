@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
@@ -10,7 +12,7 @@ export default defineNuxtConfig({
     // '@nuxtjs/leaflet',
     '@nuxtjs/plausible',
     // '@nuxtjs/robots',
-    '@unocss/nuxt',
+    // '@unocss/nuxt',
     '@vueuse/nuxt',
     'nuxt-time',
   ],
@@ -19,22 +21,24 @@ export default defineNuxtConfig({
   //   optimizeDeps: {
   //     include: ['leaflet'],
   //   },
-    css: {
-      preprocessorOptions: {
-        sass: {
-          api: 'modern-compiler', // or "modern"
-        },
-      },
-    },
-    // vue: {
-    //   template: {
-    //     compilerOptions: {
-    //       isCustomElement: tag => tag.startsWith('swiper-'),
-    //     },
-    //   },
-    // },
+  css: [
+    '@/assets/css/tw.css',
+    '@/assets/css/main.sass',
+    '@/assets/css/text.sass',
+  ],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+  // vue: {
+  //   template: {
+  //     compilerOptions: {
+  //       isCustomElement: tag => tag.startsWith('swiper-'),
+  //     },
+  //   },
   // },
-
+  // },
   app: {
     head: {
       title: 'Patrik Bird',
@@ -49,7 +53,6 @@ export default defineNuxtConfig({
     pageTransition: false,
     layoutTransition: false,
   },
-
   content: {
     markdown: {
       remarkPlugins: ['remark-reading-time'],
@@ -62,7 +65,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   colorMode: {
     preference: 'system',
     fallback: 'light',
@@ -104,11 +106,6 @@ export default defineNuxtConfig({
   image: {
     format: ['avif'],
   },
-
-  css: [
-    '@/assets/css/main.sass',
-    '@/assets/css/text.sass',
-  ],
 
   compatibilityDate: '2024-12-13',
 })
