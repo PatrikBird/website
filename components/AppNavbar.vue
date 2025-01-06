@@ -30,7 +30,7 @@
               class="opacity-75 hover:opacity-100"
               aria-label="Go to GitHub"
             >
-              <Icon name="line-md:github-loop" class="w-5 h-5" />
+              <Icon name="line-md:github-loop" />
             </NuxtLink>
             <ToggleDark
               class="opacity-75 hover:opacity-100"

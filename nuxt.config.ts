@@ -103,6 +103,10 @@ export default defineNuxtConfig({
     },
   },
 
+  icon: {
+    size: '1.3em',
+  },
+
   image: {
     format: ['avif'],
   },

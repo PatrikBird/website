@@ -45,7 +45,7 @@ const allArticles = computed(() => {
         >
           <NuxtLink
             :to="article._path"
-            class="border-none! relative flex min-h-[40px] flex-col items-baseline gap-3
+            class="relative flex min-h-[40px] flex-col items-baseline gap-3
             opacity-75 transition-opacity duration-200 hover:opacity-100 md:flex-row"
             :target="article._path?.startsWith('http') ? '_blank' : '_self'"
             rel="noopener"
@@ -53,13 +53,13 @@ const allArticles = computed(() => {
             <span class="flex items-center">
               <span
                 v-if="article._locale === 'de'"
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--8 mr-2 my-auto hidden md:block"
+                class="text-xs bg-zinc-100 dark:bg-zinc-700 rounded px-1 py-0.5 ml--8 mr-2 my-auto"
               >DE</span>
               {{ article.title }}
               <Icon
                 v-if="article._path?.startsWith('http')"
                 name="line-md:external-link"
-                class="opacity-75 mx-2"
+                class="opacity-75 mr-2 self-baseline !text-sm"
               />
 
               <div class="text-xs">
@@ -71,10 +71,10 @@ const allArticles = computed(() => {
                 /> <span v-if="!article.external">
                   · {{ article.readingTime.text.substring(0, 5) }}
                 </span>
-                <span
+                <!-- <span
                   v-if="article._locale === 'de'"
                   class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
-                >DE</span>
+                >DE</span> -->
               </div>
             </span>
           </NuxtLink>
