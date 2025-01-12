@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/html-validator',
     // '@nuxtjs/leaflet',
-    '@nuxtjs/plausible',
+    // '@nuxtjs/plausible',
     // '@nuxtjs/robots',
     // '@unocss/nuxt',
     '@vueuse/nuxt',
