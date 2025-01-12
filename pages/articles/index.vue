@@ -53,7 +53,7 @@ const allArticles = computed(() => {
             <span class="flex items-center">
               <span
                 v-if="article._locale === 'de'"
-                class="text-xs bg-zinc-100 dark:bg-zinc-700 rounded px-1 py-0.5 ml--8 mr-2 my-auto"
+                class="text-xs rounded px-2 py-0.5 my-auto hidden md:block"
               >DE</span>
               {{ article.title }}
               <Icon
@@ -71,10 +71,10 @@ const allArticles = computed(() => {
                 /> <span v-if="!article.external">
                   · {{ article.readingTime.text.substring(0, 5) }}
                 </span>
-                <!-- <span
+                <span
                   v-if="article._locale === 'de'"
-                  class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 my-auto md:hidden"
-                >DE</span> -->
+                  class="text-xs rounded px-1 py-0.5 my-auto md:hidden"
+                >DE</span>
               </div>
             </span>
           </NuxtLink>
