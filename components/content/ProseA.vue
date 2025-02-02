@@ -21,10 +21,13 @@ defineProps({
   </NuxtLink>
 </template>
 
-<style scoped lang="sass">
-a
-  border-bottom: 1.5px solid rgba(125, 125, 125, 0.7)
-  transition: border 0.2s ease-in-out
-  &:hover
-    border-bottom: 1.7px solid var(--fg)
+<style scoped>
+a {
+  border-bottom: 1.5px solid rgba(125, 125, 125, 0.7);
+  transition: border 0.2s ease-in-out;
+}
+
+a:hover {
+  border-bottom: 1.7px solid var(--fg);
+}
 </style>

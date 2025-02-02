@@ -28,8 +28,8 @@ useDark()
   </main>
 </template>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 html {
   @apply dark:bg-#121212 dark:text-white
 }
-</style>
+</style> -->

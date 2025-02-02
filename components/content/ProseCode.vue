@@ -35,11 +35,11 @@ defineProps({
   </div>
 </template>
 
-<style scoped lang="postcss">
+<!-- <style scoped lang="postcss">
 :slotted(pre) {
   @apply bg-zinc-50 dark:bg-zinc-900
 }
 :slotted(pre code span.line.highlight) {
   @apply bg-#f6edff dark:bg-#280050
 }
-</style>
+</style> -->

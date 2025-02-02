@@ -6,9 +6,9 @@
   </div>
 </template>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 .prose h2 a,
 .prose h3 a {
   @apply border-none;
 }
-</style>
+</style> -->

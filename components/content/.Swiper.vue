@@ -41,7 +41,7 @@ const initialHeight = computed(() => {
   </SwiperContainer>
 </template>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 .swiper-button-prev,
 .swiper-button-next {
   color: rgb(17 94 89);
@@ -78,4 +78,4 @@ const initialHeight = computed(() => {
     display: none;
   }
 }
-</style>
+</style> -->

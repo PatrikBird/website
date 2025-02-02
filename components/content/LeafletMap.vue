@@ -62,7 +62,7 @@ const tileColor = computed(() => {
   </div>
 </template>
 
-<style lang="postcss">
+<!-- <style lang="postcss">
 .leaflet-div-icon {
  @apply bg-transparent border-none
 }
@@ -81,4 +81,4 @@ const tileColor = computed(() => {
 .leaflet-control-attribution.leaflet-control a {
   @apply color-zinc-600 dark:color-zinc-500
 }
-</style>
+</style> -->
