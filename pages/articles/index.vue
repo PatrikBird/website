@@ -53,7 +53,7 @@ const allArticles = computed(() => {
             <span class="flex items-center">
               <span
                 v-if="article._locale === 'de'"
-                class="text-xs rounded px-2 py-0.5 my-auto hidden md:block"
+                class="text-xs bg-zinc-300/50 rounded px-1 py-0.5 mr-1 my-auto hidden md:block"
               >DE</span>
               {{ article.title }}
               <Icon
@@ -73,7 +73,7 @@ const allArticles = computed(() => {
                 </span>
                 <span
                   v-if="article._locale === 'de'"
-                  class="text-xs rounded px-1 py-0.5 my-auto md:hidden"
+                  class="text-xs bg-zinc-300/50 rounded px-1 ml-1 py-0.5 my-auto md:hidden"
                 >DE</span>
               </div>
             </span>

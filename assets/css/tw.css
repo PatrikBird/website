@@ -3,6 +3,7 @@
 @theme {
     --font-display: "Inter", "sans-serif";
 
+    --breakpoint-xs: 470px;
     --breakpoint-3xl: 1920px;
 
     --color-avocado-100: oklch(0.99 0 0);

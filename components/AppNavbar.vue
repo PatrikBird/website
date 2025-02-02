@@ -10,7 +10,7 @@
               </NuxtLink>
             </div>
           </div>
-          <div class="flex items-center space-x-5 text-sm">
+          <div class="flex items-center gap-5 text-sm">
             <NuxtLink
               to="/"
               class="no-underline opacity-75 hover:opacity-100 p-1 xs:block"
